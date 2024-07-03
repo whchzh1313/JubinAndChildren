@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">주빈과 아이들</string>
-    <string name="main_play_list">Play List</string>
+    <string name="main_play_list">PlayList</string>
     <string name="main_view_review">리뷰 보기</string>
     <string name="main_genre_1">액션</string>
     <string name="main_genre_2">슈팅</string>
@@ -9,4 +9,8 @@
     <string name="main_genre_5">롤플레잉</string>
     <string name="main_genre_6">퍼즐</string>
     <string name="main_genre_7">음악</string>
+    <string name="dmy_0">이름이 들어갑니다.</string>
+    <string name="dmy_1">게임제목</string>
+    <string name="dmy_2">리뷰 미리보기 미리보기 미리보기 미리보기 미리보기 미리보기 미리보기 미리보기 미리보기 미리보기 미리보기 미리보기 미리보기 미리보기 ...</string>
+    <string name="dmy_3">#FPS #오픈월드 #잠입액션 #스나이퍼</string>
 </resources>

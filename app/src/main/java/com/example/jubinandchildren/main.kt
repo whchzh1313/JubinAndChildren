@@ -20,8 +20,8 @@ class main : AppCompatActivity() {
         viewPager_main_reivew = findViewById(R.id.viewPager_main_reivew)
 
         /* 여백, 너비에 대한 정의 */
-        val pageMarginPx = resources.getDimensionPixelOffset(R.dimen.review_margin) // dimen 파일 안에 크기를 정의해두었다.
-        val pagerWidth = resources.getDimensionPixelOffset(R.dimen.review_width) // dimen 파일이 없으면 생성해야함
+        val pageMarginPx = resources.getDimensionPixelOffset(R.dimen.review_margin)
+        val pagerWidth = resources.getDimensionPixelOffset(R.dimen.review_width)
         val screenWidth = resources.displayMetrics.widthPixels // 스마트폰의 너비 길이를 가져옴
         val offsetPx = screenWidth - pageMarginPx - pagerWidth
 
@@ -29,43 +29,43 @@ class main : AppCompatActivity() {
             page.translationX = position * -offsetPx
         }
 
-        viewPager_main_reivew.offscreenPageLimit = 1 // 몇 개의 페이지를 미리 로드 해둘것인지
+        viewPager_main_reivew.offscreenPageLimit = 3 // 몇 개의 페이지를 미리 로드 해둘것인지
         viewPager_main_reivew.adapter = ViewPagerAdapter(getReviewList()) // 어댑터 생성
         viewPager_main_reivew.orientation = ViewPager2.ORIENTATION_HORIZONTAL // 방향을 가로로
 
     }
 
     // 뷰 페이저에 들어갈 아이템
-    private fun getReviewList(): ArrayList<Int> {
-        return arrayListOf<Int>(
-            R.drawable.game_cover_lethal_company,
-            R.drawable.game_cover_palworld,
-            R.drawable.game_cover_party_animals,
-            R.drawable.game_cover_planet_zoo,
-            R.drawable.game_cover_project_zomboid,
-            R.drawable.game_cover_raft,
-            R.drawable.game_cover_rimworld,
-            R.drawable.game_cover_satisfactory,
-            R.drawable.game_cover_slime_rancher,
-            R.drawable.game_cover_stardew_valley,
-            R.drawable.game_cover_supper_bunny_man,
-            R.drawable.game_cover_vampire_survivor,
-            R.drawable.game_cover_zelda,
-            R.drawable.game_cover_apex_legend,
-            R.drawable.game_cover_back_4_blood,
-            R.drawable.game_cover_core_keeper,
-            R.drawable.game_cover_cyberpunk_2077,
-            R.drawable.game_cover_dont_starve_together,
-            R.drawable.game_cover_dying_light,
-            R.drawable.game_cover_factorio,
-            R.drawable.game_cover_feign,
-            R.drawable.game_cover_ghost_recon,
-            R.drawable.game_cover_goose_duck,
-            R.drawable.game_cover_gta_5,
-            R.drawable.game_cover_gunfire_reborn,
-            R.drawable.game_cover_hogwarts_legacy,
-            R.drawable.game_cover_human_fall_flat,
-            R.drawable.game_cover_left_4_dead
+    private fun getReviewList(): ArrayList<ReviewList> {
+        return arrayListOf(
+            ReviewList("name",R.drawable.game_cover_lethal_company,"nameHere","lethal_company","reviewHere","hashHere",""),
+            ReviewList("name",R.drawable.game_cover_palworld,"nameHere","palworld","reviewHere","hashHere",""),
+            ReviewList("name",R.drawable.game_cover_party_animals,"nameHere","party_animals","reviewHere","hashHere",""),
+            ReviewList("name",R.drawable.game_cover_planet_zoo,"nameHere","planet_zoo","reviewHere","hashHere",""),
+            ReviewList("name",R.drawable.game_cover_project_zomboid,"nameHere","project_zomboid","reviewHere","hashHere",""),
+            ReviewList("name",R.drawable.game_cover_raft,"nameHere","raft","reviewHere","hashHere",""),
+            ReviewList("name",R.drawable.game_cover_rimworld,"nameHere","rimworld","reviewHere","hashHere",""),
+            ReviewList("name",R.drawable.game_cover_satisfactory,"nameHere","satisfactory","reviewHere","hashHere",""),
+            ReviewList("name",R.drawable.game_cover_slime_rancher,"nameHere","slime_rancher","reviewHere","hashHere",""),
+            ReviewList("name",R.drawable.game_cover_stardew_valley,"nameHere","stardew_valley","reviewHere","hashHere",""),
+            ReviewList("name",R.drawable.game_cover_supper_bunny_man,"nameHere","supper_bunny_man","reviewHere","hashHere",""),
+            ReviewList("name",R.drawable.game_cover_vampire_survivor,"nameHere","vampire_survivor","reviewHere","hashHere",""),
+            ReviewList("name",R.drawable.game_cover_zelda,"nameHere","zelda","reviewHere","hashHere",""),
+            ReviewList("name",R.drawable.game_cover_apex_legend,"nameHere","apex_legend","reviewHere","hashHere",""),
+            ReviewList("name",R.drawable.game_cover_back_4_blood,"nameHere","back_4_blood","reviewHere","hashHere",""),
+            ReviewList("name",R.drawable.game_cover_core_keeper,"nameHere","core_keeper","reviewHere","hashHere",""),
+            ReviewList("name",R.drawable.game_cover_cyberpunk_2077,"nameHere","cyberpunk_2077","reviewHere","hashHere",""),
+            ReviewList("name",R.drawable.game_cover_dont_starve_together,"nameHere","dont_starve_together","reviewHere","hashHere",""),
+            ReviewList("name",R.drawable.game_cover_dying_light,"nameHere","dying_light","reviewHere","hashHere",""),
+            ReviewList("name",R.drawable.game_cover_factorio,"nameHere","factorio","reviewHere","hashHere",""),
+            ReviewList("name",R.drawable.game_cover_feign,"nameHere","feign","reviewHere","hashHere",""),
+            ReviewList("name",R.drawable.game_cover_ghost_recon,"nameHere","ghost_recon","reviewHere","hashHere",""),
+            ReviewList("name",R.drawable.game_cover_goose_duck,"nameHere","goose_duck","reviewHere","hashHere",""),
+            ReviewList("name",R.drawable.game_cover_gta_5,"nameHere","gta_5","reviewHere","hashHere",""),
+            ReviewList("name",R.drawable.game_cover_gunfire_reborn,"nameHere","gunfire_reborn","reviewHere","hashHere",""),
+            ReviewList("name",R.drawable.game_cover_hogwarts_legacy,"nameHere","hogwarts_legacy","reviewHere","hashHere",""),
+            ReviewList("name",R.drawable.game_cover_human_fall_flat,"nameHere","human_fall_flat","reviewHere","hashHere",""),
+            ReviewList("name",R.drawable.game_cover_left_4_dead,"nameHere","left_4_dead","reviewHere","hashHere","")
         )
     }
 
