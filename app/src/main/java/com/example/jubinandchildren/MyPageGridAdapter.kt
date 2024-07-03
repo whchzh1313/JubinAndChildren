@@ -10,25 +10,32 @@ import android.widget.BaseAdapter
 import android.widget.FrameLayout
 import android.widget.GridView
 import android.widget.ImageView
+import android.widget.TextView
 
 class MyPageGridAdapter(private val context: Context): BaseAdapter() {
     private val gridItems: ArrayList<MyPageGridViewItem> = arrayListOf(
-        MyPageGridViewItem(R.drawable.mypage_test_image2, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image2, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image2, ""),
+//        MyPageGridViewItem(R.drawable.mypage_test_image2, ""),
+//        MyPageGridViewItem(R.drawable.mypage_test_image2, ""),
+//        MyPageGridViewItem(R.drawable.mypage_test_image2, ""),
     )
+    companion object {
+        var next = 0
+    }
+    fun getItemSize(): Int {
+        return next
+    }
     fun addItem(item: MyPageGridViewItem) {
-        val initSize = gridItems.size
         addEmptyItem(gridItems.size)
-        setItem(item, initSize)
+        setItem(item, next++)
     }
     private fun addEmptyItem(size: Int) {
         repeat(3 - (size % 3)) {
             gridItems.add(MyPageGridViewItem(R.drawable.mypage_test_image2, ""))
         }
     }
-    fun setItem(item: MyPageGridViewItem, size: Int) {
+    private fun setItem(item: MyPageGridViewItem, size: Int) {
         gridItems[size] = item
+        Log.d("setItem", size.toString())
     }
 
     override fun getCount(): Int = gridItems.size
@@ -38,6 +45,8 @@ class MyPageGridAdapter(private val context: Context): BaseAdapter() {
         val layout = FrameLayout.inflate(context, R.layout.layout_my_page_gridview_item, null)
         val imageView = layout.findViewById<ImageView>(R.id.iv_mypage_gv_item)
         imageView.setImageResource(gridItems[position].image)
+        val textView = layout.findViewById<TextView>(R.id.tv_mypage_gv_item)
+        textView.text = gridItems[position].more
         return layout
     }
 }

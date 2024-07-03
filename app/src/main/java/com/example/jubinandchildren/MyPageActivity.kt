@@ -1,11 +1,14 @@
 package com.example.jubinandchildren
 
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.PorterDuff
 import android.media.Image
 import android.os.Bundle
 import android.text.Layout
 import android.util.Log
+import android.view.MotionEvent
+import android.view.ViewGroup
 import android.widget.GridView
 import android.widget.ImageView
 import android.widget.LinearLayout
@@ -32,13 +35,26 @@ class MyPageActivity : AppCompatActivity() {
         tv.text = "마크"
         iv.setImageResource(R.drawable.mypage_test_image2)
 
-        val scrollView = findViewById<ScrollView>(R.id.sv_mypage)
-        val stickyHeader = findViewById<ConstraintLayout>(R.id.constraintlayout_mypage_profile)
+//        val scrollView = findViewById<ScrollView>(R.id.sv_mypage)
+//        val stickyHeader = findViewById<ConstraintLayout>(R.id.constraintlayout_mypage_profile)
+
+
 
         val gridView = findViewById<GridView>(R.id.gv_mypage_libraray)
         val adapter = MyPageGridAdapter(this)
+        repeat(8) {
+            adapter.addItem(MyPageGridViewItem(R.drawable.mypage_test_image, it.toString()))
+        }
+        gridView.isVerticalScrollBarEnabled = false
+        val size = adapter.getItemSize() + 1
+        val height = (size / 3) + (if (size % 3 != 0) 1 else 0)
+        val params = gridView.layoutParams
+        params.height = (height * 132) * 2 + 64
         gridView.adapter = adapter
-        adapter.addItem(MyPageGridViewItem(R.drawable.mypage_test_image, ""),)
+
+//        gridView.setOnTouchListener { _, event ->
+//            event.action == MotionEvent.ACTION_MOVE
+//        }
 
 //        scrollView.viewTreeObserver.addOnScrollChangedListener {
 //            val scrollY = scrollView.scrollY
