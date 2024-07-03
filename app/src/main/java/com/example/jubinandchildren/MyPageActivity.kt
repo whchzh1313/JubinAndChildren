@@ -4,10 +4,15 @@ import android.graphics.Color
 import android.graphics.PorterDuff
 import android.media.Image
 import android.os.Bundle
+import android.text.Layout
+import android.util.Log
 import android.widget.ImageView
+import android.widget.LinearLayout
+import android.widget.ScrollView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
@@ -25,5 +30,15 @@ class MyPageActivity : AppCompatActivity() {
         val tv = findViewById<TextView>(R.id.tv_mypage_profile_genre1)
         tv.text = "마크"
         iv.setImageResource(R.drawable.mypage_test_image2)
+
+        val scrollView = findViewById<ScrollView>(R.id.sv_mypage)
+        val stickyHeader = findViewById<ConstraintLayout>(R.id.constraintlayout_mypage_profile)
+
+        scrollView.viewTreeObserver.addOnScrollChangedListener {
+            val scrollY = scrollView.scrollY
+            Log.d("scroll", scrollY.toString())
+            stickyHeader.translationY = scrollY.toFloat()
+            stickyHeader.translationZ = 1f
+        }
     }
 }

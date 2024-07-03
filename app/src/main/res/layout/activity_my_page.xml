@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MyPageActivity">
+    tools:context=".MyPageActivity"
+    android:background="@color/white">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,10 +16,13 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ScrollView
+            android:id="@+id/sv_mypage"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fillViewport="true"
-            android:scrollbars="none">
+            android:scrollbars="none"
+            android:overScrollMode="never"
+            >
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -26,6 +30,7 @@
                 android:orientation="vertical">
                 <!-- 프로필 -->
                 <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintlayout_mypage_profile"
                     android:layout_width="match_parent"
                     android:layout_height="180dp"
                     android:background="@drawable/mypage_test_image"
@@ -188,6 +193,7 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
                 <!-- 게임 픽 -->
                 <LinearLayout
+                    android:id="@+id/linearlayout_mypage_gamepick"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/white"
@@ -310,7 +316,7 @@
                 <!-- 라이브러리 -->
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="700dp"
                     android:background="@color/gray"
                     android:orientation="vertical"
                     android:padding="32dp">
