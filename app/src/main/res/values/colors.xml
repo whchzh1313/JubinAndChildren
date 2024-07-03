@@ -4,5 +4,5 @@
     <color name="gray">#FFBCBCBC</color>
     <color name="white">#FFFFFFFF</color>
     <color name="primary">#FFA3C9E9</color>
-    <color name="secandary">#FFD4E2ED</color>
+    <color name="secondary">#FFD4E2ED</color>
 </resources>
