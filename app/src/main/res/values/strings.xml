@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">jubinAndChildren</string>
+    <string name="app_name">주빈과 아이들</string>
+    <string name="main_play_list">Play List</string>
+    <string name="main_view_review">리뷰 보기</string>
+    <string name="main_genre_1">액션</string>
+    <string name="main_genre_2">슈팅</string>
+    <string name="main_genre_3">어드벤처</string>
+    <string name="main_genre_4">시뮬레이션</string>
+    <string name="main_genre_5">롤플레잉</string>
+    <string name="main_genre_6">퍼즐</string>
+    <string name="main_genre_7">음악</string>
 </resources>
