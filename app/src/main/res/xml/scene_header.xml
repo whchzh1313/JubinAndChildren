@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@+id/start"
+        motion:duration="1000"
+        motion:motionInterpolator="linear">
+
+        <OnSwipe
+            motion:dragDirection="dragUp"
+            motion:touchAnchorId="@id/iv_d_background_game_image"
+            motion:touchAnchorSide="bottom"/>
+
+
+    </Transition>
+
+    <ConstraintSet android:id="@id/start">
+        <Constraint
+            android:id="@id/iv_d_background_game_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            motion:layout_constraintTop_toTopOf="parent"/>
+
+        <Constraint
+            android:id="@id/iv_d_blackfilter_game_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:alpha="0.4"/>
+
+        <Constraint
+            android:id="@id/tv_d_recommend_game"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="0dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="32dp"
+            android:visibility="invisible" />
+
+        <Constraint
+            android:id="@id/tv_d_user_recommend_game"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@id/tv_d_recommend_game"
+            android:layout_marginTop="-8dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="32dp"/>
+
+        <Constraint
+            android:id="@id/tv_d_hashtag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@id/tv_d_user_recommend_game"
+            android:layout_marginTop="0dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="32dp"
+            android:visibility="invisible"/>
+
+        <Constraint
+            android:id="@id/tv_d_user_hashtag"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="32dp"
+            motion:layout_constraintTop_toBottomOf="@id/tv_d_user_recommend_game"
+            android:layout_marginTop="8dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="32dp"
+            android:maxLines="1"
+            android:ellipsize="end"/>
+
+        <Constraint
+            android:id="@id/tv_d_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@id/tv_d_user_hashtag"
+            android:layout_marginTop="0dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="32dp"/>
+
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@id/end">
+        <Constraint
+            android:id="@id/iv_d_background_game_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            motion:layout_constraintTop_toTopOf="parent"/>
+
+        <Constraint
+            android:id="@id/iv_d_blackfilter_game_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:alpha="0.1"
+            android:visibility="invisible"/>
+
+        <Constraint
+            android:id="@id/tv_d_recommend_game"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="32dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="32dp"
+            android:visibility="visible" />
+
+        <Constraint
+            android:id="@id/tv_d_user_recommend_game"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@id/tv_d_recommend_game"
+            android:layout_marginTop="16dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="32dp"
+            motion:motionProgress="0"/>
+
+        <Constraint
+            android:id="@id/tv_d_hashtag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@id/tv_d_user_recommend_game"
+            android:layout_marginTop="16dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="32dp"
+            android:visibility="visible"/>
+
+        <Constraint
+            android:id="@id/tv_d_user_hashtag"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="32dp"
+            motion:layout_constraintTop_toBottomOf="@id/tv_d_hashtag"
+            android:layout_marginTop="16dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="32dp"
+            android:maxLines="3"/>
+
+        <Constraint
+            android:id="@id/tv_d_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@id/tv_d_user_hashtag"
+            android:layout_marginTop="100dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="32dp"/>
+
+
+
+    </ConstraintSet>
+
+
+
+
+
+</MotionScene>
