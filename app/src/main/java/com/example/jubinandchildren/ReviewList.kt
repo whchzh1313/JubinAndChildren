@@ -10,7 +10,7 @@ data class ReviewList(
     val reviewHash: String, // 해시태그
     val reviewGenre: String, // 장르
     val reviewPrice: Int, // 가격
-    val reviewRating: Double, // 별점
+    val reviewRating: Float, // 별점
     val reviewScreenShot1: Int, // 인게임 스크린샷
     val reviewScreenShot2: Int,
     val reviewScreenShot3: Int,
