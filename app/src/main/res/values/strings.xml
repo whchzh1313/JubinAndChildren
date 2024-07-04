@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">jubinAndChildren</string>
+    <string name="mypage_profile_name">이름</string>
+    <string name="mypage_profile_description">자기 소개</string>
+    <string name="mypage_profile_level">99+</string>
+    <string name="mypage_game_pick_title">게임 픽</string>
+    <string name="mypage_game_pick_name">게임 이름</string>
+    <string name="mypage_game_pick_hashtag">해시태그</string>
+    <string name="mypage_library_title">라이브러리</string>
 </resources>
