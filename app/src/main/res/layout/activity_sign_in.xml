@@ -116,15 +116,15 @@
         app:layout_constraintTop_toBottomOf="@+id/text_signin_putbirth"
         app:layout_constraintVertical_bias="1.0" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_below=""
-        android:id="@+id/Daychoice"
-        >
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:layout_below=""-->
+<!--        android:id="@+id/Daychoice"-->
+<!--        >-->
 
-    </LinearLayout>
+<!--    </LinearLayout>-->
 
     <Button
         android:id="@+id/btn_signin_complete"

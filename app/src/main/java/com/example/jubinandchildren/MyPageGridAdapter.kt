@@ -6,7 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.FrameLayout
+import android.widget.GridView
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
 
 class MyPageGridAdapter(private val context: Context): BaseAdapter() {
@@ -40,13 +42,22 @@ class MyPageGridAdapter(private val context: Context): BaseAdapter() {
     override fun getItemId(position: Int): Long = position.toLong()
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
         val layout = FrameLayout.inflate(context, R.layout.layout_my_page_gridview_item, null)
-        if(position == 2) layout.setOnClickListener {
-            println("ddd")
+        layout.setOnClickListener {
+            addItem(MyPageGridViewItem(R.drawable.mypage_test_image2, ""))
+            val linearLayout = LinearLayout.inflate(context, R.layout.activity_my_page, null)
+            val gridView = linearLayout.findViewById<GridView>(R.id.gv_mypage_libraray)
+            changeHeight(next + 1, gridView)
+            this.notifyDataSetChanged()
         }
         val imageView = layout.findViewById<ImageView>(R.id.iv_mypage_gv_item)
         imageView.setImageResource(gridItems[position].image)
         val textView = layout.findViewById<TextView>(R.id.tv_mypage_gv_item)
         textView.text = gridItems[position].more
         return layout
+    }
+    fun changeHeight(size: Int, view: View) {
+        val height = (size / 3) + (if (size % 3 != 0) 1 else 0)
+        val params = view.layoutParams
+        params.height = (height * 132) * 2 + 64
     }
 }
