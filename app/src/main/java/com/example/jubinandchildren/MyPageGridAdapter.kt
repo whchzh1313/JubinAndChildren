@@ -9,8 +9,8 @@ import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.TextView
 
-class NewMyPageGridAdapter(private val context: Context): BaseAdapter() {
-    private val gridItems: ArrayList<NewMyPageGridViewItem> = arrayListOf(
+class MyPageGridAdapter(private val context: Context): BaseAdapter() {
+    private val gridItems: ArrayList<MyPageGridViewItem> = arrayListOf(
 //        MyPageGridViewItem(R.drawable.mypage_test_image2, ""),
 //        MyPageGridViewItem(R.drawable.mypage_test_image2, ""),
 //        MyPageGridViewItem(R.drawable.mypage_test_image2, ""),
@@ -21,16 +21,16 @@ class NewMyPageGridAdapter(private val context: Context): BaseAdapter() {
     fun getItemSize(): Int {
         return next
     }
-    fun addItem(item: NewMyPageGridViewItem) {
+    fun addItem(item: MyPageGridViewItem) {
         addEmptyItem(gridItems.size)
         setItem(item, next++)
     }
     private fun addEmptyItem(size: Int) {
         repeat(3 - (size % 3)) {
-            gridItems.add(NewMyPageGridViewItem(R.drawable.mypage_background_black, ""))
+            gridItems.add(MyPageGridViewItem(R.drawable.mypage_background_black, ""))
         }
     }
-    private fun setItem(item: NewMyPageGridViewItem, size: Int) {
+    private fun setItem(item: MyPageGridViewItem, size: Int) {
         gridItems[size] = item
         Log.d("setItem", size.toString())
     }
@@ -39,7 +39,7 @@ class NewMyPageGridAdapter(private val context: Context): BaseAdapter() {
     override fun getItem(position: Int): Any = gridItems[position]
     override fun getItemId(position: Int): Long = position.toLong()
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-        val layout = FrameLayout.inflate(context, R.layout.layout_my_page_gridview_item_new, null)
+        val layout = FrameLayout.inflate(context, R.layout.layout_my_page_gridview_item, null)
         if(position == 2) layout.setOnClickListener {
             println("ddd")
         }

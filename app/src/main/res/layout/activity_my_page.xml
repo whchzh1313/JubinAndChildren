@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/secondary"
     android:orientation="vertical"
-    tools:context=".NewMyPageActivity">
+    tools:context=".MyPageActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintlayout_mypage_profile"

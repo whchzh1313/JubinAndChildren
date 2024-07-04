@@ -10,11 +10,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class NewMyPageActivity : AppCompatActivity() {
+class MyPageActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_new_my_page)
+        setContentView(R.layout.activity_my_page)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.mypage_main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -29,9 +29,9 @@ class NewMyPageActivity : AppCompatActivity() {
 //        val stickyHeader = findViewById<ConstraintLayout>(R.id.constraintlayout_mypage_profile)
 
         val gridView = findViewById<GridView>(R.id.gv_mypage_libraray)
-        val adapter = NewMyPageGridAdapter(this)
+        val adapter = MyPageGridAdapter(this)
         repeat(2) {
-            adapter.addItem(NewMyPageGridViewItem(R.drawable.mypage_test_image, it.toString()))
+            adapter.addItem(MyPageGridViewItem(R.drawable.mypage_test_image, it.toString()))
         }
         gridView.isVerticalScrollBarEnabled = false
 
