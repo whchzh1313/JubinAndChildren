@@ -4,6 +4,7 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 
@@ -13,13 +14,24 @@ class EventActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.lv_event_eventlayout)
 
-        // 하단 레이아웃(게임소개 란) 이미지 뷰 객체 생성
+        // 메인 레이아웃(업데이트) 뷰 객체 생성
+        // 이미지 뷰(4개), 버튼 대용으로 사용됨
         val btn_event_update_minecraft:ImageView = findViewById<ImageView>(R.id.imgv_update_scrimg_minecraft)
         val btn_event_update_wows:ImageView = findViewById<ImageView>(R.id.imgv_update_scrimg_wows)
         val btn_event_update_lol:ImageView = findViewById<ImageView>(R.id.imgv_update_scrimg_lol)
         val btn_event_update_civ7:ImageView = findViewById<ImageView>(R.id.imgv_update_scrimg_civ7)
+        // 텍스트 뷰(8개)
+        val tv_event_update_minecraft_title:TextView = findViewById<TextView>(R.id.tv_event_update_title_minecraft)
+        val tv_event_update_minecraft_tag:TextView = findViewById<TextView>(R.id.tv_event_update_tag_minecraft)
+        val tv_event_update_wows_title:TextView = findViewById<TextView>(R.id.tv_event_update_title_wows)
+        val tv_event_update_wows_tag:TextView = findViewById<TextView>(R.id.tv_event_update_tag_wows)
+        val tv_event_update_lol_title:TextView = findViewById<TextView>(R.id.tv_event_update_title_lol)
+        val tv_event_update_lol_tag:TextView = findViewById<TextView>(R.id.tv_event_update_tag_lol)
+        val tv_event_update_civ7_title:TextView = findViewById<TextView>(R.id.tv_event_update_title_civ7)
+        val tv_event_update_civ7_tag:TextView = findViewById<TextView>(R.id.tv_event_update_tag_civ7)
 
-        // 하단 레이아웃(게임소개 란) 이미지 뷰 객체 생성
+        // 메인 레이아웃(추천) 뷰 객체 생성
+        // 이미지 뷰(7개)
         val btn_event_rec_littlenightmare:ImageView = findViewById<ImageView>(R.id.imgv_event_scrimg_little_nightmare)
         val btn_event_rec_helldiver2:ImageView = findViewById<ImageView>(R.id.imgv_event_scrimg_helldivers2)
         val btn_event_rec_frostpunk:ImageView = findViewById<ImageView>(R.id.imgv_event_scrimg_frostpunk)
@@ -29,7 +41,7 @@ class EventActivity : AppCompatActivity() {
         val btn_event_rec_cities:ImageView = findViewById<ImageView>(R.id.imgv_event_scrimg_cities)
 
         // 이미지-웹사이트 연결용 이벤트/인텐트 로직
-        // 업데이트 페이지 파트
+        // 업데이트 파트
         // 1) 마인크래프트
         btn_event_update_minecraft.setOnClickListener {
             val intent_event_upgo_minecraft:Intent = Intent(Intent.ACTION_VIEW,
@@ -55,7 +67,7 @@ class EventActivity : AppCompatActivity() {
             startActivity(intent_event_upgo_civ7)
         }
 
-        // 추천 페이지 파트
+        // 추천 파트
         // 1) 리틀 나이트메어
         btn_event_rec_littlenightmare.setOnClickListener {
             val intent_event_recgo_little:Intent = Intent(Intent.ACTION_VIEW,

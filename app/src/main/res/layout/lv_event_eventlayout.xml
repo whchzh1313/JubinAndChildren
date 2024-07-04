@@ -6,10 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/white">
 
-
-    <!--전체 스크롤 뷰-->
-
-
+    <!--앱 타이틀(이미지, 텍스트)-->
     <ImageView
         android:id="@+id/iv_event_img_logo"
         android:layout_width="52dp"
@@ -25,12 +22,14 @@
         style="@style/headline_b"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/main_play_list"
+        android:text="PlayList"
         android:textColor="@color/primary"
         app:layout_constraintBottom_toBottomOf="@+id/iv_event_img_logo"
         app:layout_constraintStart_toEndOf="@+id/iv_event_img_logo"
         app:layout_constraintTop_toTopOf="@+id/iv_event_img_logo" />
 
+
+    <!--전체 레이아웃(세로 스크롤)-->
     <ScrollView
         android:id="@+id/scrlv_event_out_scroll"
         android:layout_width="match_parent"
@@ -42,6 +41,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <!--업데이트 타이틀(텍스트)-->
             <TextView
                 android:id="@+id/tv_event_update_title"
                 android:layout_width="wrap_content"
@@ -55,10 +55,11 @@
                 tools:layout_editor_absoluteX="1978dp"
                 tools:layout_editor_absoluteY="534dp" />
 
+            <!--업데이트 컨테이너(가로 스크롤)-->
             <HorizontalScrollView
                 android:id="@+id/scrlv_event_update_scroll"
                 android:layout_width="match_parent"
-                android:layout_height="350dp"
+                android:layout_height="400dp"
                 android:background="#A3C9E9"
                 android:fadeScrollbars="true"
                 app:layout_constraintVertical_weight="1">
@@ -68,45 +69,207 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
-                    <ImageView
-                        android:id="@+id/imgv_update_scrimg_minecraft"
-                        android:layout_width="300dp"
-                        android:layout_height="match_parent"
-                        android:layout_margin="20dp"
-                        android:layout_weight="1"
-                        android:scaleType="centerCrop"
-                        app:srcCompat="@drawable/img_minecraft_update" />
 
-                    <ImageView
-                        android:id="@+id/imgv_update_scrimg_wows"
+                    <!--업데이트 1번 컨테이너(이미지, 텍스트, 텍스트)-->
+                    <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="300dp"
                         android:layout_height="match_parent"
                         android:layout_margin="20dp"
-                        android:layout_weight="1"
-                        android:scaleType="centerCrop"
-                        app:srcCompat="@drawable/img_wows_update" />
+                        android:layout_weight="1">
 
-                    <ImageView
-                        android:id="@+id/imgv_update_scrimg_lol"
-                        android:layout_width="300dp"
-                        android:layout_height="match_parent"
-                        android:layout_margin="20dp"
-                        android:layout_weight="1"
-                        android:scaleType="centerCrop"
-                        app:srcCompat="@drawable/img_lol_main" />
+                        <ImageView
+                            android:id="@+id/imgv_update_scrimg_minecraft"
+                            android:layout_width="300dp"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            app:srcCompat="@drawable/img_minecraft_update" />
 
-                    <ImageView
-                        android:id="@+id/imgv_update_scrimg_civ7"
+                        <ImageView
+                            android:id="@+id/imgv_update_scrblk_minecraft"
+                            android:layout_width="300dp"
+                            android:layout_height="match_parent"
+                            android:alpha="0.4"
+                            android:background="@color/black"
+                            android:scaleType="centerCrop" />
+
+                        <TextView
+                            android:id="@+id/tv_event_update_title_minecraft"
+                            style="@style/subtitle_b"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginBottom="60dp"
+                            android:text="마인크래프트 1.21"
+                            android:textColor="@color/white"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tv_event_update_tag_minecraft"
+                            style="@style/body"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginBottom="35dp"
+                            android:text="# 샌드박스"
+                            android:textColor="@color/white"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <!--업데이트 2번 컨테이너(이미지, 텍스트, 텍스트)-->
+                    <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="300dp"
                         android:layout_height="match_parent"
                         android:layout_margin="20dp"
-                        android:layout_weight="1"
-                        android:scaleType="centerCrop"
-                        app:srcCompat="@drawable/img_civ7_main" />
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/imgv_update_scrimg_wows"
+                            android:layout_width="300dp"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            app:srcCompat="@drawable/img_wows_update" />
+
+                        <ImageView
+                            android:id="@+id/imgv_update_scrblk_wows"
+                            android:layout_width="300dp"
+                            android:layout_height="match_parent"
+                            android:alpha="0.4"
+                            android:background="@color/black"
+                            android:scaleType="centerCrop" />
+
+                        <TextView
+                            android:id="@+id/tv_event_update_title_wows"
+                            style="@style/subtitle_b"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginBottom="60dp"
+                            android:text="월드오브워쉽 13.6"
+                            android:textColor="@color/white"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tv_event_update_tag_wows"
+                            style="@style/body"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginBottom="35dp"
+                            android:text="# 슈팅"
+                            android:textColor="@color/white"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <!--업데이트 3번 컨테이너(이미지, 텍스트, 텍스트)-->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="300dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="20dp"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/imgv_update_scrimg_lol"
+                            android:layout_width="300dp"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            app:srcCompat="@drawable/img_lol_main" />
+
+                        <ImageView
+                            android:id="@+id/imgv_update_scrblk_lol"
+                            android:layout_width="300dp"
+                            android:layout_height="match_parent"
+                            android:alpha="0.4"
+                            android:background="@color/black"
+                            android:scaleType="centerCrop" />
+
+                        <TextView
+                            android:id="@+id/tv_event_update_title_lol"
+                            style="@style/subtitle_b"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginBottom="60dp"
+                            android:text="리그오브레전드 14.13"
+                            android:textColor="@color/white"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tv_event_update_tag_lol"
+                            style="@style/body"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginBottom="35dp"
+                            android:text="# AOS"
+                            android:textColor="@color/white"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <!--업데이트 4번 컨테이너(이미지, 텍스트, 텍스트)-->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="300dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="20dp"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/imgv_update_scrimg_civ7"
+                            android:layout_width="300dp"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            app:srcCompat="@drawable/img_civ7_main" />
+
+                        <ImageView
+                            android:id="@+id/imgv_update_scrblk_civ7"
+                            android:layout_width="300dp"
+                            android:layout_height="match_parent"
+                            android:alpha="0.4"
+                            android:background="@color/black"
+                            android:scaleType="centerCrop" />
+
+                        <TextView
+                            android:id="@+id/tv_event_update_title_civ7"
+                            style="@style/subtitle_b"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginBottom="60dp"
+                            android:text="문명 7 (2025년 공개)"
+                            android:textColor="@color/white"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tv_event_update_tag_civ7"
+                            style="@style/body"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginBottom="35dp"
+                            android:text="# 전략시뮬레이션"
+                            android:textColor="@color/white"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
                 </LinearLayout>
             </HorizontalScrollView>
 
+
+            <!--추천 타이틀(텍스트)-->
             <TextView
                 android:id="@+id/tv_event_rec_title"
                 android:layout_width="wrap_content"
@@ -119,10 +282,12 @@
                 android:textColor="#000000"
                 android:textSize="24sp" />
 
+
+            <!--추천 컨테이너(가로 스크롤)-->
             <HorizontalScrollView
                 android:id="@+id/scrlv_event_rec_scroll"
                 android:layout_width="match_parent"
-                android:layout_height="300dp"
+                android:layout_height="400dp"
                 android:layout_marginBottom="80dp"
                 android:background="#A3C9E9"
                 android:fadeScrollbars="true"
@@ -133,68 +298,354 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
-                    <ImageView
-                        android:id="@+id/imgv_event_scrimg_little_nightmare"
-                        android:layout_width="240dp"
+                    <!--추천 1번 컨테이너(이미지 2, 텍스트 2)-->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="300dp"
                         android:layout_height="match_parent"
                         android:layout_margin="20dp"
-                        android:layout_weight="1"
-                        android:scaleType="centerCrop"
-                        app:srcCompat="@drawable/img_little_main" />
+                        android:layout_weight="1">
 
-                    <ImageView
-                        android:id="@+id/imgv_event_scrimg_helldivers2"
-                        android:layout_width="240dp"
-                        android:layout_height="match_parent"
-                        android:layout_margin="20dp"
-                        android:layout_weight="1"
-                        android:scaleType="centerCrop"
-                        app:srcCompat="@drawable/img_hellda2_main" />
+                        <ImageView
+                            android:id="@+id/imgv_event_scrimg_little_nightmare"
+                            android:layout_width="300dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:scaleType="centerCrop"
+                            app:srcCompat="@drawable/img_little_main" />
 
-                    <ImageView
-                        android:id="@+id/imgv_event_scrimg_frostpunk"
-                        android:layout_width="240dp"
-                        android:layout_height="match_parent"
-                        android:layout_margin="20dp"
-                        android:layout_weight="1"
-                        android:scaleType="centerCrop"
-                        app:srcCompat="@drawable/img_fropunk_main" />
+                        <ImageView
+                            android:id="@+id/imgv_event_scrblk_little_nightmare"
+                            android:layout_width="300dp"
+                            android:layout_height="match_parent"
+                            android:alpha="0.4"
+                            android:background="@color/black"
+                            android:scaleType="centerCrop" />
 
-                    <ImageView
-                        android:id="@+id/imgv_event_scrimg_fm24"
-                        android:layout_width="240dp"
-                        android:layout_height="match_parent"
-                        android:layout_margin="20dp"
-                        android:layout_weight="1"
-                        android:scaleType="centerCrop"
-                        app:srcCompat="@drawable/img_fm24_main" />
+                        <TextView
+                            android:id="@+id/tv_event_rec_title_little_nightmare"
+                            style="@style/subtitle_b"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginBottom="60dp"
+                            android:text="리틀 나이트매어"
+                            android:textColor="@color/white"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent" />
 
-                    <ImageView
-                        android:id="@+id/imgv_event_scrimg_eldenring"
-                        android:layout_width="240dp"
-                        android:layout_height="match_parent"
-                        android:layout_margin="20dp"
-                        android:layout_weight="1"
-                        android:scaleType="centerCrop"
-                        app:srcCompat="@drawable/img_elring_main" />
+                        <TextView
+                            android:id="@+id/tv_event_rec_tag_little_nightmare"
+                            style="@style/body"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginBottom="35dp"
+                            android:text="# 아케이드"
+                            android:textColor="@color/white"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent" />
 
-                    <ImageView
-                        android:id="@+id/imgv_event_scrimg_civ6"
-                        android:layout_width="240dp"
-                        android:layout_height="match_parent"
-                        android:layout_margin="20dp"
-                        android:layout_weight="1"
-                        android:scaleType="centerCrop"
-                        app:srcCompat="@drawable/img_civ6_main" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
-                    <ImageView
-                        android:id="@+id/imgv_event_scrimg_cities"
-                        android:layout_width="240dp"
+
+                    <!--추천 2번 컨테이너(이미지 2, 텍스트 2)-->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="300dp"
                         android:layout_height="match_parent"
                         android:layout_margin="20dp"
-                        android:layout_weight="1"
-                        android:scaleType="centerCrop"
-                        app:srcCompat="@drawable/img_cities_main" />
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/imgv_event_scrimg_helldivers2"
+                            android:layout_width="300dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:scaleType="centerCrop"
+                            app:srcCompat="@drawable/img_hellda2_main" />
+
+                        <ImageView
+                            android:id="@+id/imgv_event_scrblk_helldivers2"
+                            android:layout_width="300dp"
+                            android:layout_height="match_parent"
+                            android:alpha="0.4"
+                            android:background="@color/black"
+                            android:scaleType="centerCrop" />
+
+                        <TextView
+                            android:id="@+id/tv_event_rec_title_helldivers2"
+                            style="@style/subtitle_b"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginBottom="60dp"
+                            android:text="헬다이버즈 2"
+                            android:textColor="@color/white"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tv_event_rec_tag_helldivers2"
+                            style="@style/body"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginBottom="35dp"
+                            android:text="# TPS, # Co-Op"
+                            android:textColor="@color/white"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <!--추천 3번 컨테이너(이미지 2, 텍스트 2)-->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="300dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="20dp"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/imgv_event_scrimg_frostpunk"
+                            android:layout_width="300dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:scaleType="centerCrop"
+                            app:srcCompat="@drawable/img_fropunk_main" />
+
+                        <ImageView
+                            android:id="@+id/imgv_event_scrblk_frostpunk"
+                            android:layout_width="300dp"
+                            android:layout_height="match_parent"
+                            android:alpha="0.4"
+                            android:background="@color/black"
+                            android:scaleType="centerCrop" />
+
+                        <TextView
+                            android:id="@+id/tv_event_rec_title_frostpunk"
+                            style="@style/subtitle_b"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginBottom="60dp"
+                            android:text="프로스트펑크"
+                            android:textColor="@color/white"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tv_event_rec_tag_frostpunk"
+                            style="@style/body"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginBottom="35dp"
+                            android:text="# 건설 경영 시뮬레이션"
+                            android:textColor="@color/white"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <!--추천 4번 컨테이너(이미지 2, 텍스트 2)-->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="300dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="20dp"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/imgv_event_scrimg_fm24"
+                            android:layout_width="300dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:scaleType="centerCrop"
+                            app:srcCompat="@drawable/img_fm24_main" />
+
+                        <ImageView
+                            android:id="@+id/imgv_event_scrblk_fm24"
+                            android:layout_width="300dp"
+                            android:layout_height="match_parent"
+                            android:alpha="0.4"
+                            android:background="@color/black"
+                            android:scaleType="centerCrop" />
+
+                        <TextView
+                            android:id="@+id/tv_event_rec_title_fm24"
+                            style="@style/subtitle_b"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginBottom="60dp"
+                            android:text="풋볼매니저2024"
+                            android:textColor="@color/white"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tv_event_rec_tag_fm24"
+                            style="@style/body"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginBottom="35dp"
+                            android:text="# 스포츠 경영 시뮬레이션"
+                            android:textColor="@color/white"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <!--추천 5번 컨테이너(이미지 2, 텍스트 2)-->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="300dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="20dp"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/imgv_event_scrimg_eldenring"
+                            android:layout_width="300dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:scaleType="centerCrop"
+                            app:srcCompat="@drawable/img_elring_main" />
+
+                        <ImageView
+                            android:id="@+id/imgv_event_scrblk_eldenring"
+                            android:layout_width="300dp"
+                            android:layout_height="match_parent"
+                            android:alpha="0.4"
+                            android:background="@color/black"
+                            android:scaleType="centerCrop" />
+
+                        <TextView
+                            android:id="@+id/tv_event_rec_title_eldenring"
+                            style="@style/subtitle_b"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginBottom="60dp"
+                            android:text="엘든링"
+                            android:textColor="@color/white"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tv_event_rec_tag_eldenring"
+                            style="@style/body"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginBottom="35dp"
+                            android:text="# 소울라이크"
+                            android:textColor="@color/white"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <!--추천 6번 컨테이너(이미지 2, 텍스트 2)-->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="300dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="20dp"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/imgv_event_scrimg_civ6"
+                            android:layout_width="300dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:scaleType="centerCrop"
+                            app:srcCompat="@drawable/img_civ6_main" />
+
+                        <ImageView
+                            android:id="@+id/imgv_event_scrblk_civ6"
+                            android:layout_width="300dp"
+                            android:layout_height="match_parent"
+                            android:alpha="0.4"
+                            android:background="@color/black"
+                            android:scaleType="centerCrop" />
+
+                        <TextView
+                            android:id="@+id/tv_event_rec_title_civ6"
+                            style="@style/subtitle_b"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginBottom="60dp"
+                            android:text="문명 6"
+                            android:textColor="@color/white"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tv_event_rec_tag_civ6"
+                            style="@style/body"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginBottom="35dp"
+                            android:text="# 전략 시뮬레이션"
+                            android:textColor="@color/white"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <!--추천 7번 컨테이너(이미지)-->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="300dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="20dp"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/imgv_event_scrimg_cities"
+                            android:layout_width="300dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:scaleType="centerCrop"
+                            app:srcCompat="@drawable/img_cities_main" />
+
+                        <ImageView
+                            android:id="@+id/imgv_event_scrblk_cities"
+                            android:layout_width="300dp"
+                            android:layout_height="match_parent"
+                            android:alpha="0.4"
+                            android:background="@color/black"
+                            android:scaleType="centerCrop" />
+
+                        <TextView
+                            android:id="@+id/tv_event_rec_title_cities"
+                            style="@style/subtitle_b"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginBottom="60dp"
+                            android:text="시티즈:스카이라인"
+                            android:textColor="@color/white"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tv_event_rec_tag_cities"
+                            style="@style/body"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginBottom="35dp"
+                            android:text="# 건설 경영 시뮬레이션"
+                            android:textColor="@color/white"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
                 </LinearLayout>
             </HorizontalScrollView>
@@ -202,15 +653,8 @@
         </LinearLayout>
     </ScrollView>
 
-    <!--업데이트 게임 타이틀 뷰-->
 
-    <!--업데이트 게임 스크롤 뷰-->
-
-    <!--추천 게임 타이틀 뷰-->
-
-    <!--추천 게임 스크롤 뷰-->
-
-    <!--하단 네비게이션 뷰-->
+    <!--하단 컨테이너(네비게이션)-->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/navigation"
         android:layout_width="match_parent"
