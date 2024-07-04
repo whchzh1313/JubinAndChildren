@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffffff"
-    tools:context=".main">
+    tools:context=".Main">
 
     <HorizontalScrollView
         android:id="@+id/scrollView_main_genre"
@@ -154,10 +154,10 @@
         android:layout_height="52dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
-        android:tint="@color/primary"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/icon_image" />
+        app:srcCompat="@drawable/icon_image"
+        app:tint="@color/primary" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

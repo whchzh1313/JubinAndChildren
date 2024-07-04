@@ -1,17 +1,14 @@
 package com.example.jubinandchildren
 
 import android.os.Bundle
-import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
 
 
 private lateinit var viewPager_main_reivew: ViewPager2
-class main : AppCompatActivity() {
+class Main : AppCompatActivity() {
 
-    private val MIN_SCALE = 0.9f // 뷰가 몇퍼센트로 줄어들 것인지
-    private val MIN_ALPHA = 0.7f // 어두워지는 정도를 나타낸 듯 하다.
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()

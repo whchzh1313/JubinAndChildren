@@ -14,6 +14,7 @@ class ViewPagerAdapter(reviewList: ArrayList<ReviewList>) : RecyclerView.Adapter
     override fun getItemCount(): Int = item.size
 
     override fun onBindViewHolder(holder: PagerViewHolder, position: Int) {
+        // println(position) 현재 인덱스 번호
         holder.reviewImage.setImageResource(item[position].imageName)
         holder.reviewName.setText(item[position].reviewName)
         holder.reviewTitle.setText(item[position].reviewTitle)
