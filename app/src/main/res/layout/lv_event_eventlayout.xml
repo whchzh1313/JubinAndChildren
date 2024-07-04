@@ -25,11 +25,11 @@
         style="@style/headline_b"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="PlayList"
+        android:text="@string/main_play_list"
         android:textColor="@color/primary"
-        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_event_img_logo"
         app:layout_constraintStart_toEndOf="@+id/iv_event_img_logo"
-        tools:layout_editor_absoluteY="56dp" />
+        app:layout_constraintTop_toTopOf="@+id/iv_event_img_logo" />
 
     <ScrollView
         android:id="@+id/scrlv_event_out_scroll"
