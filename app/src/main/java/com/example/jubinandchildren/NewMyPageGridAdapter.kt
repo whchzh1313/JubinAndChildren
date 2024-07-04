@@ -1,19 +1,16 @@
 package com.example.jubinandchildren
 
 import android.content.Context
-import android.text.Layout
 import android.util.Log
-import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.FrameLayout
-import android.widget.GridView
 import android.widget.ImageView
 import android.widget.TextView
 
-class MyPageGridAdapter(private val context: Context): BaseAdapter() {
-    private val gridItems: ArrayList<MyPageGridViewItem> = arrayListOf(
+class NewMyPageGridAdapter(private val context: Context): BaseAdapter() {
+    private val gridItems: ArrayList<NewMyPageGridViewItem> = arrayListOf(
 //        MyPageGridViewItem(R.drawable.mypage_test_image2, ""),
 //        MyPageGridViewItem(R.drawable.mypage_test_image2, ""),
 //        MyPageGridViewItem(R.drawable.mypage_test_image2, ""),
@@ -24,16 +21,16 @@ class MyPageGridAdapter(private val context: Context): BaseAdapter() {
     fun getItemSize(): Int {
         return next
     }
-    fun addItem(item: MyPageGridViewItem) {
+    fun addItem(item: NewMyPageGridViewItem) {
         addEmptyItem(gridItems.size)
         setItem(item, next++)
     }
     private fun addEmptyItem(size: Int) {
         repeat(3 - (size % 3)) {
-            gridItems.add(MyPageGridViewItem(R.drawable.mypage_background_black, ""))
+            gridItems.add(NewMyPageGridViewItem(R.drawable.mypage_background_black, ""))
         }
     }
-    private fun setItem(item: MyPageGridViewItem, size: Int) {
+    private fun setItem(item: NewMyPageGridViewItem, size: Int) {
         gridItems[size] = item
         Log.d("setItem", size.toString())
     }
@@ -42,7 +39,7 @@ class MyPageGridAdapter(private val context: Context): BaseAdapter() {
     override fun getItem(position: Int): Any = gridItems[position]
     override fun getItemId(position: Int): Long = position.toLong()
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-        val layout = FrameLayout.inflate(context, R.layout.layout_my_page_gridview_item, null)
+        val layout = FrameLayout.inflate(context, R.layout.layout_my_page_gridview_item_new, null)
         if(position == 2) layout.setOnClickListener {
             println("ddd")
         }
