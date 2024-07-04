@@ -5,7 +5,7 @@
     android:id="@+id/mypage_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/secondary"
     android:orientation="vertical"
     tools:context=".MyPageActivity">
 
@@ -112,6 +112,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:textAlignment="center"
+                    style="@style/caption"
                     android:textColor="@color/white" />
             </androidx.cardview.widget.CardView>
 
@@ -135,6 +137,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:textAlignment="center"
                     android:textColor="@color/white" />
             </androidx.cardview.widget.CardView>
 
@@ -158,6 +161,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:textAlignment="center"
+                    style="@style/caption"
                     android:textColor="@color/white" />
             </androidx.cardview.widget.CardView>
 
@@ -200,6 +205,7 @@
                     android:id="@+id/linearlayout_mypage_gamepick"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
                     android:background="@color/white"
                     android:orientation="vertical"
                     android:padding="32dp">
@@ -321,10 +327,10 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/gray"
+                    android:layout_marginVertical="4dp"
+                    android:background="@color/white"
                     android:orientation="vertical"
-                    android:padding="32dp"
-                    >
+                    android:padding="32dp">
 
                     <TextView
                         style="@style/subtitle_b"
@@ -338,8 +344,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:numColumns="3"
-                        android:scrollbars="none"
-                        />
+                        android:scrollbars="none" />
 
                 </LinearLayout>
 

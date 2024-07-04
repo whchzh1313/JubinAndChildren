@@ -30,7 +30,7 @@ class MyPageGridAdapter(private val context: Context): BaseAdapter() {
     }
     private fun addEmptyItem(size: Int) {
         repeat(3 - (size % 3)) {
-            gridItems.add(MyPageGridViewItem(R.drawable.mypage_test_image2, ""))
+            gridItems.add(MyPageGridViewItem(R.drawable.mypage_background_black, ""))
         }
     }
     private fun setItem(item: MyPageGridViewItem, size: Int) {
@@ -43,6 +43,9 @@ class MyPageGridAdapter(private val context: Context): BaseAdapter() {
     override fun getItemId(position: Int): Long = position.toLong()
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
         val layout = FrameLayout.inflate(context, R.layout.layout_my_page_gridview_item, null)
+        if(position == 2) layout.setOnClickListener {
+            println("ddd")
+        }
         val imageView = layout.findViewById<ImageView>(R.id.iv_mypage_gv_item)
         imageView.setImageResource(gridItems[position].image)
         val textView = layout.findViewById<TextView>(R.id.tv_mypage_gv_item)
