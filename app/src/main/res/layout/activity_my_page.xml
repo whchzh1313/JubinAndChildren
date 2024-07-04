@@ -325,8 +325,9 @@
                 </LinearLayout>
                 <!-- 라이브러리 -->
                 <LinearLayout
+                    android:id="@+id/linearlayout_mypage_library"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="250dp"
                     android:layout_marginVertical="4dp"
                     android:background="@color/white"
                     android:orientation="vertical"
@@ -342,9 +343,11 @@
                     <GridView
                         android:id="@+id/gv_mypage_libraray"
                         android:layout_width="wrap_content"
-                        android:layout_height="0dp"
+                        android:layout_height="wrap_content"
                         android:numColumns="3"
                         android:scrollbars="none"
+                        android:verticalSpacing="32dp"
+                        android:horizontalSpacing="16dp"
                         />
 
                 </LinearLayout>
