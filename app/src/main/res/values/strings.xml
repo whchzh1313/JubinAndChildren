@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">주빈과 아이들</string>
     <string name="main_play_list">PlayList</string>
     <string name="main_view_review">리뷰 보기</string>
     <string name="main_genre_1">액션</string>
@@ -13,4 +12,19 @@
     <string name="dmy_1">게임제목</string>
     <string name="dmy_2">리뷰 미리보기 미리보기 미리보기 미리보기 미리보기 미리보기 미리보기 미리보기 미리보기 미리보기 미리보기 미리보기 미리보기 미리보기 ...</string>
     <string name="dmy_3">#FPS #오픈월드 #잠입액션 #스나이퍼</string>
+    <string name="app_name">jubinAndChildren</string>
+
+    <string name="user_name">유저이름</string>
+    <string name="_user_name">이강진</string>
+    <string name="recommend_game_name">추천 게임</string>
+    <string name="_recommend_game_name">Super Bunny Man</string>
+    <string name="hashtag">해시태그</string>
+    <string name="_hashtag">#캐주얼#헤롱헤롱#메롱메롱#헤롱헤롱#메롱메롱</string>
+    <string name="price">23000원</string>
+    <string name="subtitle_user_rating">님의 평점</string>
+    <string name="addcart_description">카트에 담기</string>
+    <string name="subtitle_user_review">님의 리뷰</string>
+    <string name="_user_review">흐물흐물한 토끼가 맥을 못추고 쓰러지는 모습이 장관입니다. 친한친구랑 함께 해보시길 추천드립니다. 토끼가 귀여워요 근데 분홍토끼만하고싶은데 시작할 때 선택하게 해주삼 불라블라블라 아아아아아앙이이이이이이잉으으으으으응어에에에에에에에에에에야야야야야아오아ㅗㅇ;ㅣㅏㅗㅁ;이라머;이라멍;ㅣㅏ너;</string>
+    <string name="show_more">더보기</string>
+    <string name="subtitle_screenshot">인게임 스크린샷</string>
 </resources>
