@@ -41,7 +41,7 @@ class MyPageActivity : AppCompatActivity() {
 
         val gridView = findViewById<GridView>(R.id.gv_mypage_libraray)
         val adapter = MyPageGridAdapter(this)
-        repeat(1) {
+        repeat(2) {
             adapter.addItem(MyPageGridViewItem(R.drawable.mypage_test_image, it.toString()))
         }
         gridView.isVerticalScrollBarEnabled = false
