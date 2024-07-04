@@ -10,32 +10,63 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import kotlin.math.ceil
+import java.util.Queue
+import java.util.LinkedList
 
 class MyPageGridAdapter(private val context: Context, private val linear: LinearLayout): BaseAdapter() {
-    private val additionalGridItems: ArrayList<MyPageGridViewItem> = arrayListOf(
+    private val gridItems: ArrayList<MyPageGridViewItem> = arrayListOf()
+
+    var next = 2
+
+    private var queue: Queue<MyPageGridViewItem> = LinkedList()
+
+    val blackImage = MyPageGridViewItem(R.drawable.mypage_background_black, "")
+
+    /*TODO 추후 삭제. 현재는 자료 대신 사용할 테스트용*/
+    private val itemList: List<MyPageGridViewItem> = listOf(
+        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
         MyPageGridViewItem(R.drawable.mypage_test_image2, ""),
+        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
+        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
+        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
+        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
         MyPageGridViewItem(R.drawable.mypage_test_image2, ""),
+        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
+        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
         MyPageGridViewItem(R.drawable.mypage_test_image2, ""),
+        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
+        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
+        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
+        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
         MyPageGridViewItem(R.drawable.mypage_test_image2, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image2, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image2, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image2, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image2, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image2, ""),
+        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
+        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
         MyPageGridViewItem(R.drawable.mypage_test_image2, ""),
     )
-    private val gridItems: ArrayList<MyPageGridViewItem> = arrayListOf(
-        MyPageGridViewItem(R.drawable.mypage_test_image2, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image2, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image2, ""),
-    )
-    private fun moreItem() {
-        gridItems += additionalGridItems
-        addEmptyItem(gridItems.size)
+
+    fun initItem() {
+        initQueue()
+        addItem(3)
     }
-    private fun addEmptyItem(size: Int) {
-        repeat(3 - (size % 3)) {
-            gridItems.add(MyPageGridViewItem(R.drawable.mypage_background_black, ""))
+    private fun initQueue() {
+        for(i in itemList) queue.add(i)
+    }
+    private fun addItem(num: Int) {
+        repeat(num) {
+            gridItems += if(queue.isNotEmpty()) queue.remove() else blackImage
+        }
+    }
+
+    private fun moreItem() {
+        val n = if(queue.size >= 15) 15 else queue.size
+        next += 15
+        addItem(n)
+        addEmptyItem(n)
+    }
+
+    fun addEmptyItem(num: Int) {
+        repeat(3 - if(num % 3 == 0) 3 else num % 3) {
+            gridItems += blackImage
         }
     }
 
@@ -51,8 +82,8 @@ class MyPageGridAdapter(private val context: Context, private val linear: Linear
         imageView.setImageResource(gridItems[position].image)
         textView.text = gridItems[position].more
 
-        if(position == 2) {
-            imageView.setColorFilter(Color.parseColor("#2222229f"))
+        if( ( position == next && ((next - 2) % 15 == 0) || (position == 2 && next == 2) ) ) {
+            imageView.setColorFilter(Color.parseColor("#7f222222"))
             textView.text = "더보기+"
             textView.setTextColor(Color.RED)
             layout.setOnClickListener {
@@ -61,7 +92,6 @@ class MyPageGridAdapter(private val context: Context, private val linear: Linear
                 this.notifyDataSetChanged()
             }
         }
-
         return layout
     }
 }

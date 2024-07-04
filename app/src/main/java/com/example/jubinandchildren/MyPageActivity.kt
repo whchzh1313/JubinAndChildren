@@ -19,7 +19,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MyPageActivity : AppCompatActivity() {
-    private var adapter: MyPageGridAdapter? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -36,7 +36,8 @@ class MyPageActivity : AppCompatActivity() {
 
         val gridView = findViewById<GridView>(R.id.gv_mypage_libraray)
         val linearLayout = findViewById<LinearLayout>(R.id.linearlayout_mypage_library)
-        adapter = MyPageGridAdapter(this, linearLayout)
+        val adapter = MyPageGridAdapter(this, linearLayout)
+        adapter.initItem()
 
         gridView.isVerticalScrollBarEnabled = false
 
