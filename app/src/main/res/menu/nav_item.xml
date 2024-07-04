@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:enabled="true"
+        android:title="홈"
+        android:icon="@drawable/iv_icon_home_gray"/>
+
+    <item
+        android:id="@+id/search"
+        android:enabled="true"
+        android:title="탐색"
+        android:icon="@drawable/iv_icon_search_gray"/>
+
+    <item
+        android:id="@+id/profile"
+        android:enabled="true"
+        android:title="프로필"
+        android:icon="@drawable/iv_icon_profile_gray"/>
+
+</menu>
