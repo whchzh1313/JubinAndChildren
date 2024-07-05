@@ -122,7 +122,6 @@
                 android:text="여자"
                 tools:layout_editor_absoluteX="98dp"
                 tools:layout_editor_absoluteY="100dp" />
-
         </com.google.android.material.button.MaterialButtonToggleGroup>
 
         <EditText
@@ -237,7 +236,6 @@
                 app:chipCornerRadius="100dp"
                 app:chipStrokeColor="@color/black"
                 app:chipStrokeWidth="1dp" />
-
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chip_signin_genre5"

@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/framelayout_grdiview"
-    android:layout_width="80dp"
-    android:layout_height="80dp"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
     >
 
     <ImageView
         android:id="@+id/iv_mypage_gv_item"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:scaleType="fitXY"
         android:layout_gravity="center"
-        android:layout_margin="16dp"
         android:background="@color/white"
         android:src="@drawable/mypage_test_image"/>
 
@@ -22,6 +21,9 @@
         android:layout_gravity="center"
         android:textAlignment="center"
         android:text=""
-        style="@style/body"/>
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:letterSpacing="0.2"
+        />
 
 </FrameLayout>
