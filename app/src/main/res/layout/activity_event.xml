@@ -52,7 +52,7 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginBottom="15dp"
                 android:fontFamily="@font/pretendard_black"
-                android:text="최근 업데이트 된 게임"
+                android:text="@string/update_now_title"
                 android:textColor="#000000"
                 android:textSize="24sp"
                 tools:layout_editor_absoluteX="1978dp"
@@ -105,7 +105,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginRight="30dp"
                             android:layout_marginBottom="60dp"
-                            android:text="마인크래프트 1.21"
+                            android:text="@string/update_title_minecraft"
                             android:textColor="@color/white"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent" />
@@ -117,7 +117,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginRight="30dp"
                             android:layout_marginBottom="35dp"
-                            android:text="# 샌드박스"
+                            android:text="@string/update_tag_minecraft"
                             android:textColor="@color/white"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent" />
@@ -157,7 +157,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginRight="30dp"
                             android:layout_marginBottom="60dp"
-                            android:text="월드오브워쉽 13.6"
+                            android:text="@string/update_title_wows"
                             android:textColor="@color/white"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent" />
@@ -169,7 +169,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginRight="30dp"
                             android:layout_marginBottom="35dp"
-                            android:text="# 슈팅"
+                            android:text="@string/update_tag_wows"
                             android:textColor="@color/white"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent" />
@@ -209,7 +209,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginRight="30dp"
                             android:layout_marginBottom="60dp"
-                            android:text="리그오브레전드 14.13"
+                            android:text="@string/update_title_lol"
                             android:textColor="@color/white"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent" />
@@ -221,7 +221,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginRight="30dp"
                             android:layout_marginBottom="35dp"
-                            android:text="# AOS"
+                            android:text="@string/update_tag_lol"
                             android:textColor="@color/white"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent" />
@@ -261,7 +261,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginRight="30dp"
                             android:layout_marginBottom="60dp"
-                            android:text="문명 7 (2025년 공개)"
+                            android:text="@string/update_title_civ7"
                             android:textColor="@color/white"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent" />
@@ -273,7 +273,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginRight="30dp"
                             android:layout_marginBottom="35dp"
-                            android:text="# 전략시뮬레이션"
+                            android:text="@string/update_tag_civ7"
                             android:textColor="@color/white"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent" />
@@ -293,7 +293,7 @@
                 android:layout_marginTop="40dp"
                 android:layout_marginBottom="15dp"
                 android:fontFamily="@font/pretendard_black"
-                android:text="고객님을 위한 추천"
+                android:text="@string/rec_now_title"
                 android:textColor="#000000"
                 android:textSize="24sp" />
 
@@ -346,7 +346,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginRight="30dp"
                             android:layout_marginBottom="60dp"
-                            android:text="리틀 나이트매어"
+                            android:text="@string/recommand_title_little"
                             android:textColor="@color/white"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent" />
@@ -358,7 +358,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginRight="30dp"
                             android:layout_marginBottom="35dp"
-                            android:text="# 아케이드"
+                            android:text="@string/recommand_tag_little"
                             android:textColor="@color/white"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent" />
@@ -399,7 +399,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginRight="30dp"
                             android:layout_marginBottom="60dp"
-                            android:text="헬다이버즈 2"
+                            android:text="@string/recommand_title_helldivers2"
                             android:textColor="@color/white"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent" />
@@ -411,7 +411,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginRight="30dp"
                             android:layout_marginBottom="35dp"
-                            android:text="# TPS, # Co-Op"
+                            android:text="@string/recommand_tag_helldivers2"
                             android:textColor="@color/white"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent" />
@@ -452,7 +452,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginRight="30dp"
                             android:layout_marginBottom="60dp"
-                            android:text="프로스트펑크"
+                            android:text="@string/recommand_title_frostpunk"
                             android:textColor="@color/white"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent" />
@@ -464,7 +464,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginRight="30dp"
                             android:layout_marginBottom="35dp"
-                            android:text="# 건설 경영 시뮬레이션"
+                            android:text="@string/recommand_tag_frostpunk"
                             android:textColor="@color/white"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent" />
@@ -505,7 +505,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginRight="30dp"
                             android:layout_marginBottom="60dp"
-                            android:text="풋볼매니저2024"
+                            android:text="@string/recommand_title_fm24"
                             android:textColor="@color/white"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent" />
@@ -517,7 +517,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginRight="30dp"
                             android:layout_marginBottom="35dp"
-                            android:text="# 스포츠 경영 시뮬레이션"
+                            android:text="@string/recommand_tag_fm24"
                             android:textColor="@color/white"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent" />
@@ -558,7 +558,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginRight="30dp"
                             android:layout_marginBottom="60dp"
-                            android:text="엘든링"
+                            android:text="@string/recommand_title_elden_ring"
                             android:textColor="@color/white"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent" />
@@ -570,7 +570,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginRight="30dp"
                             android:layout_marginBottom="35dp"
-                            android:text="# 소울라이크"
+                            android:text="@string/recommand_tag_elden_ring"
                             android:textColor="@color/white"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent" />
@@ -611,7 +611,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginRight="30dp"
                             android:layout_marginBottom="60dp"
-                            android:text="문명 6"
+                            android:text="@string/recommand_title_civ6"
                             android:textColor="@color/white"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent" />
@@ -623,7 +623,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginRight="30dp"
                             android:layout_marginBottom="35dp"
-                            android:text="# 전략 시뮬레이션"
+                            android:text="@string/recommand_tag_civ6"
                             android:textColor="@color/white"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent" />
@@ -664,7 +664,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginRight="30dp"
                             android:layout_marginBottom="60dp"
-                            android:text="시티즈:스카이라인"
+                            android:text="@string/recommand_title_cities"
                             android:textColor="@color/white"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent" />
@@ -676,7 +676,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginRight="30dp"
                             android:layout_marginBottom="35dp"
-                            android:text="# 건설 경영 시뮬레이션"
+                            android:text="@string/recommand_tag_cities"
                             android:textColor="@color/white"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent" />

@@ -44,16 +44,19 @@ class MainActivity : AppCompatActivity() {
             when (it.itemId) {
                 R.id.home -> {
                     val intent = Intent(this, MainActivity::class.java)
+                    finish()
                     startActivity(intent)
                     true
                 }
                 R.id.search -> {
                     val intent = Intent(this, EventActivity::class.java)
+                    finish()
                     startActivity(intent)
                     true
                 }
                 R.id.profile -> {
                     val intent = Intent(this, MyPageActivity::class.java)
+                    finish()
                     startActivity(intent)
                     true
                 }

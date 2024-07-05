@@ -1,8 +1,10 @@
 package com.example.jubinandchildren
 
+import android.graphics.Color
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.RadioGroup
 import android.widget.Toast
 import android.widget.ToggleButton
 import androidx.activity.enableEdgeToEdge
@@ -33,6 +35,7 @@ class SignInActivity : AppCompatActivity() {
         var signin_id_check = findViewById<Button>(R.id.btn_signin_check_id)
         var signin_pw = findViewById<EditText>(R.id.text_signin_putpw)
         var signin_pw_check = findViewById<EditText>(R.id.text_signin_putpw_check)
+
         var signin_genre = findViewById<ChipGroup>(R.id.chip_si)
         var signin_genre_chip1 = findViewById<Chip>(R.id.chip_signin_genre1)
         var signin_genre_chip2 = findViewById<Chip>(R.id.chip_signin_genre2)

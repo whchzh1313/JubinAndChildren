@@ -1,16 +1,26 @@
 package com.example.jubinandchildren
 
+import android.content.Intent
 import android.os.Bundle
+import android.util.DisplayMetrics
 import android.view.View
+import android.view.ViewGroup
+import android.widget.Adapter
 import android.widget.GridView
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.LinearLayoutCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.button.MaterialButtonToggleGroup
 
 class MyPageActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -25,37 +35,41 @@ class MyPageActivity : AppCompatActivity() {
         tv.text = "로그\n라이크"
         iv.setImageResource(R.drawable.mypage_test_image2)
 
-//        val scrollView = findViewById<ScrollView>(R.id.sv_mypage)
-//        val stickyHeader = findViewById<ConstraintLayout>(R.id.constraintlayout_mypage_profile)
-
+        val bnv = findViewById<BottomNavigationView>(R.id.bnv_mypage)
         val gridView = findViewById<GridView>(R.id.gv_mypage_libraray)
-        val adapter = MyPageGridAdapter(this)
-        repeat(2) {
-            adapter.addItem(MyPageGridViewItem(R.drawable.mypage_test_image, it.toString()))
-        }
+        val linearLayout = findViewById<LinearLayout>(R.id.linearlayout_mypage_library)
+        val adapter = MyPageGridAdapter(this, linearLayout)
+
+        adapter.initItem()
+
+        bnv.selectedItemId = R.id.profile
+
         gridView.isVerticalScrollBarEnabled = false
 
-        val size = adapter.getItemSize() + 1
+        val dpi = this.resources.displayMetrics.density
 
-        changeHeight(size, gridView)
+        changeHeight(dpi, 1, linearLayout)
 
         gridView.adapter = adapter
 
-//        gridView.setOnTouchListener { _, event ->
-//            event.action == MotionEvent.ACTION_MOVE
-//        }
-
-//        scrollView.viewTreeObserver.addOnScrollChangedListener {
-//            val scrollY = scrollView.scrollY
-//            Log.d("scroll", scrollY.toString())
-//            stickyHeader.translationY = scrollY.toFloat()
-//            stickyHeader.translationZ = 1f
-//        }
+        bnv.setOnItemSelectedListener {
+            when(it.itemId) {
+                R.id.home -> {
+                    val intent = Intent(this, MainActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                    true
+                }
+                R.id.search -> {
+                    val intent = Intent(this, EventActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                    true
+                }
+                else -> true
+            }
+        }
     }
 
-    fun changeHeight(size: Int, view: View) {
-        val height = (size / 3) + (if (size % 3 != 0) 1 else 0)
-        val params = view.layoutParams
-        params.height = (height * 132) * 2 + 64
-    }
+
 }
