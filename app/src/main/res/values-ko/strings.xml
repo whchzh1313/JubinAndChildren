@@ -29,13 +29,6 @@
     <string name="_user_review">흐물흐물한 토끼가 맥을 못추고 쓰러지는 모습이 장관입니다. 친한친구랑 함께 해보시길 추천드립니다. 토끼가 귀여워요 근데 분홍토끼만하고싶은데 시작할 때 선택하게 해주삼 불라블라블라 아아아아아앙이이이이이이잉으으으으으응어에에에에에에에에에에야야야야야아오아ㅗㅇ;ㅣㅏㅗㅁ;이라머;이라멍;ㅣㅏ너;</string>
     <string name="show_more">더보기</string>
     <string name="subtitle_screenshot">인게임 스크린샷</string>
-    <string name="mypage_profile_name">이름</string>
-    <string name="mypage_profile_description">자기 소개</string>
-    <string name="mypage_profile_level">99+</string>
-    <string name="mypage_game_pick_title">게임 픽</string>
-    <string name="mypage_game_pick_name">게임 이름</string>
-    <string name="mypage_game_pick_hashtag">해시태그</string>
-    <string name="mypage_library_title">라이브러리</string>
 
 
     <!-- 디테일 액티비티(김현지) 내부 언어셋-->
@@ -45,7 +38,13 @@
 
     <!-- 마이 페이지 액티비티(공명선) 내부 언어셋-->
 
-
+    <string name="mypage_profile_name">이름</string>
+    <string name="mypage_profile_description">자기 소개</string>
+    <string name="mypage_profile_level">99+</string>
+    <string name="mypage_game_pick_title">게임 픽</string>
+    <string name="mypage_game_pick_name">게임 이름</string>
+    <string name="mypage_game_pick_hashtag">해시태그</string>
+    <string name="mypage_library_title">라이브러리</string>
 
     <!-- 로그인 액티비티(황주빈) 내부 언어셋-->
 
