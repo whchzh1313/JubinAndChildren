@@ -38,7 +38,7 @@ class SignInActivity : AppCompatActivity() {
                     println("dwdw")
                 }
                 R.id.tt2 -> {
-                    println("dwdw")
+                    println("wdwd")
                 }
             }
         }

@@ -35,10 +35,16 @@ class MyPageActivity : AppCompatActivity() {
         tv.text = "로그\n라이크"
         iv.setImageResource(R.drawable.mypage_test_image2)
 
+        val bnv = findViewById<BottomNavigationView>(R.id.bnv_mypage)
         val gridView = findViewById<GridView>(R.id.gv_mypage_libraray)
         val linearLayout = findViewById<LinearLayout>(R.id.linearlayout_mypage_library)
         val adapter = MyPageGridAdapter(this, linearLayout)
+
+
+
         adapter.initItem()
+
+        bnv.selectedItemId = R.id.profile
 
         gridView.isVerticalScrollBarEnabled = false
 
@@ -47,5 +53,25 @@ class MyPageActivity : AppCompatActivity() {
         changeHeight(dpi, 1, linearLayout)
 
         gridView.adapter = adapter
+
+        bnv.setOnItemSelectedListener {
+            when(it.itemId) {
+                R.id.home -> {
+                    val intent = Intent(this, MainActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                    true
+                }
+                R.id.search -> {
+                    val intent = Intent(this, EventActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                    true
+                }
+                else -> true
+            }
+        }
     }
+
+
 }
