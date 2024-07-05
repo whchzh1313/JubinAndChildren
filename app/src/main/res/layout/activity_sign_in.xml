@@ -17,6 +17,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <ImageView
+            android:id="@+id/image_signin_view"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintBottom_toTopOf="@+id/text_signin_putname"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/icon_image"
+            app:tint="#FFA3C9E9" />
+
         <TextView
             android:id="@+id/text_signin_logotext"
             style="@style/headline_b"
@@ -33,21 +48,6 @@
             app:layout_constraintStart_toEndOf="@+id/image_signin_view"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0" />
-
-        <ImageView
-            android:id="@+id/image_signin_view"
-            android:layout_width="52dp"
-            android:layout_height="52dp"
-            android:layout_marginTop="36dp"
-            android:layout_marginBottom="32dp"
-            app:layout_constraintBottom_toTopOf="@+id/text_signin_putname"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.317"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@drawable/icon_image"
-            app:tint="#FFA3C9E9" />
 
         <EditText
             android:id="@+id/text_signin_putname"
@@ -70,6 +70,25 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <EditText
+            android:id="@+id/text_signin_putid"
+            android:layout_width="205dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/input_large"
+            android:backgroundTint="@color/gray"
+            android:ems="10"
+            android:hint="  아이디"
+            android:inputType="text"
+            app:layout_constraintBottom_toTopOf="@+id/text_signin_putpw"
+            app:layout_constraintEnd_toStartOf="@+id/btn_signin_check_id"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_signin_putbirth"
+            app:layout_constraintVertical_bias="1" />
+
         <Button
             android:id="@+id/btn_signin_check_id"
             android:layout_width="123dp"
@@ -81,7 +100,8 @@
             app:layout_constraintBottom_toBottomOf="@+id/text_signin_putid"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/text_signin_putid"
-            app:layout_constraintTop_toTopOf="@+id/text_signin_putid" />
+            app:layout_constraintTop_toTopOf="@+id/text_signin_putid"
+            app:layout_constraintVertical_bias="1.0" />
 
         <com.google.android.material.button.MaterialButtonToggleGroup
             android:id="@+id/toggle_button_group"
@@ -90,8 +110,7 @@
             android:layout_marginStart="32dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toTopOf="@+id/text_signin_putid"
+            app:layout_constraintBottom_toBottomOf="@+id/text_signin_putbirth"
             app:layout_constraintEnd_toStartOf="@+id/text_signin_putbirth"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/text_signin_putname">
@@ -99,7 +118,7 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/toggle_btn_gender1"
                 style=""
-                android:layout_width="69dp"
+                android:layout_width="65dp"
                 android:layout_height="match_parent"
                 android:backgroundTint="#FFA3C9E9"
                 android:text="남자"
@@ -109,7 +128,7 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/toggle_btn_gender2"
                 style=""
-                android:layout_width="69dp"
+                android:layout_width="67dp"
                 android:layout_height="match_parent"
                 android:backgroundTint="#FFD4E2ED"
                 android:text="여자"
@@ -130,28 +149,7 @@
             android:hint="  YYYY-MM-DD"
             android:inputType="text"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.988"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/text_signin_putname" />
-
-        <EditText
-            android:id="@+id/text_signin_putid"
-            android:layout_width="205dp"
-            android:layout_height="45dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:background="@drawable/input_large"
-            android:backgroundTint="@color/gray"
-            android:ems="10"
-            android:hint="  아이디"
-            android:inputType="text"
-            app:layout_constraintBottom_toTopOf="@+id/text_signin_putpw"
-            app:layout_constraintEnd_toStartOf="@+id/btn_signin_check_id"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_signin_putbirth"
-            app:layout_constraintVertical_bias="1.0" />
 
         <EditText
             android:id="@+id/text_signin_putpw"
@@ -160,7 +158,6 @@
             android:layout_marginStart="32dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="32dp"
-            android:layout_marginBottom="8dp"
             android:background="@drawable/input_large"
             android:backgroundTint="@color/gray"
             android:ems="10"
@@ -179,7 +176,7 @@
             android:layout_height="53dp"
             android:layout_marginStart="32dp"
             android:layout_marginEnd="32dp"
-            android:layout_marginBottom="40dp"
+            android:layout_marginBottom="16dp"
             android:background="@drawable/input_large"
             android:backgroundTint="@color/gray"
             android:ems="10"
