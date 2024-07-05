@@ -47,12 +47,14 @@ class MainActivity : AppCompatActivity() {
                     val intent = Intent(this, EventActivity::class.java)
                     startActivity(intent)
                     overridePendingTransition(R.drawable.slideup, R.drawable.slideout)
+                    finish()
                     true
                 }
                 R.id.profile -> {
                     val intent = Intent(this, MyPageActivity::class.java)
                     startActivity(intent)
                     overridePendingTransition(R.drawable.slideup, R.drawable.slideout)
+                    finish()
                     true
                 }
                 else -> {
