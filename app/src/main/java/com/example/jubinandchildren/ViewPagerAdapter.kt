@@ -1,5 +1,6 @@
 package com.example.jubinandchildren
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.ImageView
@@ -20,6 +21,12 @@ class ViewPagerAdapter(reviewList: ArrayList<ReviewList>) : RecyclerView.Adapter
         holder.reviewTitle.setText(item[position].reviewTitle)
         holder.reviewReview.setText(item[position].reviewReview)
         holder.reviewHash.setText(item[position].reviewHash)
+        val context = holder.reviewImage.context
+        holder.itemView.setOnClickListener(){
+            val intent = Intent(holder.reviewImage.context, DetailActivity::class.java)
+            intent.putExtra("index", position)
+            context.startActivity(intent)
+        }
     }
 
     inner class PagerViewHolder(parent: ViewGroup) : RecyclerView.ViewHolder
