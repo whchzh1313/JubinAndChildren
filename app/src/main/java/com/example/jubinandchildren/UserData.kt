@@ -11,5 +11,5 @@ data class UserData(
 )
 
 object UserDataList {
-    val userList: MutableMap<String, UserData> = mutableMapOf("a4cross072" to UserData("공명선",true,"YYYY_MM_DD","gongms",""))
+    val userList: MutableMap<String, UserData> = mutableMapOf("a4cross072" to UserData("공명선",true,"YYYY_MM_DD","gongms",""),)
 }
