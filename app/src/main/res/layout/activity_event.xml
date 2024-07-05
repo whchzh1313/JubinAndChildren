@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!--이벤트 액티비티 주 레이아웃 서식(작성자:박정호)-->
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -81,6 +84,8 @@
                             android:id="@+id/imgv_update_scrimg_minecraft"
                             android:layout_width="300dp"
                             android:layout_height="match_parent"
+                            android:background="@drawable/event_img_round"
+                            android:clipToOutline="true"
                             android:scaleType="centerCrop"
                             app:srcCompat="@drawable/img_minecraft_update" />
 
@@ -88,8 +93,9 @@
                             android:id="@+id/imgv_update_scrblk_minecraft"
                             android:layout_width="300dp"
                             android:layout_height="match_parent"
+                            android:background="@drawable/event_img_round"
+                            android:clipToOutline="true"
                             android:alpha="0.4"
-                            android:background="@color/black"
                             android:scaleType="centerCrop" />
 
                         <TextView
@@ -130,6 +136,8 @@
                             android:id="@+id/imgv_update_scrimg_wows"
                             android:layout_width="300dp"
                             android:layout_height="match_parent"
+                            android:background="@drawable/event_img_round"
+                            android:clipToOutline="true"
                             android:scaleType="centerCrop"
                             app:srcCompat="@drawable/img_wows_update" />
 
@@ -137,8 +145,9 @@
                             android:id="@+id/imgv_update_scrblk_wows"
                             android:layout_width="300dp"
                             android:layout_height="match_parent"
+                            android:background="@drawable/event_img_round"
+                            android:clipToOutline="true"
                             android:alpha="0.4"
-                            android:background="@color/black"
                             android:scaleType="centerCrop" />
 
                         <TextView
@@ -179,6 +188,8 @@
                             android:id="@+id/imgv_update_scrimg_lol"
                             android:layout_width="300dp"
                             android:layout_height="match_parent"
+                            android:background="@drawable/event_img_round"
+                            android:clipToOutline="true"
                             android:scaleType="centerCrop"
                             app:srcCompat="@drawable/img_lol_main" />
 
@@ -186,8 +197,9 @@
                             android:id="@+id/imgv_update_scrblk_lol"
                             android:layout_width="300dp"
                             android:layout_height="match_parent"
+                            android:background="@drawable/event_img_round"
+                            android:clipToOutline="true"
                             android:alpha="0.4"
-                            android:background="@color/black"
                             android:scaleType="centerCrop" />
 
                         <TextView
@@ -228,6 +240,8 @@
                             android:id="@+id/imgv_update_scrimg_civ7"
                             android:layout_width="300dp"
                             android:layout_height="match_parent"
+                            android:background="@drawable/event_img_round"
+                            android:clipToOutline="true"
                             android:scaleType="centerCrop"
                             app:srcCompat="@drawable/img_civ7_main" />
 
@@ -235,8 +249,9 @@
                             android:id="@+id/imgv_update_scrblk_civ7"
                             android:layout_width="300dp"
                             android:layout_height="match_parent"
+                            android:background="@drawable/event_img_round"
+                            android:clipToOutline="true"
                             android:alpha="0.4"
-                            android:background="@color/black"
                             android:scaleType="centerCrop" />
 
                         <TextView
@@ -309,6 +324,8 @@
                             android:id="@+id/imgv_event_scrimg_little_nightmare"
                             android:layout_width="300dp"
                             android:layout_height="match_parent"
+                            android:background="@drawable/event_img_round"
+                            android:clipToOutline="true"
                             android:layout_weight="1"
                             android:scaleType="centerCrop"
                             app:srcCompat="@drawable/img_little_main" />
@@ -317,8 +334,9 @@
                             android:id="@+id/imgv_event_scrblk_little_nightmare"
                             android:layout_width="300dp"
                             android:layout_height="match_parent"
+                            android:background="@drawable/event_img_round"
+                            android:clipToOutline="true"
                             android:alpha="0.4"
-                            android:background="@color/black"
                             android:scaleType="centerCrop" />
 
                         <TextView
@@ -359,6 +377,8 @@
                             android:id="@+id/imgv_event_scrimg_helldivers2"
                             android:layout_width="300dp"
                             android:layout_height="match_parent"
+                            android:background="@drawable/event_img_round"
+                            android:clipToOutline="true"
                             android:layout_weight="1"
                             android:scaleType="centerCrop"
                             app:srcCompat="@drawable/img_hellda2_main" />
@@ -367,8 +387,9 @@
                             android:id="@+id/imgv_event_scrblk_helldivers2"
                             android:layout_width="300dp"
                             android:layout_height="match_parent"
+                            android:background="@drawable/event_img_round"
+                            android:clipToOutline="true"
                             android:alpha="0.4"
-                            android:background="@color/black"
                             android:scaleType="centerCrop" />
 
                         <TextView
@@ -409,6 +430,8 @@
                             android:id="@+id/imgv_event_scrimg_frostpunk"
                             android:layout_width="300dp"
                             android:layout_height="match_parent"
+                            android:background="@drawable/event_img_round"
+                            android:clipToOutline="true"
                             android:layout_weight="1"
                             android:scaleType="centerCrop"
                             app:srcCompat="@drawable/img_fropunk_main" />
@@ -417,8 +440,9 @@
                             android:id="@+id/imgv_event_scrblk_frostpunk"
                             android:layout_width="300dp"
                             android:layout_height="match_parent"
+                            android:background="@drawable/event_img_round"
+                            android:clipToOutline="true"
                             android:alpha="0.4"
-                            android:background="@color/black"
                             android:scaleType="centerCrop" />
 
                         <TextView
@@ -459,6 +483,8 @@
                             android:id="@+id/imgv_event_scrimg_fm24"
                             android:layout_width="300dp"
                             android:layout_height="match_parent"
+                            android:background="@drawable/event_img_round"
+                            android:clipToOutline="true"
                             android:layout_weight="1"
                             android:scaleType="centerCrop"
                             app:srcCompat="@drawable/img_fm24_main" />
@@ -467,8 +493,9 @@
                             android:id="@+id/imgv_event_scrblk_fm24"
                             android:layout_width="300dp"
                             android:layout_height="match_parent"
+                            android:background="@drawable/event_img_round"
+                            android:clipToOutline="true"
                             android:alpha="0.4"
-                            android:background="@color/black"
                             android:scaleType="centerCrop" />
 
                         <TextView
@@ -509,6 +536,8 @@
                             android:id="@+id/imgv_event_scrimg_eldenring"
                             android:layout_width="300dp"
                             android:layout_height="match_parent"
+                            android:background="@drawable/event_img_round"
+                            android:clipToOutline="true"
                             android:layout_weight="1"
                             android:scaleType="centerCrop"
                             app:srcCompat="@drawable/img_elring_main" />
@@ -517,8 +546,9 @@
                             android:id="@+id/imgv_event_scrblk_eldenring"
                             android:layout_width="300dp"
                             android:layout_height="match_parent"
+                            android:background="@drawable/event_img_round"
+                            android:clipToOutline="true"
                             android:alpha="0.4"
-                            android:background="@color/black"
                             android:scaleType="centerCrop" />
 
                         <TextView
@@ -559,6 +589,8 @@
                             android:id="@+id/imgv_event_scrimg_civ6"
                             android:layout_width="300dp"
                             android:layout_height="match_parent"
+                            android:background="@drawable/event_img_round"
+                            android:clipToOutline="true"
                             android:layout_weight="1"
                             android:scaleType="centerCrop"
                             app:srcCompat="@drawable/img_civ6_main" />
@@ -567,8 +599,9 @@
                             android:id="@+id/imgv_event_scrblk_civ6"
                             android:layout_width="300dp"
                             android:layout_height="match_parent"
+                            android:background="@drawable/event_img_round"
+                            android:clipToOutline="true"
                             android:alpha="0.4"
-                            android:background="@color/black"
                             android:scaleType="centerCrop" />
 
                         <TextView
@@ -609,6 +642,8 @@
                             android:id="@+id/imgv_event_scrimg_cities"
                             android:layout_width="300dp"
                             android:layout_height="match_parent"
+                            android:background="@drawable/event_img_round"
+                            android:clipToOutline="true"
                             android:layout_weight="1"
                             android:scaleType="centerCrop"
                             app:srcCompat="@drawable/img_cities_main" />
@@ -617,8 +652,9 @@
                             android:id="@+id/imgv_event_scrblk_cities"
                             android:layout_width="300dp"
                             android:layout_height="match_parent"
+                            android:background="@drawable/event_img_round"
+                            android:clipToOutline="true"
                             android:alpha="0.4"
-                            android:background="@color/black"
                             android:scaleType="centerCrop" />
 
                         <TextView
@@ -655,16 +691,10 @@
 
 
     <!--하단 컨테이너(네비게이션)-->
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/navigation"
+    <include
+        layout="@layout/bottom_navigation_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
-        app:itemIconTint="@color/selector_nav"
-        app:itemTextColor="@color/selector_nav"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:menu="@menu/nav_item">
-    </com.google.android.material.bottomnavigation.BottomNavigationView>
-
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
