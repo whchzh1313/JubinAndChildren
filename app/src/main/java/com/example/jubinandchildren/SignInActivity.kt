@@ -75,17 +75,23 @@ class SignInActivity : AppCompatActivity() {
         }
 
         checkedChipIds = mutableListOf()
+        val firstChip = R.id.chip_signin_genre1
         signin_genre.setOnCheckedStateChangeListener { group, checkedIds ->
-            if (checkedIds.size > 3) {
-                val chip = findViewById<Chip>(checkedIds[checkedIds.size - 1])
-                chip.isChecked = false
-                Toast.makeText(this, "최대 3개의 장르를 선택할 수 있습니다.", Toast.LENGTH_SHORT).show()
-                Log.d("checked", "test${checkedChipIds.size}")
-                Log.d("checked", "test$checkedChipIds")
+            val list: List<Int> = (0..6). filter { firstChip+it !in checkedIds }
+            if (checkedIds.size > 2) {
+                list.forEach {
+                    findViewById<Chip>(firstChip+it).isEnabled = false
+                }
+//                Toast.makeText(this, "최대 3개의 장르를 선택할 수 있습니다.", Toast.LENGTH_SHORT).show()
+//                Log.d("checked", "test${checkedChipIds.size}")
+//                Log.d("checked", "test$checkedChipIds")
             } else {
+                list.forEach {
+                    findViewById<Chip>(firstChip+it).isEnabled = true
+                }
                 checkedChipIds = checkedIds
-                Log.d("checked", "testElse${checkedChipIds.size}")
-                Log.d("checked", "testElse$checkedChipIds")
+//                Log.d("checked", "testElse${checkedChipIds.size}")
+//                Log.d("checked", "testElse$checkedChipIds")
             }
         }
 
