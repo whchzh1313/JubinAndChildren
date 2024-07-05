@@ -21,9 +21,9 @@ class SignInActivity : AppCompatActivity() {
             insets
         }
 
-        var signin_id = findViewById<EditText>(R.id.text_signin_putid)
-        var signin_pw = findViewById<EditText>(R.id.text_signin_putpw)
-        var signin_pw_check = findViewById<EditText>(R.id.text_signin_putpw_check)
+//        var signin_id = findViewById<EditText>(R.id.text_signin_putid)
+//        var signin_pw = findViewById<EditText>(R.id.text_signin_putpw)
+//        var signin_pw_check = findViewById<EditText>(R.id.text_signin_putpw_check)
 
 
 
