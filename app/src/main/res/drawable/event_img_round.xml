@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--이벤트 액티비티 이미지 모서리 둥글게 만드는 서식(작성자:박정호)-->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="20dp" />
+    <solid android:color="@color/black" />
+</shape>
