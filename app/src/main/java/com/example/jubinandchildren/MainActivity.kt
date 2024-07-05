@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
-        val main_navigation_bar = findViewById<BottomNavigationView>(R.id.main_navigation_bar)
+
         viewPager_main_reivew = findViewById(R.id.viewPager_main_reivew)
         val viewPager_main_indicator = findViewById<DotsIndicator>(R.id.viewPager_main_indicator)
         /* 여백, 너비에 대한 정의 */
@@ -38,6 +38,8 @@ class MainActivity : AppCompatActivity() {
         viewPager_main_indicator.attachTo(viewPager_main_reivew)
         viewPager_main_reivew.orientation = ViewPager2.ORIENTATION_HORIZONTAL // 방향을 가로로
 
+        // 네비게이터 인텐트
+        val main_navigation_bar = findViewById<BottomNavigationView>(R.id.main_navigation_bar)
         main_navigation_bar.setOnNavigationItemSelectedListener() {
             when (it.itemId) {
                 R.id.home -> {
