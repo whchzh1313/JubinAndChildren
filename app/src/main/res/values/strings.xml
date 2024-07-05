@@ -33,9 +33,9 @@
     <string name="hashtag">HashTag</string>
     <string name="_hashtag">#test#hashTag</string>
     <string name="price">$23</string>
-    <string name="subtitle_user_rating"> 's Rating</string>
+    <string name="subtitle_user_rating"> \'s Rating</string>
     <string name="addcart_description">Add Cart</string>
-    <string name="subtitle_user_review"> 's Review</string>
+    <string name="subtitle_user_review"> \'s Review</string>
     <string name="_user_review">test review</string>
     <string name="show_more">See More</string>
     <string name="subtitle_screenshot">Game Screenshot</string>
