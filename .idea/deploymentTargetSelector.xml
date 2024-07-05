@@ -13,7 +13,7 @@
         </DropdownSelection>
         <DialogSelection />
       </SelectionState>
-      <SelectionState runConfigName="main">
+      <SelectionState runConfigName="플레이리스트 회원가입">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
     </selectionStates>
