@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/secondary"
+    tools:context=".SignInActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_i"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.62"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/text_signin_logotext"
+            style="@style/headline_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="32dp"
+            android:text="@string/main_play_list"
+            android:textColor="@color/primary"
+            app:layout_constraintBottom_toTopOf="@+id/text_signin_putname"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/image_signin_view"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/image_signin_view"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintBottom_toTopOf="@+id/text_signin_putname"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.317"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/icon_image"
+            app:tint="#FFA3C9E9" />
+
+        <EditText
+            android:id="@+id/text_signin_putname"
+            android:layout_width="344dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="128dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/input_large"
+            android:backgroundTint="@color/gray"
+            android:bottomLeftRadius="30dp"
+
+            android:ems="10"
+            android:hint="  이름"
+            android:inputType="text"
+            app:layout_constraintBottom_toTopOf="@+id/text_signin_putbirth"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.333"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_signin_check_id"
+            android:layout_width="123dp"
+            android:layout_height="49dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="36dp"
+            android:backgroundTint="#FFA3C9E9"
+            android:text="중복확인"
+            app:layout_constraintBottom_toBottomOf="@+id/text_signin_putid"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/text_signin_putid"
+            app:layout_constraintTop_toTopOf="@+id/text_signin_putid" />
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/toggle_button_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/text_signin_putid"
+            app:layout_constraintEnd_toStartOf="@+id/text_signin_putbirth"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_signin_putname">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/toggle_btn_gender1"
+                style=""
+                android:layout_width="69dp"
+                android:layout_height="match_parent"
+                android:backgroundTint="#FFA3C9E9"
+                android:text="남자"
+                tools:layout_editor_absoluteX="24dp"
+                tools:layout_editor_absoluteY="100dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/toggle_btn_gender2"
+                style=""
+                android:layout_width="69dp"
+                android:layout_height="match_parent"
+                android:backgroundTint="#FFD4E2ED"
+                android:text="여자"
+                tools:layout_editor_absoluteX="98dp"
+                tools:layout_editor_absoluteY="100dp" />
+
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <EditText
+            android:id="@+id/text_signin_putbirth"
+            android:layout_width="203dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/input_large"
+            android:backgroundTint="@color/gray"
+            android:ems="10"
+            android:hint="  YYYY-MM-DD"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.988"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_signin_putname" />
+
+        <EditText
+            android:id="@+id/text_signin_putid"
+            android:layout_width="205dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/input_large"
+            android:backgroundTint="@color/gray"
+            android:ems="10"
+            android:hint="  아이디"
+            android:inputType="text"
+            app:layout_constraintBottom_toTopOf="@+id/text_signin_putpw"
+            app:layout_constraintEnd_toStartOf="@+id/btn_signin_check_id"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_signin_putbirth"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <EditText
+            android:id="@+id/text_signin_putpw"
+            android:layout_width="347dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/input_large"
+            android:backgroundTint="@color/gray"
+            android:ems="10"
+            android:hint="  비밀번호"
+            android:inputType="text"
+            app:layout_constraintBottom_toTopOf="@+id/text_signin_putpw_check"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_signin_putid"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <EditText
+            android:id="@+id/text_signin_putpw_check"
+            android:layout_width="347dp"
+            android:layout_height="53dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/input_large"
+            android:backgroundTint="@color/gray"
+            android:ems="10"
+            android:hint="  비밀번호 확인"
+            android:inputType="text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_si_chip"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/white"
+        android:paddingHorizontal="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_i">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chip_si"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_signin_complete"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.4">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_signin_genre1"
+                style="@style/CustomChipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/main_genre_1"
+                app:chipCornerRadius="100dp"
+                app:chipStrokeColor="@color/black"
+                app:chipStrokeWidth="1dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_signin_genre2"
+                style="@style/CustomChipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/main_genre_2"
+                app:chipCornerRadius="100dp"
+                app:chipStrokeColor="@color/black"
+                app:chipStrokeWidth="1dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_signin_genre3"
+                style="@style/CustomChipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/main_genre_3"
+                app:chipCornerRadius="100dp"
+                app:chipStrokeColor="@color/black"
+                app:chipStrokeWidth="1dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_signin_genre4"
+                style="@style/CustomChipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/main_genre_4"
+                app:chipCornerRadius="100dp"
+                app:chipStrokeColor="@color/black"
+                app:chipStrokeWidth="1dp" />
+
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_signin_genre5"
+                style="@style/CustomChipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/main_genre_5"
+                app:chipCornerRadius="100dp"
+                app:chipStrokeColor="@color/black"
+                app:chipStrokeWidth="1dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_signin_genre6"
+                style="@style/CustomChipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/main_genre_6"
+                app:chipCornerRadius="100dp"
+                app:chipStrokeColor="@color/black"
+                app:chipStrokeWidth="1dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_signin_genre"
+                style="@style/CustomChipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/main_genre_7"
+                app:chipCornerRadius="100dp"
+                app:chipStrokeColor="@color/black"
+                app:chipStrokeWidth="1dp" />
+        </com.google.android.material.chip.ChipGroup>
+
+        <Button
+            android:id="@+id/btn_signin_complete"
+            android:layout_width="341dp"
+            android:layout_height="53dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="72dp"
+            android:backgroundTint="#FFA3C9E9"
+            android:text="회원가입 완료"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
