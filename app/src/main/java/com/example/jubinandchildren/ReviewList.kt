@@ -11,10 +11,10 @@ data class ReviewList(
     val reviewGenre: String, // 장르
     val reviewPrice: Int, // 가격
     val reviewRating: Float, // 별점
-    val reviewScreenShot1: Int, // 인게임 스크린샷
-    val reviewScreenShot2: Int,
-    val reviewScreenShot3: Int,
-    val reviewScreenShot4: Int,
-    val reviewScreenShot5: Int,
-    val reviewScreenShot6: Int
+    val reviewScreenShot1: Int?, // 인게임 스크린샷
+    val reviewScreenShot2: Int?,
+    val reviewScreenShot3: Int?,
+    val reviewScreenShot4: Int?,
+    val reviewScreenShot5: Int?,
+    val reviewScreenShot6: Int?
 )
