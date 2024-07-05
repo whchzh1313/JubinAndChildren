@@ -115,7 +115,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:textAlignment="center"
-                    style="@style/caption"/>
+                    style="@style/caption_b"/>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView

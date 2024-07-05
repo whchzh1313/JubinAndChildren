@@ -33,8 +33,8 @@ class MyPageActivity : AppCompatActivity() {
         val dpi = this.resources.displayMetrics.density
         val iv = findViewById<ImageView>(R.id.iv_mypage_profile_genre1)
         val tv = findViewById<TextView>(R.id.tv_mypage_profile_genre1)
-        tv.text = "로그\n라이크"
-        iv.setImageResource(R.drawable.mypage_test_image2)
+        tv.text = "슈팅"
+        iv.setImageResource(R.drawable.mypage_shooting)
 
         val bnv = findViewById<BottomNavigationView>(R.id.bnv_mypage)
         val gridView = findViewById<GridView>(R.id.gv_mypage_libraray)
@@ -49,7 +49,20 @@ class MyPageActivity : AppCompatActivity() {
 
         changeHeight(dpi, 1, linearLayout)
 
-        val idArray = resources.getStringArray(R.array.mypage_library_initial_data)
+        val stringArray = resources.getStringArray(R.array.mypage_library_genre)
+
+        val genrePhoto: Map<String, Int> = mapOf(
+            "슈팅" to R.drawable.mypage_test_image,
+            "오픈월드" to R.drawable.mypage_test_image,
+            "샌드박스" to R.drawable.mypage_test_image,
+            "서바이벌" to R.drawable.mypage_test_image,
+            "시뮬레이션" to R.drawable.mypage_test_image,
+            "퍼즐" to R.drawable.mypage_test_image,
+            "RPG" to R.drawable.mypage_test_image,
+            "액션" to R.drawable.mypage_test_image,
+        )
+
+        LibraryData.initData()
 
         bnv.setOnItemSelectedListener {
             when(it.itemId) {
