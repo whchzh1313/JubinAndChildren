@@ -14,7 +14,6 @@
             motion:touchAnchorId="@id/iv_d_background_game_image"
             motion:touchAnchorSide="bottom"/>
 
-
     </Transition>
 
     <ConstraintSet android:id="@id/start">
@@ -62,10 +61,8 @@
 
         <Constraint
             android:id="@id/tv_d_user_hashtag"
-            android:layout_width="0dp"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
-            motion:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="32dp"
             motion:layout_constraintTop_toBottomOf="@id/tv_d_user_recommend_game"
             android:layout_marginTop="8dp"
             motion:layout_constraintEnd_toEndOf="parent"
@@ -132,10 +129,8 @@
 
         <Constraint
             android:id="@id/tv_d_user_hashtag"
-            android:layout_width="0dp"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
-            motion:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="32dp"
             motion:layout_constraintTop_toBottomOf="@id/tv_d_hashtag"
             android:layout_marginTop="16dp"
             motion:layout_constraintEnd_toEndOf="parent"
