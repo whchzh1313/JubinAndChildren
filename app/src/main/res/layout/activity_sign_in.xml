@@ -8,218 +8,218 @@
     android:background="#FFFFFFFF"
     tools:context=".SignInActivity">
 
-<!--    <ImageView-->
-<!--        android:id="@+id/image_signin_view"-->
-<!--        android:layout_width="71dp"-->
-<!--        android:layout_height="35dp"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.094"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:layout_constraintVertical_bias="0.041"-->
-<!--        tools:srcCompat="@tools:sample/avatars" />-->
+    <ImageView
+        android:id="@+id/image_signin_view"
+        android:layout_width="71dp"
+        android:layout_height="35dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.094"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.041"
+        tools:srcCompat="@tools:sample/avatars" />
 
-<!--    <EditText-->
-<!--        android:id="@+id/text_signin_putname"-->
-<!--        android:layout_width="345dp"-->
-<!--        android:layout_height="45dp"-->
-<!--        android:layout_marginStart="32dp"-->
-<!--        android:layout_marginEnd="32dp"-->
-<!--        android:background="#FFBCBCBC"-->
-<!--        android:ems="10"-->
-<!--        android:hint="  이름"-->
-<!--        android:inputType="text"-->
-<!--        android:bottomLeftRadius="30dp"-->
-<!--        app:layout_constraintBottom_toTopOf="@+id/text_signin_putbirth"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/image_signin_view"-->
-<!--        app:layout_constraintVertical_bias="0.9" />-->
+    <EditText
+        android:id="@+id/text_signin_putname"
+        android:layout_width="345dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="#FFBCBCBC"
+        android:ems="10"
+        android:hint="  이름"
+        android:inputType="text"
+        android:bottomLeftRadius="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/text_signin_putbirth"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_signin_view"
+        app:layout_constraintVertical_bias="0.9" />
 
-<!--    <Button-->
-<!--        android:id="@+id/btn_signin_check_id"-->
-<!--        android:layout_width="123dp"-->
-<!--        android:layout_height="49dp"-->
-<!--        android:layout_marginEnd="32dp"-->
-<!--        android:layout_marginBottom="8dp"-->
-<!--        android:backgroundTint="#FFA3C9E9"-->
-<!--        android:text="중복확인"-->
-<!--        app:layout_constraintBottom_toTopOf="@+id/text_signin_putpw"-->
-<!--        app:layout_constraintEnd_toEndOf="parent" />-->
+    <Button
+        android:id="@+id/btn_signin_check_id"
+        android:layout_width="123dp"
+        android:layout_height="49dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="#FFA3C9E9"
+        android:text="중복확인"
+        app:layout_constraintBottom_toTopOf="@+id/text_signin_putpw"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-<!--    <EditText-->
-<!--        android:id="@+id/text_signin_putid"-->
-<!--        android:layout_width="219dp"-->
-<!--        android:layout_height="45dp"-->
-<!--        android:layout_marginStart="32dp"-->
-<!--        android:layout_marginTop="8dp"-->
-<!--        android:layout_marginBottom="8dp"-->
-<!--        android:background="#FFBCBCBC"-->
-<!--        android:ems="10"-->
-<!--        android:hint="  아이디"-->
-<!--        android:inputType="text"-->
-<!--        app:layout_constraintBottom_toTopOf="@+id/text_signin_putpw"-->
-<!--        app:layout_constraintEnd_toStartOf="@+id/btn_signin_check_id"-->
-<!--        app:layout_constraintHorizontal_bias="0.0"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/text_signin_putbirth"-->
-<!--        app:layout_constraintVertical_bias="1.0" />-->
+    <EditText
+        android:id="@+id/text_signin_putid"
+        android:layout_width="219dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#FFBCBCBC"
+        android:ems="10"
+        android:hint="  아이디"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/text_signin_putpw"
+        app:layout_constraintEnd_toStartOf="@+id/btn_signin_check_id"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_signin_putbirth"
+        app:layout_constraintVertical_bias="1.0" />
 
-<!--    <EditText-->
-<!--        android:id="@+id/text_signin_putpw_check"-->
-<!--        android:layout_width="347dp"-->
-<!--        android:layout_height="53dp"-->
-<!--        android:layout_marginStart="32dp"-->
-<!--        android:layout_marginEnd="32dp"-->
-<!--        android:layout_marginBottom="180dp"-->
-<!--        android:background="#FFBCBCBC"-->
-<!--        android:ems="10"-->
-<!--        android:hint="  비밀번호 확인"-->
-<!--        android:inputType="text"-->
-<!--        app:layout_constraintBottom_toTopOf="@+id/btn_signin_complete"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="1.0"-->
-<!--        app:layout_constraintStart_toStartOf="parent" />-->
+    <EditText
+        android:id="@+id/text_signin_putpw_check"
+        android:layout_width="347dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="180dp"
+        android:background="#FFBCBCBC"
+        android:ems="10"
+        android:hint="  비밀번호 확인"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/btn_signin_complete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
-<!--    <EditText-->
-<!--        android:id="@+id/text_signin_putbirth"-->
-<!--        android:layout_width="203dp"-->
-<!--        android:layout_height="48dp"-->
-<!--        android:layout_marginTop="180dp"-->
-<!--        android:layout_marginEnd="32dp"-->
-<!--        android:background="#FFBCBCBC"-->
-<!--        android:ems="10"-->
-<!--        android:hint="  YYYY-MM-DD"-->
-<!--        android:inputType="text"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="1.0"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
+    <EditText
+        android:id="@+id/text_signin_putbirth"
+        android:layout_width="203dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="180dp"
+        android:layout_marginEnd="32dp"
+        android:background="#FFBCBCBC"
+        android:ems="10"
+        android:hint="  YYYY-MM-DD"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-<!--    <EditText-->
-<!--        android:id="@+id/text_signin_putpw"-->
-<!--        android:layout_width="347dp"-->
-<!--        android:layout_height="50dp"-->
-<!--        android:layout_marginStart="32dp"-->
-<!--        android:layout_marginTop="8dp"-->
-<!--        android:layout_marginEnd="32dp"-->
-<!--        android:layout_marginBottom="8dp"-->
-<!--        android:background="#FFBCBCBC"-->
-<!--        android:ems="10"-->
-<!--        android:hint="  비밀번호"-->
-<!--        android:inputType="text"-->
-<!--        app:layout_constraintBottom_toTopOf="@+id/text_signin_putpw_check"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="1.0"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/text_signin_putbirth"-->
-<!--        app:layout_constraintVertical_bias="1.0" />-->
+    <EditText
+        android:id="@+id/text_signin_putpw"
+        android:layout_width="347dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="8dp"
+        android:background="#FFBCBCBC"
+        android:ems="10"
+        android:hint="  비밀번호"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/text_signin_putpw_check"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_signin_putbirth"
+        app:layout_constraintVertical_bias="1.0" />
 
-<!--    <LinearLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:orientation="horizontal"-->
-<!--        android:layout_below=""-->
-<!--        android:id="@+id/Daychoice"-->
-<!--        >-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below=""
+        android:id="@+id/Daychoice"
+        >
 
-<!--    </LinearLayout>-->
+    </LinearLayout>
 
-<!--    <Button-->
-<!--        android:id="@+id/btn_signin_complete"-->
-<!--        android:layout_width="341dp"-->
-<!--        android:layout_height="53dp"-->
-<!--        android:layout_marginStart="32dp"-->
-<!--        android:layout_marginEnd="32dp"-->
-<!--        android:backgroundTint="#FFA3C9E9"-->
-<!--        android:text="회원가입 완료"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:layout_constraintVertical_bias="0.862" />-->
+    <Button
+        android:id="@+id/btn_signin_complete"
+        android:layout_width="341dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="#FFA3C9E9"
+        android:text="회원가입 완료"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.862" />
 
-<!--    <com.google.android.material.chip.Chip-->
-<!--        android:id="@+id/chip_signin_genre5"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        tools:layout_editor_absoluteX="298dp"-->
-<!--        tools:layout_editor_absoluteY="444dp" />-->
+    <com.google.android.material.chip.Chip
+        android:id="@+id/chip_signin_genre5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="298dp"
+        tools:layout_editor_absoluteY="444dp" />
 
-<!--    <com.google.android.material.chip.Chip-->
-<!--        android:id="@+id/chip_signin_genre3"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginEnd="8dp"-->
-<!--        app:layout_constraintEnd_toStartOf="@+id/chip_signin_genre4"-->
-<!--        tools:layout_editor_absoluteY="444dp" />-->
+    <com.google.android.material.chip.Chip
+        android:id="@+id/chip_signin_genre3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/chip_signin_genre4"
+        tools:layout_editor_absoluteY="444dp" />
 
-<!--    <com.google.android.material.chip.Chip-->
-<!--        android:id="@+id/chip_signin_genre2"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginEnd="8dp"-->
-<!--        app:layout_constraintEnd_toStartOf="@+id/chip_signin_genre3"-->
-<!--        tools:layout_editor_absoluteY="444dp" />-->
+    <com.google.android.material.chip.Chip
+        android:id="@+id/chip_signin_genre2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/chip_signin_genre3"
+        tools:layout_editor_absoluteY="444dp" />
 
-<!--    <com.google.android.material.chip.Chip-->
-<!--        android:id="@+id/chip_signin_genre1"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginEnd="8dp"-->
-<!--        app:layout_constraintEnd_toStartOf="@+id/chip_signin_genre2"-->
-<!--        tools:layout_editor_absoluteY="444dp" />-->
+    <com.google.android.material.chip.Chip
+        android:id="@+id/chip_signin_genre1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/chip_signin_genre2"
+        tools:layout_editor_absoluteY="444dp" />
 
-<!--    <com.google.android.material.chip.Chip-->
-<!--        android:id="@+id/chip_signin_genre4"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginEnd="4dp"-->
-<!--        app:layout_constraintEnd_toStartOf="@+id/chip_signin_genre5"-->
-<!--        tools:layout_editor_absoluteY="444dp" />-->
+    <com.google.android.material.chip.Chip
+        android:id="@+id/chip_signin_genre4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintEnd_toStartOf="@+id/chip_signin_genre5"
+        tools:layout_editor_absoluteY="444dp" />
 
-<!--    <com.google.android.material.chip.Chip-->
-<!--        android:id="@+id/chip_signin_genre7"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        tools:layout_editor_absoluteX="134dp"-->
-<!--        tools:layout_editor_absoluteY="505dp" />-->
+    <com.google.android.material.chip.Chip
+        android:id="@+id/chip_signin_genre7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="134dp"
+        tools:layout_editor_absoluteY="505dp" />
 
-<!--    <com.google.android.material.chip.Chip-->
-<!--        android:id="@+id/chip_signin_genre6"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        tools:layout_editor_absoluteX="78dp"-->
-<!--        tools:layout_editor_absoluteY="505dp" />-->
+    <com.google.android.material.chip.Chip
+        android:id="@+id/chip_signin_genre6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="78dp"
+        tools:layout_editor_absoluteY="505dp" />
 
 
-<!--    <com.google.android.material.button.MaterialButtonToggleGroup-->
-<!--        android:id="@+id/toggle_button_group"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        tools:layout_editor_absoluteX="32dp"-->
-<!--        tools:layout_editor_absoluteY="180dp">-->
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/toggle_button_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="180dp">
 
-<!--        <com.google.android.material.button.MaterialButton-->
-<!--            style=""-->
-<!--            android:layout_width="69dp"-->
-<!--            android:layout_height="match_parent"-->
-<!--            android:text="남자"-->
-<!--            android:backgroundTint="#FFA3C9E9"-->
-<!--            tools:layout_editor_absoluteX="24dp"-->
-<!--            tools:layout_editor_absoluteY="100dp" />-->
+        <com.google.android.material.button.MaterialButton
+            style=""
+            android:layout_width="69dp"
+            android:layout_height="match_parent"
+            android:text="남자"
+            android:backgroundTint="#FFA3C9E9"
+            tools:layout_editor_absoluteX="24dp"
+            tools:layout_editor_absoluteY="100dp" />
 
-<!--        <com.google.android.material.button.MaterialButton-->
-<!--            style=""-->
-<!--            android:layout_width="69dp"-->
-<!--            android:layout_height="match_parent"-->
-<!--            android:text="여자"-->
-<!--            android:backgroundTint="#FFD4E2ED"-->
-<!--            tools:layout_editor_absoluteX="98dp"-->
-<!--            tools:layout_editor_absoluteY="100dp" />-->
+        <com.google.android.material.button.MaterialButton
+            style=""
+            android:layout_width="69dp"
+            android:layout_height="match_parent"
+            android:text="여자"
+            android:backgroundTint="#FFD4E2ED"
+            tools:layout_editor_absoluteX="98dp"
+            tools:layout_editor_absoluteY="100dp" />
 
-<!--    </com.google.android.material.button.MaterialButtonToggleGroup>-->
+    </com.google.android.material.button.MaterialButtonToggleGroup>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
