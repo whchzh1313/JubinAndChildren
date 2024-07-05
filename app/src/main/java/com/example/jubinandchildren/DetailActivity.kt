@@ -163,12 +163,12 @@ class DetailActivity : AppCompatActivity() {
 
 
                 when (currentId){
-                    2131296442-> {
+                    R.id.start-> {
+                        userHashtag.maxLines = Int.MAX_VALUE
+                    }
+                    R.id.end -> {
                         userHashtag.maxLines = 1
                         userHashtag.ellipsize = TextUtils.TruncateAt.END
-                    }
-                    2131296750 -> {
-                        userHashtag.maxLines = Int.MAX_VALUE
                     }
                 }
                 Log.d("currentId", ": $currentId")
