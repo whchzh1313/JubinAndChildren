@@ -48,6 +48,7 @@
         <item name="android:textSize">12sp</item>
         <item name="android:textFontWeight">400</item>
     </style>
+
     <style name="CustomChipStyle" parent="Widget.MaterialComponents.Chip.Filter">
         <item name="chipBackgroundColor">@color/chip_bg_color</item>
         <item name="android:textColor">@color/chip_text_color</item>
