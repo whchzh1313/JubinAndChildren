@@ -30,6 +30,7 @@ class MyPageActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        val dpi = this.resources.displayMetrics.density
         val iv = findViewById<ImageView>(R.id.iv_mypage_profile_genre1)
         val tv = findViewById<TextView>(R.id.tv_mypage_profile_genre1)
         tv.text = "로그\n라이크"
@@ -40,19 +41,13 @@ class MyPageActivity : AppCompatActivity() {
         val linearLayout = findViewById<LinearLayout>(R.id.linearlayout_mypage_library)
         val adapter = MyPageGridAdapter(this, linearLayout)
 
-
-
-        adapter.initItem()
-
         bnv.selectedItemId = R.id.profile
 
+        adapter.initItem()
         gridView.isVerticalScrollBarEnabled = false
-
-        val dpi = this.resources.displayMetrics.density
+        gridView.adapter = adapter
 
         changeHeight(dpi, 1, linearLayout)
-
-        gridView.adapter = adapter
 
         bnv.setOnItemSelectedListener {
             when(it.itemId) {
@@ -72,6 +67,4 @@ class MyPageActivity : AppCompatActivity() {
             }
         }
     }
-
-
 }

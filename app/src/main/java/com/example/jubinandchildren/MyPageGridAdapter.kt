@@ -20,86 +20,11 @@ class MyPageGridAdapter(private val context: Context, private val linear: Linear
 
     private var queue: Queue<MyPageGridViewItem> = LinkedList()
 
-    val blackImage = MyPageGridViewItem(R.drawable.mypage_background_black, "")
+    val blackImage = MyPageGridViewItem(R.drawable.mypage_background_black)
 
     /*TODO 추후 삭제. 현재는 자료 대신 사용할 테스트용*/
     private val itemList: List<MyPageGridViewItem> = listOf(
-        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image2, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image2, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image2, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image2, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image2, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image2, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image2, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image2, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image2, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image2, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image2, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image2, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image2, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image2, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image2, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image2, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
+        MyPageGridViewItem(R.drawable.mypage_test_image),
     )
 
     fun initItem() {
@@ -122,7 +47,7 @@ class MyPageGridAdapter(private val context: Context, private val linear: Linear
         addEmptyItem(n)
     }
 
-    fun addEmptyItem(num: Int) {
+    private fun addEmptyItem(num: Int) {
         repeat(3 - if(num % 3 == 0) 3 else num % 3) {
             gridItems += blackImage
         }
@@ -138,7 +63,6 @@ class MyPageGridAdapter(private val context: Context, private val linear: Linear
         val dpi = context.resources.displayMetrics.density
 
         imageView.setImageResource(gridItems[position].image)
-        textView.text = gridItems[position].more
 
         if( next < itemList.size && ( position == next && ((next - 2) % 15 == 0) || (position == 2 && next == 2) ) ) {
             imageView.setColorFilter(Color.parseColor("#7f222222"))
