@@ -74,6 +74,8 @@ class SignInActivity : AppCompatActivity() {
             }
         }
 
+
+        //칩 최대 3개까지 선택 가능하게
         checkedChipIds = mutableListOf()
         val firstChip = R.id.chip_signin_genre1
         signin_genre.setOnCheckedStateChangeListener { group, checkedIds ->
@@ -96,8 +98,6 @@ class SignInActivity : AppCompatActivity() {
         }
 
         //회원가입 버튼 눌렀을 때
-
-
         // 조건 : 모든 정보가 기입 되어야 함, 비밀번호와 비밀번호 체크가 동일, 아이디 중복 확인이 통과된 상태에서 끝나야함
         btn_signup.setOnClickListener {
             if (signin_name.text.isEmpty()) {
@@ -126,12 +126,14 @@ class SignInActivity : AppCompatActivity() {
                     checkedChipIds
                 )
                 userDataList.userList[signin_id.text.toString()] = userData
+
+                Toast.makeText(this, "회원가입이 완료되었습니다.", Toast.LENGTH_SHORT).show()
+
                 val intent = Intent(this, LogInActivity::class.java)
                 intent.putExtra("userData", userData)
             }
+            setResult(RESULT_OK, intent)
+            finish()
         }
-        //칩 최대 3개까지 선택 가능하게
-
-
     }
 }
