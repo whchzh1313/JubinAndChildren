@@ -9,12 +9,13 @@
     android:orientation="vertical"
     tools:context=".MyPageActivity">
 
+    <!-- 프로필 -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintlayout_mypage_profile"
         android:layout_width="match_parent"
         android:layout_height="180dp"
         android:background="@drawable/mypage_test_image"
-        android:backgroundTint="#80F6F6F6"
+        android:backgroundTint="#80000000"
         android:backgroundTintMode="src_atop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -62,11 +63,11 @@
         <TextView
             android:id="@+id/tv_mypage_name"
             style="@style/body_b"
+            android:textColor="@color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginTop="32dp"
-            android:background="@drawable/mypage_profile_text_background"
             android:text="@string/mypage_profile_name"
             app:layout_constraintStart_toEndOf="@id/fl_mypage_profile"
             app:layout_constraintTop_toTopOf="parent" />
@@ -74,11 +75,11 @@
         <TextView
             android:id="@+id/tv_mypage_description"
             style="@style/caption"
+            android:textColor="@color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginTop="8dp"
-            android:background="@drawable/mypage_profile_text_background"
             android:text="@string/mypage_profile_description"
             app:layout_constraintStart_toEndOf="@id/fl_mypage_profile"
             app:layout_constraintTop_toBottomOf="@id/tv_mypage_name" />
@@ -105,7 +106,7 @@
                     android:scaleType="centerCrop"
                     android:src="@drawable/mypage_test_image"
                     android:tintMode="src_atop"
-                    app:tint="#80000000" />
+                    app:tint="#80D1D1D1" />
 
                 <TextView
                     android:id="@+id/tv_mypage_profile_genre1"
@@ -130,7 +131,7 @@
                     android:scaleType="centerCrop"
                     android:src="@drawable/mypage_test_image"
                     android:tintMode="src_atop"
-                    app:tint="#80000000" />
+                    app:tint="#80D1D1D1" />
 
                 <TextView
                     android:id="@+id/tv_mypage_profile_genre2"
@@ -154,7 +155,7 @@
                     android:scaleType="centerCrop"
                     android:src="@drawable/mypage_test_image"
                     android:tintMode="src_atop"
-                    app:tint="#80000000" />
+                    app:tint="#80D1D1D1" />
 
                 <TextView
                     android:id="@+id/tv_mypage_profile_genre3"
@@ -198,7 +199,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-                <!-- 프로필 -->
 
                 <!-- 게임 픽 -->
                 <LinearLayout

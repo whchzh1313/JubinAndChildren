@@ -12,6 +12,7 @@
         android:id="@+id/image_signin_view"
         android:layout_width="71dp"
         android:layout_height="35dp"
+        app:layout_constraintHeight_percent="0.5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.094"
@@ -27,15 +28,16 @@
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
         android:background="#FFBCBCBC"
+        android:bottomLeftRadius="30dp"
         android:ems="10"
         android:hint="  이름"
         android:inputType="text"
-        android:bottomLeftRadius="30dp"
         app:layout_constraintBottom_toTopOf="@+id/text_signin_putbirth"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/image_signin_view"
-        app:layout_constraintVertical_bias="0.9" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/btn_signin_check_id"
@@ -116,15 +118,15 @@
         app:layout_constraintTop_toBottomOf="@+id/text_signin_putbirth"
         app:layout_constraintVertical_bias="1.0" />
 
-<!--    <LinearLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:orientation="horizontal"-->
-<!--        android:layout_below=""-->
-<!--        android:id="@+id/Daychoice"-->
-<!--        >-->
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:orientation="horizontal"-->
+    <!--        android:layout_below=""-->
+    <!--        android:id="@+id/Daychoice"-->
+    <!--        >-->
 
-<!--    </LinearLayout>-->
+    <!--    </LinearLayout>-->
 
     <Button
         android:id="@+id/btn_signin_complete"
@@ -194,32 +196,36 @@
         tools:layout_editor_absoluteY="505dp" />
 
 
-    <com.google.android.material.button.MaterialButtonToggleGroup
+    <RadioGroup
         android:id="@+id/toggle_button_group"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="horizontal"
         tools:layout_editor_absoluteX="32dp"
         tools:layout_editor_absoluteY="180dp">
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/tt1"
             style=""
             android:layout_width="69dp"
             android:layout_height="match_parent"
-            android:text="남자"
             android:backgroundTint="#FFA3C9E9"
+            android:text="남자"
             tools:layout_editor_absoluteX="24dp"
             tools:layout_editor_absoluteY="100dp" />
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/tt2"
             style=""
             android:layout_width="69dp"
             android:layout_height="match_parent"
-            android:text="여자"
             android:backgroundTint="#FFD4E2ED"
+            android:text="여자"
             tools:layout_editor_absoluteX="98dp"
             tools:layout_editor_absoluteY="100dp" />
 
-    </com.google.android.material.button.MaterialButtonToggleGroup>
-
+    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

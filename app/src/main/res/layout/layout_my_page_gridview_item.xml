@@ -21,6 +21,9 @@
         android:layout_gravity="center"
         android:textAlignment="center"
         android:text=""
-        style="@style/body"/>
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:letterSpacing="0.2"
+        />
 
 </FrameLayout>

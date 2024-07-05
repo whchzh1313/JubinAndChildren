@@ -41,7 +41,8 @@ class MyPageGridAdapter(private val context: Context, private val linear: Linear
         MyPageGridViewItem(R.drawable.mypage_test_image2, ""),
         MyPageGridViewItem(R.drawable.mypage_test_image, ""),
         MyPageGridViewItem(R.drawable.mypage_test_image, ""),
-        MyPageGridViewItem(R.drawable.mypage_test_image2, ""),
+        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
+        MyPageGridViewItem(R.drawable.mypage_test_image, ""),
     )
 
     fun initItem() {
@@ -82,10 +83,9 @@ class MyPageGridAdapter(private val context: Context, private val linear: Linear
         imageView.setImageResource(gridItems[position].image)
         textView.text = gridItems[position].more
 
-        if( ( position == next && ((next - 2) % 15 == 0) || (position == 2 && next == 2) ) ) {
+        if( next < itemList.size && ( position == next && ((next - 2) % 15 == 0) || (position == 2 && next == 2) ) ) {
             imageView.setColorFilter(Color.parseColor("#7f222222"))
-            textView.text = "더보기+"
-            textView.setTextColor(Color.RED)
+            textView.text = "더보기"
             layout.setOnClickListener {
                 moreItem()
                 changeHeight(dpi, gridItems.size / 3 + if(gridItems.size % 3 != 0) 1 else 0, linear)
