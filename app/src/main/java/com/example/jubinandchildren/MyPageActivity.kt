@@ -49,6 +49,8 @@ class MyPageActivity : AppCompatActivity() {
 
         changeHeight(dpi, 1, linearLayout)
 
+        val idArray = resources.getStringArray(R.array.mypage_library_initial_data)
+
         bnv.setOnItemSelectedListener {
             when(it.itemId) {
                 R.id.home -> {

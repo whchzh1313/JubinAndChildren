@@ -33,4 +33,7 @@
     <string name="mypage_game_pick_name">게임 이름</string>
     <string name="mypage_game_pick_hashtag">해시태그</string>
     <string name="mypage_library_title">라이브러리</string>
+    <string-array name="mypage_library_initial_data">
+        <item>a4cross072</item>
+    </string-array>
 </resources>
