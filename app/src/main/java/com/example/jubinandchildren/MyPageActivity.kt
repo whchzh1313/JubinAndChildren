@@ -2,22 +2,15 @@ package com.example.jubinandchildren
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.DisplayMetrics
-import android.view.View
-import android.view.ViewGroup
-import android.widget.Adapter
 import android.widget.GridView
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.LinearLayoutCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.android.material.button.MaterialButtonToggleGroup
 
 class MyPageActivity : AppCompatActivity() {
 
@@ -34,7 +27,7 @@ class MyPageActivity : AppCompatActivity() {
         val iv = findViewById<ImageView>(R.id.iv_mypage_profile_genre1)
         val tv = findViewById<TextView>(R.id.tv_mypage_profile_genre1)
         tv.text = "슈팅"
-        iv.setImageResource(R.drawable.mypage_shooting)
+        iv.setImageResource(R.drawable.mypage_library_shooting)
 
         val bnv = findViewById<BottomNavigationView>(R.id.bnv_mypage)
         val gridView = findViewById<GridView>(R.id.gv_mypage_libraray)
@@ -51,16 +44,16 @@ class MyPageActivity : AppCompatActivity() {
 
         val stringArray = resources.getStringArray(R.array.mypage_library_genre)
 
-        val genrePhoto: Map<String, Int> = mapOf(
-            "슈팅" to R.drawable.mypage_test_image,
-            "오픈월드" to R.drawable.mypage_test_image,
-            "샌드박스" to R.drawable.mypage_test_image,
-            "서바이벌" to R.drawable.mypage_test_image,
-            "시뮬레이션" to R.drawable.mypage_test_image,
-            "퍼즐" to R.drawable.mypage_test_image,
-            "RPG" to R.drawable.mypage_test_image,
-            "액션" to R.drawable.mypage_test_image,
-        )
+        val genrePhoto: MutableMap<String, Int> =
+            mutableMapOf(
+                stringArray[0] to R.drawable.mypage_library_action,
+                stringArray[1] to R.drawable.mypage_library_shooting,
+                stringArray[2] to R.drawable.mypage_library_adventure,
+                stringArray[3] to R.drawable.mypage_library_simulation,
+                stringArray[4] to R.drawable.mypage_library_roleplaying,
+                stringArray[5] to R.drawable.mypage_library_puzzle,
+                stringArray[6] to R.drawable.mypage_library_music,
+            )
 
         LibraryData.initData()
 

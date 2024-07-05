@@ -36,13 +36,12 @@
     <string name="mypage_library_title">라이브러리</string>
 
     <string-array name="mypage_library_genre">
-        <item>슈팅</item>
-        <item>오픈월드</item>
-        <item>샌드박스</item>
-        <item>서바이벌</item>
-        <item>시뮬레이션</item>
-        <item>퍼즐</item>
-        <item>RPG</item>
         <item>액션</item>
+        <item>슈팅</item>
+        <item>어드벤처</item>
+        <item>시뮬레이션</item>
+        <item>롤플레잉</item>
+        <item>퍼즐</item>
+        <item>음악</item>
     </string-array>
 </resources>

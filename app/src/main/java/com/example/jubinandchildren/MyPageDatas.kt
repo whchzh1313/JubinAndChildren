@@ -1,6 +1,22 @@
 package com.example.jubinandchildren
 
-data class MyPageData(val genres: Array<String>, val gamePicks: Array<String>, val libraryPicturesIds: Int)
+data class MyPageData(
+    val profile: Profile,
+    val genres: Map<String, Int>,
+    val gamePicks: GamePick,
+    val libraryPicturesIds: Array<Int>
+)
+
+data class Profile(
+    val name: String,
+    val description: String,
+    val image: Int,
+)
+data class GamePick(
+    val title: String,
+    val description: String,
+    val image: Int
+)
 
 object LibraryData {
     private val myPageLibraryData: MutableMap<String, ArrayList<MyPageData>> = mutableMapOf()
@@ -8,8 +24,12 @@ object LibraryData {
 
     fun initData() {
         if(!isDataInitialized) {
-            myPageLibraryData["a4cross072"] =
-                arrayListOf ( MyPageData(arrayOf("dwdw"), arrayOf("dwqq"), 1) )
+            myPageLibraryData["orinugoori9"] =
+                arrayListOf (
+                    MyPageData(
+
+                    )
+                )
             isDataInitialized = true
         } else {
             println("이미 초기화됨")
