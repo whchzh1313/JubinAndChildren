@@ -23,63 +23,55 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="4dp"
         android:background="@drawable/input_large"
         android:backgroundTint="@color/gray"
         android:ems="10"
         android:hint="  아이디"
         android:inputType="text"
-        app:layout_constraintBottom_toTopOf="@+id/text_login_putpw"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewpager_login_introduce" />
 
     <Button
         android:id="@+id/btn_login_login"
         android:layout_width="170dp"
         android:layout_height="47dp"
-        android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:backgroundTint="#FFA3C9E9"
         android:text="로그인"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btn_login_signin"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_login_putpw"
-        app:layout_constraintVertical_bias="0.095" />
+        app:layout_constraintStart_toStartOf="@+id/text_login_putid"
+        app:layout_constraintTop_toBottomOf="@+id/text_login_putpw" />
 
     <Button
         android:id="@+id/btn_login_signin"
         android:layout_width="165dp"
         android:layout_height="47dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
         android:backgroundTint="#FFD4E2ED"
         android:text="회원가입"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_login_putpw"
-        app:layout_constraintVertical_bias="0.095" />
+        app:layout_constraintEnd_toEndOf="@+id/text_login_putid"
+        app:layout_constraintTop_toBottomOf="@+id/text_login_putpw" />
 
     <EditText
         android:id="@+id/text_login_putpw"
         android:layout_width="346dp"
         android:layout_height="47dp"
-        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/input_large"
         android:backgroundTint="@color/gray"
         android:ems="10"
         android:hint="  비밀번호"
         android:inputType="numberPassword"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/text_login_putid"
         app:layout_constraintHorizontal_bias="0.0"
-
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="422dp" />
+        app:layout_constraintStart_toStartOf="@+id/text_login_putid"
+        app:layout_constraintTop_toBottomOf="@+id/text_login_putid" />
 
     <ImageView
         android:id="@+id/image_login_view"
@@ -88,12 +80,8 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:tint="#FFA3C9E9"
-        app:layout_constraintBottom_toTopOf="@+id/text_login_putid"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/icon_image"
         tools:ignore="UseAppTint"
         tools:src="@tools:sample/avatars" />

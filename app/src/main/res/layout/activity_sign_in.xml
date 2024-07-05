@@ -187,7 +187,6 @@
 
         <com.google.android.material.chip.ChipGroup
             android:id="@+id/chip_si"
-            style="@style/Widget.MaterialComponents.Chip.Choice"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
@@ -196,7 +195,8 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.4">
+            app:singleSelection="false"
+            app:selectionRequired="false">
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chip_signin_genre1"
