@@ -18,6 +18,7 @@ import androidx.constraintlayout.motion.widget.MotionLayout
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.transition.Transition.TransitionListener
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import org.w3c.dom.Text
 
 class DetailActivity : AppCompatActivity() {
@@ -55,6 +56,31 @@ class DetailActivity : AppCompatActivity() {
         val userIndex = intent.getIntExtra("index", 0)
 
         val ReviewList = getReviewList().get(userIndex)
+
+        val navigation = findViewById<BottomNavigationView>(R.id.d_navigation)
+
+        navigation.setOnNavigationItemSelectedListener(){
+            when(it.itemId){
+                R.id.home -> {
+                    val homeIntent = Intent(this,MainActivity::class.java)
+                    startActivity(homeIntent)
+                    true
+                }
+                R.id.search -> {
+                    val searchIntent = Intent(this,EventActivity::class.java)
+                    startActivity(searchIntent)
+                    true
+                }
+                R.id.profile -> {
+                    val profileIntent = Intent(this,MyPageActivity::class.java)
+                    startActivity(profileIntent)
+                    true
+                }
+                else -> {
+                    false
+                }
+            }
+        }
 
         //각 요소들에 ReviewList에서 가져온 정보 넣어주기
         backgroundImage.setImageResource(ReviewList.imageName)
