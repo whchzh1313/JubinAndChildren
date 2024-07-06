@@ -40,7 +40,6 @@
     <string name="mypage_library_title">라이브러리</string>
 >>>>>>> 8f5ed606037cd89dcbbe6395c5a082cb49030769
 
-
     <!-- 디테일 액티비티(김현지) 내부 언어셋-->
     <string name="user_name">UserName</string>
     <string name="_user_name">testName</string>
@@ -119,5 +118,4 @@
 
         <string name="recommand_title_cities">Cities:SkyLine</string>
         <string name="recommand_tag_cities">#Management</string>
-
 </resources>
