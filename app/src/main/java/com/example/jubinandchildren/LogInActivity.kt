@@ -32,10 +32,7 @@ class LogInActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_login)
-<<<<<<< HEAD
-=======
-        println("우와~")
->>>>>>> ef48e8fa73b52e51ebfe4bf3c0d457cf7edbdbb7
+
 
         val btn_login = findViewById<Button>(R.id.btn_login_login)
         val btn_signin = findViewById<Button>(R.id.btn_login_signin)
