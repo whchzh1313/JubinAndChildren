@@ -175,7 +175,10 @@ class DetailActivity : AppCompatActivity() {
         }
 
         userNameRating.setOnClickListener {
+            val reviewerId = ReviewList.id
 
+            val myPageIntent = Intent(this,MyPageActivity::class.java)
+            myPageIntent.putExtra("reviewerId",reviewerId)
         }
 
         //스팀페이지로 이동
