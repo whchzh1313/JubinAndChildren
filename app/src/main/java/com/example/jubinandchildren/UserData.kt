@@ -13,6 +13,7 @@ data class UserData(
     val userGenre: MutableList<Int?>
 ):Parcelable
 
+
 object userDataList {
     val userList: MutableMap<String, UserData> = mutableMapOf()
 }
