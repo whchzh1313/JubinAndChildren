@@ -150,7 +150,7 @@ object MyPageDataObject {
 
 }
 
-val genre = arrayOf("액션","슈팅","어드벤쳐","시뮬레이션","롤플레잉","퍼즐","음악","")
+val genre = arrayOf("액션","슈팅","어드벤처","시뮬레이션","롤플레잉","퍼즐","음악","")
 val genrePhoto: Map<String, Int> =
     mapOf(
         "액션" to R.drawable.mypage_library_action,
