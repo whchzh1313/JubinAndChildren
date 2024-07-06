@@ -58,7 +58,7 @@
 
     <TextView
         android:id="@+id/tv_d_user_recommend_game"
-        style="@style/subtitle_b"
+        style="@style/headline_b"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -80,11 +80,13 @@
 
     <TextView
         android:id="@+id/tv_d_user_hashtag"
-        style="@style/subtitle_b"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="@string/_hashtag"
+        android:fontFamily="@font/pretendard"
+        android:textSize="24sp"
+        android:textFontWeight="700"
         android:gravity="right"
         android:maxLines="3"
         android:textColor="@color/white"
@@ -93,11 +95,13 @@
 
     <TextView
         android:id="@+id/tv_d_price"
-        style="@style/headline_b"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
         android:text="@string/price"
+        android:fontFamily="@font/pretendard"
+        android:textSize="36sp"
+        android:textFontWeight="700"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="@id/tv_d_recommend_game"
         app:layout_constraintTop_toBottomOf="@id/tv_d_user_hashtag"/>
