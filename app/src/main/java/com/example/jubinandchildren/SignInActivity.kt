@@ -81,7 +81,7 @@ class SignInActivity : AppCompatActivity() {
         var isChecked: Boolean? = null
 
         signin_id_check.setOnClickListener {
-            if (signin_id.text.toString() in userDataList.userList) {
+            if (signin_id.text.toString() in UserDataList.userList) {
                 Toast.makeText(this, "이미 존재하는 아이디입니다.", Toast.LENGTH_SHORT).show()
                 isChecked = false
             } else {
@@ -96,6 +96,7 @@ class SignInActivity : AppCompatActivity() {
         val firstChip = R.id.chip_signin_genre1
         signin_genre.setOnCheckedStateChangeListener{ group, checkedIds ->
             val list: List<Int> = (0..6).filter { firstChip + it !in checkedIds }
+            checkedChipIds = checkedIds
             if (checkedIds.size > 2) {
                 list.forEach {
                     findViewById<Chip>(firstChip + it).isEnabled = false
@@ -107,7 +108,7 @@ class SignInActivity : AppCompatActivity() {
                 list.forEach {
                     findViewById<Chip>(firstChip + it).isEnabled = true
                 }
-                checkedChipIds = checkedIds
+
 //                Log.d("checked", "testElse${checkedChipIds.size}")
 //                Log.d("checked", "testElse$checkedChipIds")
             }
@@ -129,7 +130,7 @@ class SignInActivity : AppCompatActivity() {
                 Toast.makeText(this, "비밀번호와 비밀번호 확인이 서로 다릅니다.", Toast.LENGTH_SHORT).show()
             } else if (isChecked == false || isChecked == null) {
                 Toast.makeText(this, "아이디 중복 확인을 다시 해주세요.", Toast.LENGTH_SHORT).show()
-            } else if (checkedChipIds.size != 2) {
+            } else if (checkedChipIds.size != 3) {
                 Toast.makeText(this, "3가지의 장르를 선택해주세요.", Toast.LENGTH_SHORT).show()
                 Log.d("checked", "$checkedChipIds")
             } else {
@@ -139,9 +140,10 @@ class SignInActivity : AppCompatActivity() {
                     b_toggle,
                     np_value,
                     signin_pw.text.toString(),
-                    checkedChipIds
+                    checkedChipIds.map { it!! - firstChip }.toMutableList()
                 )
-                userDataList.userList[signin_id.text.toString()] = userData
+                UserDataList.userList[signin_id.text.toString()] = userData
+                UserDataList.id = signin_id.text.toString()
                 Toast.makeText(this, "회원가입이 완료되었습니다.", Toast.LENGTH_SHORT).show()
                 val intent = Intent(this, LogInActivity::class.java)
                 intent.putExtra("userData", userData)

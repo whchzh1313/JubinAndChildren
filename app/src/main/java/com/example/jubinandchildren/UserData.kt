@@ -14,6 +14,7 @@ data class UserData(
 ):Parcelable
 
 
-object userDataList {
+object UserDataList {
     val userList: MutableMap<String, UserData> = mutableMapOf()
+    var id = ""
 }

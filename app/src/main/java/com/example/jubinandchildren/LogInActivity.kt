@@ -58,8 +58,8 @@ class LogInActivity : AppCompatActivity() {
         btn_login.setOnClickListener {
             if (login_text_id.text.toString().trim().isEmpty() || login_text_pw.text.trim().isEmpty()) {
                 Toast.makeText(this, "아이디 또는 비밀번호를 입력해주세요.", Toast.LENGTH_SHORT).show()
-            } else if (login_text_id.text.toString() in userDataList.userList) {
-                if (userDataList.userList[login_text_id.text.toString()]?.userPw == login_text_pw.text.toString()) {
+            } else if (login_text_id.text.toString() in UserDataList.userList) {
+                if (UserDataList.userList[login_text_id.text.toString()]?.userPw == login_text_pw.text.toString()) {
                     val intent = Intent(this, MainActivity::class.java)
                     startActivity(intent)
                 } else {
