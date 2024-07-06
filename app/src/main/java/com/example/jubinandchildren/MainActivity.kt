@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
         val screenWidth = resources.displayMetrics.widthPixels // 스마트폰의 너비 길이를 가져옴
         val offsetPx = screenWidth - pageMarginPx - pagerWidth
 
+
         viewPager_main_reivew.setPageTransformer { page, position ->
             page.translationX = position * -offsetPx
         }
