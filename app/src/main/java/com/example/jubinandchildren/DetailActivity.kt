@@ -179,6 +179,7 @@ class DetailActivity : AppCompatActivity() {
 
             val myPageIntent = Intent(this,MyPageActivity::class.java)
             myPageIntent.putExtra("reviewerId",reviewerId)
+            startActivity(myPageIntent)
         }
 
         //스팀페이지로 이동
