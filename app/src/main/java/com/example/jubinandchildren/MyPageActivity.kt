@@ -53,15 +53,15 @@ class MyPageActivity : AppCompatActivity() {
                 R.id.home -> {
                     val intent = Intent(this, MainActivity::class.java)
                     startActivity(intent)
-                    //overridePendingTransition(R.drawable.slideup, R.drawable.slideout)
-                    //finish()
+                    overridePendingTransition(R.drawable.slideright, R.drawable.sliderightout)
+                    finish()
                     true
                 }
                 R.id.search -> {
                     val intent = Intent(this, EventActivity::class.java)
                     startActivity(intent)
-                    //overridePendingTransition(R.drawable.slideup, R.drawable.slideout)
-                    //finish()
+                    overridePendingTransition(R.drawable.slideright, R.drawable.sliderightout)
+                    finish()
                     true
                 }
                 else -> true
