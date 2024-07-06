@@ -39,8 +39,7 @@ class MyPageActivity : AppCompatActivity() {
             insets
         }
         MyPageDataObject.initData()
-        MyPageDataObject.addData("choco")
-        val mpd = MyPageDataObject.getMyData("a4cross072")
+        val mpd = MyPageDataObject.getMyData(UserDataList.id)
         val bnv = findViewById<BottomNavigationView>(R.id.bnv_mypage)
         val btnLogout = findViewById<ImageView>(R.id.iv_mypage_logout)
         val btnEdit = findViewById<ImageView>(R.id.iv_mypage_edit)
