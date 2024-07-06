@@ -43,8 +43,6 @@ class MyPageActivity : AppCompatActivity() {
         val btnLogout = findViewById<ImageView>(R.id.iv_mypage_logout)
         val btnEdit = findViewById<ImageView>(R.id.iv_mypage_edit)
 
-        
-
         drawMyPage(this, mpd)
 
         bnv.selectedItemId = R.id.profile
