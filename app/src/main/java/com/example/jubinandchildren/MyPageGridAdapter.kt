@@ -13,26 +13,40 @@ import kotlin.math.ceil
 import java.util.Queue
 import java.util.LinkedList
 
-class MyPageGridAdapter(private val context: Context, private val linear: LinearLayout): BaseAdapter() {
-    private val gridItems: ArrayList<MyPageGridViewItem> = arrayListOf()
-
+class MyPageGridAdapter(private val context: Context, private val linear: LinearLayout, mpd: MyPageData): BaseAdapter() {
+    private val gridItems: ArrayList<Int> = arrayListOf()
     var next = 2
-
-    private var queue: Queue<MyPageGridViewItem> = LinkedList()
-
-    val blackImage = MyPageGridViewItem(R.drawable.mypage_background_black)
+    private var queue: Queue<Int> = LinkedList()
+    private val blackImage = R.drawable.mypage_background_black
 
     /*TODO 추후 삭제. 현재는 자료 대신 사용할 테스트용*/
-    private val itemList: List<MyPageGridViewItem> = listOf(
-        MyPageGridViewItem(R.drawable.mypage_test_image),
-    )
+//    private val itemArray: IntArray = intArrayOf(
+//        R.drawable.mypage_test_image,
+//        R.drawable.mypage_test_image,
+//        R.drawable.mypage_test_image,
+//        R.drawable.mypage_test_image,
+//        R.drawable.mypage_test_image,
+//        R.drawable.mypage_test_image,
+//        R.drawable.mypage_test_image,
+//        R.drawable.mypage_test_image,
+//        R.drawable.mypage_test_image,
+//        R.drawable.mypage_test_image,
+//        R.drawable.mypage_test_image,
+//        R.drawable.mypage_test_image,
+//        R.drawable.mypage_test_image,
+//        R.drawable.mypage_test_image,
+//        R.drawable.mypage_test_image,
+//        R.drawable.mypage_test_image,
+//    )
+
+    private val itemArray: IntArray = mpd.libraryPicturesIds
 
     fun initItem() {
         initQueue()
         addItem(3)
     }
     private fun initQueue() {
-        for(i in itemList) queue.add(i)
+        for(i in itemArray) queue.add(i)
     }
     private fun addItem(num: Int) {
         repeat(num) {
@@ -62,9 +76,9 @@ class MyPageGridAdapter(private val context: Context, private val linear: Linear
         val textView = layout.findViewById<TextView>(R.id.tv_mypage_gv_item)
         val dpi = context.resources.displayMetrics.density
 
-        imageView.setImageResource(gridItems[position].image)
+        imageView.setImageResource(gridItems[position])
 
-        if( next < itemList.size && ( position == next && ((next - 2) % 15 == 0) || (position == 2 && next == 2) ) ) {
+        if( next < itemArray.size && ( position == next && ((next - 2) % 15 == 0) || (position == 2 && next == 2) ) ) {
             imageView.setColorFilter(Color.parseColor("#7f222222"))
             textView.text = "더보기"
             layout.setOnClickListener {
