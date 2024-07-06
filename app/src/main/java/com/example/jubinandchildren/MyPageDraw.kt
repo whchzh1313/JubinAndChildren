@@ -1,5 +1,6 @@
 package com.example.jubinandchildren
 
+import android.graphics.Color
 import android.widget.GridView
 import android.widget.ImageView
 import android.widget.LinearLayout
@@ -37,6 +38,7 @@ private fun drawMyPageProfile(activity: MyPageActivity, mpd: MyPageData) {
     profileLevel.text = mpd.libraryPicturesIds.size.toString()
     val notBlack = mpd.gamePicks.filterNot { it.title == "?" }.size
     if(notBlack != 0) profileBackground.setBackgroundResource(mpd.gamePicks[Random.nextInt(notBlack)].image)
+    else profileBackground.setBackgroundColor(Color.parseColor("#3f000000"))
     profileTextGenre1.text = mpd.genres[0]
     profileTextGenre2.text = mpd.genres[1]
     profileTextGenre3.text = mpd.genres[2]
