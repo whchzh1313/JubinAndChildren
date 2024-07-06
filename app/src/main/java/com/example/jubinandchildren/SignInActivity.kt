@@ -25,7 +25,10 @@ class SignInActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_sign_in)
+<<<<<<< HEAD
 
+=======
+>>>>>>> ef48e8fa73b52e51ebfe4bf3c0d457cf7edbdbb7
         var signin_name = findViewById<EditText>(R.id.text_signin_putname)
 
         var signin_gender = findViewById<MaterialButtonToggleGroup>(R.id.toggle_button_group)
