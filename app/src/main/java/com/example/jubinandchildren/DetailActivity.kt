@@ -47,6 +47,7 @@ class DetailActivity : AppCompatActivity() {
 
         }
 
+
         //변수할당
         val backgroundImage = findViewById<ImageView>(R.id.iv_d_background_game_image)
         val userRecommendGame = findViewById<TextView>(R.id.tv_d_user_recommend_game)
@@ -67,6 +68,8 @@ class DetailActivity : AppCompatActivity() {
             findViewById<ImageView>(R.id.iv_d_screenshot_5),
             findViewById<ImageView>(R.id.iv_d_screenshot_6)
         )
+
+
 
 
         val userIndex = intent.getIntExtra("index", 0)
@@ -163,6 +166,16 @@ class DetailActivity : AppCompatActivity() {
         }
 
 
+        userNameReview.setOnClickListener {
+            val reviewerId = ReviewList.id
+
+            val myPageIntent = Intent(this,MyPageActivity::class.java)
+            myPageIntent.putExtra("reviewerId",reviewerId)
+        }
+
+        userNameRating.setOnClickListener {
+
+        }
 
         //스팀페이지로 이동
         val addCart = findViewById<LinearLayout>(R.id.layout_d_icon_addcart)
