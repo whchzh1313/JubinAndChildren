@@ -46,22 +46,24 @@ class EventActivity : AppCompatActivity() {
         val event_btm_navi:BottomNavigationView = findViewById(R.id.navigation)
         event_btm_navi.selectedItemId = R.id.search
 
-        // 메인 레이아웃(하단 네비게이션) 뷰 선택 시 처리용 로직
+        // 메인 레이아웃(하단 네비게이션) 뷰 선택 시 처리용 로직(왼쪽으로 이동)
         event_btm_navi.setOnNavigationItemSelectedListener { ele ->
             when (ele.itemId) {
                 // 홈 메뉴 선택 >> 메인 액티비티 호출
                 R.id.home -> {
                     val intent_call_Main:Intent
                     intent_call_Main = Intent(this, MainActivity::class.java)
-                    startActivity(intent_call_Main); finish()
+                    startActivity(intent_call_Main)
+                    overridePendingTransition(R.drawable.slideleft, R.drawable.slideleftout)
 
                     true
                 }
-                // 프로필 메뉴 선택 >> 마이 페이지 액티비티 호출
+                // 프로필 메뉴 선택 >> 마이 페이지 액티비티 호출(오른쪽으로 이동)
                 R.id.profile -> {
                     val intent_call_MyPage:Intent
                     intent_call_MyPage = Intent(this, MyPageActivity::class.java)
-                    startActivity(intent_call_MyPage); finish()
+                    startActivity(intent_call_MyPage)
+                    overridePendingTransition(R.drawable.slideright, R.drawable.sliderightout)
 
                     true
                 }
