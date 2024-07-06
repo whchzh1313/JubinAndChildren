@@ -28,8 +28,8 @@ class ViewPagerAdapter(reviewList: ArrayList<ReviewList>) : RecyclerView.Adapter
             intent.putExtra("index", position)
             val activity = holder.reviewImage.context as Activity
             context.startActivity(intent)
-            activity.overridePendingTransition(R.drawable.slideup, R.drawable.slideout)
-            activity.finish()
+//            activity.overridePendingTransition(R.drawable.no_animation, R.drawable.no_animation)
+//            activity.finish()
         }
     }
 
