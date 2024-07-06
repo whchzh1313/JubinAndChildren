@@ -1,23 +1,20 @@
 package com.example.jubinandchildren
 
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
+@Parcelize
 data class UserData(
+    val userId: String,
     val userName: String,
-    val isMan: Boolean,
+    val isMan: Boolean?,
     val userBirth: String,
-//    val userId: String,
-    //유저 리스트 첫번째에 아이디 작성해주기
     val userPw: String,
-    val userGenre: Array<String>
-)
+    val userGenre: MutableList<Int?>
+):Parcelable
+
 
 object UserDataList {
-    val userList: MutableMap<String, UserData> =
-        mutableMapOf(
-            "a4cross072" to UserData(
-                "공명선",
-                true,
-                "YYYY_MM_DD",
-                "gongms",
-                arrayOf("액션")),
-            )
+    val userList: MutableMap<String, UserData> = mutableMapOf()
+    var id = ""
 }

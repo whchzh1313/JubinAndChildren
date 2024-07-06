@@ -22,14 +22,14 @@ class EventActivity : AppCompatActivity() {
         val btn_event_update_lol:ImageView = findViewById<ImageView>(R.id.imgv_update_scrimg_lol)
         val btn_event_update_civ7:ImageView = findViewById<ImageView>(R.id.imgv_update_scrimg_civ7)
         // 텍스트 뷰(8개)  언어 전환 시 쓸 객체, 근데 이거 필요한가 ??
-        val tv_event_update_minecraft_title:TextView = findViewById<TextView>(R.id.tv_event_update_title_minecraft)
-        val tv_event_update_minecraft_tag:TextView = findViewById<TextView>(R.id.tv_event_update_tag_minecraft)
-        val tv_event_update_wows_title:TextView = findViewById<TextView>(R.id.tv_event_update_title_wows)
-        val tv_event_update_wows_tag:TextView = findViewById<TextView>(R.id.tv_event_update_tag_wows)
-        val tv_event_update_lol_title:TextView = findViewById<TextView>(R.id.tv_event_update_title_lol)
-        val tv_event_update_lol_tag:TextView = findViewById<TextView>(R.id.tv_event_update_tag_lol)
-        val tv_event_update_civ7_title:TextView = findViewById<TextView>(R.id.tv_event_update_title_civ7)
-        val tv_event_update_civ7_tag:TextView = findViewById<TextView>(R.id.tv_event_update_tag_civ7)
+        var tv_event_update_minecraft_title:TextView = findViewById<TextView>(R.id.tv_event_update_title_minecraft)
+        var tv_event_update_minecraft_tag:TextView = findViewById<TextView>(R.id.tv_event_update_tag_minecraft)
+        var tv_event_update_wows_title:TextView = findViewById<TextView>(R.id.tv_event_update_title_wows)
+        var tv_event_update_wows_tag:TextView = findViewById<TextView>(R.id.tv_event_update_tag_wows)
+        var tv_event_update_lol_title:TextView = findViewById<TextView>(R.id.tv_event_update_title_lol)
+        var tv_event_update_lol_tag:TextView = findViewById<TextView>(R.id.tv_event_update_tag_lol)
+        var tv_event_update_civ7_title:TextView = findViewById<TextView>(R.id.tv_event_update_title_civ7)
+        var tv_event_update_civ7_tag:TextView = findViewById<TextView>(R.id.tv_event_update_tag_civ7)
 
         // 메인 레이아웃(추천) 뷰 객체 생성
         // 이미지 뷰(7개), 버튼 대용으로 사용됨
@@ -66,7 +66,7 @@ class EventActivity : AppCompatActivity() {
                     true
                 }
                 // 탐색 메뉴(자기자신) 선택, 예외 케이스 >> 아무것도 안함
-                else -> false
+                else -> { false }
             }
         }
 

@@ -1,5 +1,6 @@
 package com.example.jubinandchildren
 
+import android.app.Activity
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -25,7 +26,10 @@ class ViewPagerAdapter(reviewList: ArrayList<ReviewList>) : RecyclerView.Adapter
         holder.itemView.setOnClickListener(){
             val intent = Intent(holder.reviewImage.context, DetailActivity::class.java)
             intent.putExtra("index", position)
+            val activity = holder.reviewImage.context as Activity
             context.startActivity(intent)
+            activity.overridePendingTransition(R.drawable.slideup, R.drawable.slideout)
+            activity.finish()
         }
     }
 

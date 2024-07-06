@@ -124,7 +124,7 @@ object MyPageDataObject {
                         UserDataList.userList[id]?.isMan ?: true,
                         "자기소개가 입력되지 않았습니다.",
                         R.drawable.mypage_profile_base_image),
-                    UserDataList.userList[id]?.userGenre ?: arrayOf("", "", ""),
+                    UserDataList.userList[id]?.userGenre!!.map{genre[it!!]}.toTypedArray()?: arrayOf("", "", ""),
                     arrayOf(
                         GamePick("?", "#추가해주세요!", R.drawable.mypage_background_black),
                         GamePick("?", "#추가해주세요!", R.drawable.mypage_background_black),
@@ -150,6 +150,7 @@ object MyPageDataObject {
 
 }
 
+val genre = arrayOf("액션","슈팅","어드벤쳐","시뮬레이션","롤플레잉","퍼즐","음악","")
 val genrePhoto: Map<String, Int> =
     mapOf(
         "액션" to R.drawable.mypage_library_action,
