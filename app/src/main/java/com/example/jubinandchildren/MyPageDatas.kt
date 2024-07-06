@@ -114,6 +114,7 @@ object MyPageDataObject {
         }
     }
 
+    // 데이터 추가
     fun addData(id: String) {
         if(!isDataContains(id)) {
             myPageDataMap[id] =
@@ -141,6 +142,7 @@ object MyPageDataObject {
 
     private fun isDataContains(id: String): Boolean = myPageDataMap.keys.contains(id)
 
+    // 데이터 가져오기
     fun getMyData(id: String): MyPageData {
         addData(id)
         return myPageDataMap[id]!!
@@ -148,7 +150,7 @@ object MyPageDataObject {
 
 }
 
-val genre = arrayOf("액션","슈팅","어드벤쳐","시뮬레이션","롤플레잉","퍼즐","음악","")
+val genre = arrayOf("액션","슈팅","어드벤처","시뮬레이션","롤플레잉","퍼즐","음악","")
 val genrePhoto: Map<String, Int> =
     mapOf(
         "액션" to R.drawable.mypage_library_action,
