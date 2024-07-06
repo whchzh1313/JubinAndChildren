@@ -126,9 +126,9 @@ object MyPageDataObject {
                         R.drawable.mypage_profile_base_image),
                     UserDataList.userList[id]?.userGenre!!.map{genre[it!!]}.toTypedArray()?: arrayOf("", "", ""),
                     arrayOf(
-                        GamePick("?", "#추가해주세요!", R.drawable.mypage_background_black),
-                        GamePick("?", "#추가해주세요!", R.drawable.mypage_background_black),
-                        GamePick("?", "#추가해주세요!", R.drawable.mypage_background_black)
+                        GamePick("?", "#추가해주세요!", R.drawable.mypage_missing),
+                        GamePick("?", "#추가해주세요!", R.drawable.mypage_missing),
+                        GamePick("?", "#추가해주세요!", R.drawable.mypage_missing)
                     ),
                     intArrayOf(
 
@@ -160,7 +160,7 @@ val genrePhoto: Map<String, Int> =
         "롤플레잉" to R.drawable.mypage_library_roleplaying,
         "퍼즐" to R.drawable.mypage_library_puzzle,
         "음악" to R.drawable.mypage_library_music,
-        "" to R.drawable.mypage_background_black
+        "" to R.drawable.mypage_missing
     )
 
 

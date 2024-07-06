@@ -3,6 +3,7 @@ package com.example.jubinandchildren
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.NumberPicker
@@ -25,10 +26,7 @@ class SignInActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_sign_in)
-<<<<<<< HEAD
 
-=======
->>>>>>> ef48e8fa73b52e51ebfe4bf3c0d457cf7edbdbb7
         var signin_name = findViewById<EditText>(R.id.text_signin_putname)
 
         var signin_gender = findViewById<MaterialButtonToggleGroup>(R.id.toggle_button_group)

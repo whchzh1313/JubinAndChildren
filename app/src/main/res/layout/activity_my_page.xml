@@ -13,8 +13,8 @@
         android:id="@+id/constraintlayout_mypage_profile"
         android:layout_width="match_parent"
         android:layout_height="180dp"
-        android:background="@drawable/mypage_test_image"
-        android:backgroundTint="#80000000"
+        android:background="@color/primary"
+        android:backgroundTint="#20000000"
         android:backgroundTintMode="src_atop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -241,7 +241,7 @@
                             android:layout_width="80dp"
                             android:layout_height="80dp"
                             android:scaleType="fitXY"
-                            android:src="@drawable/mypage_test_image"
+                            android:src="@drawable/mypage_missing"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
@@ -277,7 +277,7 @@
                             android:layout_width="80dp"
                             android:layout_height="80dp"
                             android:scaleType="fitXY"
-                            android:src="@drawable/mypage_test_image"
+                            android:src="@drawable/mypage_missing"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
@@ -313,7 +313,7 @@
                             android:layout_width="80dp"
                             android:layout_height="80dp"
                             android:scaleType="fitXY"
-                            android:src="@drawable/mypage_test_image"
+                            android:src="@drawable/mypage_missing"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 

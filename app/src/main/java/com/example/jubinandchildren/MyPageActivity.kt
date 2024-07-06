@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.GridView
 import android.widget.ImageView
 import android.widget.LinearLayout
+import android.widget.ScrollView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -18,11 +19,18 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 
 해결0. 로그아웃 기능 구현과 id 받고 있기 - 협업 필수
 해결1. 가입한 사용자의 LibraryData
-2. 레이아웃 더보기 클릭 시 해당 위치로 이동, 더보기의 반대인 줄이기 또는 닫기 구현할지
+해결2. 레이아웃 더보기 클릭 시 해당 위치로 이동, 더보기의 반대인 줄이기 또는 닫기 구현할지
+해결?3. 더보기 자간, 폰트 수정
+해결3. 마지막 자리에 더보기 닫기 추가 및 빈칸 이미지 ? 있는 이미지로 수정 고려
+1.string.xml, ko 작성
+해결3. primary background로 기본 배경 설정
+3. 로그아웃 시 인텐트 플래그 추가
 3. 내 거 게임 정보도 넣기(테스트 고려해야 함. 라이브러리 30개 이상, 소개 글자 엄청 길게)
+4. 디테일 페이지에서 오면 뒤로가기 활성화
 앞에 걸로 적용함4. 배경화면(프로필 뒤에 있는 사진)을 게임 픽 중에 랜덤으로 하거나, 시간 되면 클릭 시 해당 게임 사진으로 고정 가능하게
 5. 모션 및 애니메이션 고려
 6. 라이브러리 클릭 시 확대돼서 가운데에 띄우기(지금 못 쓰는 기능이면 패스)
+7. 시간 남으면 게임픽이랑 장르에도 어댑터 추가
 
  */
 
@@ -70,6 +78,7 @@ class MyPageActivity : AppCompatActivity() {
         btnLogout.setOnClickListener {
             /*TODO 싱글톤 로그아웃 기능 추가*/
             val intent = Intent(this, LogInActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
             finish()
             startActivity(intent)
         }

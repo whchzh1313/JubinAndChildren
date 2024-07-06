@@ -23,7 +23,8 @@
         android:text=""
         android:textColor="@color/white"
         android:textSize="22sp"
-        android:letterSpacing="0.2"
+        android:letterSpacing="0.3"
+        android:fontFamily="@font/pretendard_light"
         />
 
 </FrameLayout>
