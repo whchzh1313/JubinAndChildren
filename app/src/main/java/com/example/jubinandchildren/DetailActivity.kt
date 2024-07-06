@@ -171,6 +171,7 @@ class DetailActivity : AppCompatActivity() {
 
             val myPageIntent = Intent(this,MyPageActivity::class.java)
             myPageIntent.putExtra("reviewerId",reviewerId)
+            startActivity(myPageIntent)
         }
 
         userNameRating.setOnClickListener {
