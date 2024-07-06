@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.ActivityResultLauncher
@@ -12,6 +13,8 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.viewpager2.widget.ViewPager2
+import com.tbuonomo.viewpagerdotsindicator.DotsIndicator
 
 // 1. 로그인 가능하게
 // 2. 회원가입에서 로그인 페이지로 이동 가능하게 (0)
@@ -22,11 +25,17 @@ class LogInActivity : AppCompatActivity() {
 
     private lateinit var LauncherLogIn: ActivityResultLauncher<Intent>
 
+    //뷰페이저
+    private lateinit var vp_login_group: ViewPager2
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_login)
+<<<<<<< HEAD
+=======
         println("우와~")
+>>>>>>> ef48e8fa73b52e51ebfe4bf3c0d457cf7edbdbb7
 
         val btn_login = findViewById<Button>(R.id.btn_login_login)
         val btn_signin = findViewById<Button>(R.id.btn_login_signin)
