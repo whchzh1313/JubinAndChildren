@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
-        overridePendingTransition(R.drawable.slideup, R.drawable.slideout)
+        overridePendingTransition(R.drawable.slideright, R.drawable.sliderightout)
         viewPager_main_reivew = findViewById(R.id.viewPager_main_reivew)
         val viewPager_main_indicator = findViewById<DotsIndicator>(R.id.viewPager_main_indicator)
         /* 여백, 너비에 대한 정의 */
@@ -46,13 +46,15 @@ class MainActivity : AppCompatActivity() {
                 R.id.search -> {
                     val intent = Intent(this, EventActivity::class.java)
                     startActivity(intent)
-                    overridePendingTransition(R.drawable.slideup, R.drawable.slideout)
+                    overridePendingTransition(R.drawable.slideright, R.drawable.sliderightout)
+                    finish()
                     true
                 }
                 R.id.profile -> {
                     val intent = Intent(this, MyPageActivity::class.java)
                     startActivity(intent)
-                    overridePendingTransition(R.drawable.slideup, R.drawable.slideout)
+                    overridePendingTransition(R.drawable.slideright, R.drawable.sliderightout)
+                    finish()
                     true
                 }
                 else -> {
