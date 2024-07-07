@@ -329,7 +329,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/tv_s_title_select_genre"
+                        app:layout_constraintTop_toBottomOf="@id/tv_des_genreselect"
                         app:selectionRequired="false"
                         app:singleSelection="false">
 

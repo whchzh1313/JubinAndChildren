@@ -83,7 +83,7 @@
         android:backgroundTint="@color/gray"
         android:ems="10"
         android:hint="@string/hint_login_pw"
-        android:inputType="text|textMultiLine"
+        android:inputType="textPassword"
         android:paddingHorizontal="16dp"
         app:layout_constraintEnd_toEndOf="@+id/text_login_putid"
         app:layout_constraintHorizontal_bias="0.0"
