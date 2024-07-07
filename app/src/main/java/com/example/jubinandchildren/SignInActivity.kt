@@ -91,7 +91,7 @@ class SignInActivity : AppCompatActivity() {
         MyPageDataObject.initData()
 
         signin_id_check.setOnClickListener {
-            if (signin_id.text.toString() in UserDataList.userList || signin_id.text.toString().trim() in MyPageDataObject.myPageDataMap) {
+            if (signin_id.text.toString() in UserDataObject.getMap() || signin_id.text.toString().trim() in MyPageDataObject.myPageDataMap) {
                 Toast.makeText(this, "이미 존재하는 아이디입니다.", Toast.LENGTH_SHORT).show()
                 isChecked = false
             } else {
@@ -155,18 +155,16 @@ class SignInActivity : AppCompatActivity() {
             } else {
                 val userData = UserData(
                     signin_id.text.toString(),
+                    signin_pw.text.toString(),
                     signin_name.text.toString(),
                     b_toggle,
                     np_value,
-                    signin_pw.text.toString(),
                     checkedChipIds.map { it!! - firstChip }.toMutableList()
                 )
-                UserDataList.userList[signin_id.text.toString()] = userData
-                UserDataList.id = signin_id.text.toString()
+                UserDataObject.addMap(signin_id.text.toString(), userData)
+                UserDataObject.setId(signin_id.text.toString())
+                println(UserDataObject.getId())
                 Toast.makeText(this, "회원가입이 완료되었습니다.", Toast.LENGTH_SHORT).show()
-                val intent = Intent(this, LogInActivity::class.java)
-                intent.putExtra("userData", userData)
-                setResult(RESULT_OK, intent)
                 finish()
             }
         }
