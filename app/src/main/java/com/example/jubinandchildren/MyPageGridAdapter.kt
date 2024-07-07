@@ -59,9 +59,10 @@ class MyPageGridAdapter(private val activity: MyPageActivity, private val linear
     }
 
     private fun addEmptyItem(num: Int) {
-        repeat(3 - if(num % 3 == 0) 3 else num % 3) {
-            gridItems += blackImage
-        }
+//        repeat(3 - if(num % 3 == 0) 3 else num % 3) {
+//            gridItems += blackImage
+//        }
+        gridItems += blackImage
     }
 
     override fun getCount(): Int = gridItems.size
