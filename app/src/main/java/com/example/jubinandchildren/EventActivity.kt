@@ -3,10 +3,13 @@ package com.example.jubinandchildren
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.view.View
+import android.widget.HorizontalScrollView
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.constraintlayout.widget.ConstraintLayout
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class EventActivity : AppCompatActivity() {
@@ -16,23 +19,26 @@ class EventActivity : AppCompatActivity() {
         setContentView(R.layout.activity_event)
 
         // 메인 레이아웃(업데이트) 뷰 객체 생성
-        // 이미지 뷰(4개), 버튼 대용으로 사용됨
+        // 텍스트 뷰(1개), 1차메뉴 선택 버튼 대용
+        var tv_event_update_title:TextView = findViewById<TextView>(R.id.tv_event_updated_game)
+
+        // 레이아웃 뷰(1개), 1차메뉴와 연동된 뷰
+        var lv_event_update_container:HorizontalScrollView = findViewById<HorizontalScrollView>(R.id.scrlv_event_update_scroll)
+
+        // 이미지 뷰(4개), 2차메뉴 선택버튼 대용으로 사용됨
         val btn_event_update_minecraft:ImageView = findViewById<ImageView>(R.id.imgv_update_scrimg_minecraft)
         val btn_event_update_wows:ImageView = findViewById<ImageView>(R.id.imgv_update_scrimg_wows)
         val btn_event_update_lol:ImageView = findViewById<ImageView>(R.id.imgv_update_scrimg_lol)
         val btn_event_update_civ7:ImageView = findViewById<ImageView>(R.id.imgv_update_scrimg_civ7)
-        // 텍스트 뷰(8개)  언어 전환 시 쓸 객체, 근데 이거 필요한가 ??
-        var tv_event_update_minecraft_title:TextView = findViewById<TextView>(R.id.tv_event_update_title_minecraft)
-        var tv_event_update_minecraft_tag:TextView = findViewById<TextView>(R.id.tv_event_update_tag_minecraft)
-        var tv_event_update_wows_title:TextView = findViewById<TextView>(R.id.tv_event_update_title_wows)
-        var tv_event_update_wows_tag:TextView = findViewById<TextView>(R.id.tv_event_update_tag_wows)
-        var tv_event_update_lol_title:TextView = findViewById<TextView>(R.id.tv_event_update_title_lol)
-        var tv_event_update_lol_tag:TextView = findViewById<TextView>(R.id.tv_event_update_tag_lol)
-        var tv_event_update_civ7_title:TextView = findViewById<TextView>(R.id.tv_event_update_title_civ7)
-        var tv_event_update_civ7_tag:TextView = findViewById<TextView>(R.id.tv_event_update_tag_civ7)
 
         // 메인 레이아웃(추천) 뷰 객체 생성
-        // 이미지 뷰(7개), 버튼 대용으로 사용됨
+        // 텍스트 뷰(1개), 1차메뉴 선택 버튼 대용
+        var tv_event_recommand_title:TextView = findViewById<TextView>(R.id.tv_event_recommanded_game)
+
+        // 레이아웃 뷰(1개), 1차메뉴와 연동된 뷰
+        var lv_event_recommand_container:HorizontalScrollView = findViewById<HorizontalScrollView>(R.id.scrlv_event_rec_scroll)
+
+        // 이미지 뷰(7개), 2차메뉴 선택버튼 대용으로 사용됨
         val btn_event_rec_littlenightmare:ImageView = findViewById<ImageView>(R.id.imgv_event_scrimg_little_nightmare)
         val btn_event_rec_helldiver2:ImageView = findViewById<ImageView>(R.id.imgv_event_scrimg_helldivers2)
         val btn_event_rec_frostpunk:ImageView = findViewById<ImageView>(R.id.imgv_event_scrimg_frostpunk)
@@ -41,15 +47,43 @@ class EventActivity : AppCompatActivity() {
         val btn_event_rec_civ6:ImageView = findViewById<ImageView>(R.id.imgv_event_scrimg_civ6)
         val btn_event_rec_cities:ImageView = findViewById<ImageView>(R.id.imgv_event_scrimg_cities)
 
+        // 메인 레이아웃(업데이트/추천) 선택 시 처리용 로직
+        // 기본 화면(메뉴 및 레이아웃 초기화)
+        lv_event_recommand_container.visibility = View.GONE
+        lv_event_update_container.visibility = View.VISIBLE
+
+        // 업데이트 선택 시
+        tv_event_update_title.setOnClickListener{
+            // 선택 메뉴(1.0) 및 다른 메뉴(0.2)의 투명도 조정
+            tv_event_update_title.alpha = 1.0f
+            tv_event_recommand_title.alpha = 0.2f
+
+            // 각 메뉴와 연결된 레이아웃 렌더링 조정
+            lv_event_recommand_container.visibility = View.GONE
+            lv_event_update_container.visibility = View.VISIBLE
+        }
+
+        // 추천 선택 시
+        tv_event_recommand_title.setOnClickListener{
+            // 선택 메뉴(1.0) 및 다른 메뉴(0.2)의 투명도 조정
+            tv_event_recommand_title.alpha = 1.0f
+            tv_event_update_title.alpha = 0.2f
+
+            // 각 메뉴와 연결된 레이아웃 렌더링 조정
+            lv_event_update_container.visibility = View.GONE
+            lv_event_recommand_container.visibility = View.VISIBLE
+        }
+
+
         // 메인 레이아웃(하단 네비게이션) 뷰 객체 생성/초기화
         // 하단 네비 뷰(1개)
-        val event_btm_navi:BottomNavigationView = findViewById(R.id.navigation)
+        val event_btm_navi:BottomNavigationView = findViewById(R.id.inc_event_bot_navi)
         event_btm_navi.selectedItemId = R.id.search
 
-        // 메인 레이아웃(하단 네비게이션) 뷰 선택 시 처리용 로직(왼쪽으로 이동)
+        // 메인 레이아웃(하단 네비게이션) 뷰 선택 시 처리용 로직
         event_btm_navi.setOnNavigationItemSelectedListener { ele ->
             when (ele.itemId) {
-                // 홈 메뉴 선택 >> 메인 액티비티 호출
+                // 홈 메뉴 선택 >> 메인 액티비티 호출(왼쪽으로 이동)
                 R.id.home -> {
                     val intent_call_Main:Intent
                     intent_call_Main = Intent(this, MainActivity::class.java)
