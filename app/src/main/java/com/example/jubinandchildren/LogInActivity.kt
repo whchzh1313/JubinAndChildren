@@ -5,12 +5,14 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.res.ResourcesCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.viewpager2.widget.ViewPager2
@@ -25,9 +27,6 @@ class LogInActivity : AppCompatActivity() {
 
     private lateinit var LauncherLogIn: ActivityResultLauncher<Intent>
 
-    //뷰페이저
-    private lateinit var vp_login_group: ViewPager2
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -37,6 +36,15 @@ class LogInActivity : AppCompatActivity() {
         val btn_signin = findViewById<Button>(R.id.btn_login_signin)
         val login_text_id = findViewById<EditText>(R.id.text_login_putid)
         val login_text_pw = findViewById<EditText>(R.id.text_login_putpw)
+
+        val iv_signin_random = findViewById<ImageView>(R.id.iv_login_introduce)
+        val random = when ((1..4).random()) {
+            1 -> R.drawable.iv_login_image_1
+            2 -> R.drawable.iv_login_image_2
+            3 -> R.drawable.iv_login_image_3
+            else -> R.drawable.iv_login_image_1
+        }
+        iv_signin_random.setImageDrawable(ResourcesCompat.getDrawable(resources,random,null))
 
         //회원가입 > 로그인으로 올 때 아이디 / 비밀번호 데려올 수 있는 기능
         LauncherLogIn =
@@ -58,7 +66,7 @@ class LogInActivity : AppCompatActivity() {
         btn_login.setOnClickListener {
             if (login_text_id.text.toString().trim().isEmpty() || login_text_pw.text.trim().isEmpty()) {
                 Toast.makeText(this, "아이디 또는 비밀번호를 입력해주세요.", Toast.LENGTH_SHORT).show()
-            } else if (login_text_id.text.toString() in UserDataList.userList) {
+            } else if (login_text_id.text.toString() in UserDataList.userList || login_text_id.text.toString().trim() in MyPageDataObject.myPageDataMap) {
                 if (UserDataList.userList[login_text_id.text.toString()]?.userPw == login_text_pw.text.toString()) {
                     val intent = Intent(this, MainActivity::class.java)
                     startActivity(intent)
