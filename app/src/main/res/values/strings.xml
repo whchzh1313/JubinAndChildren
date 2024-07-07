@@ -16,15 +16,6 @@
     <string name="dmy_3">#FPS #OpenWorld #StealthAction #Sniper #FPS #OpenWorld #StealthAction #Sniper #FPS #OpenWorld #StealthAction #Sniper</string>
     <string name="app_name">jubinAndChildren</string>
 
-    <string name="mypage_profile_name">이름</string>
-    <string name="mypage_profile_description">자기 소개</string>
-    <string name="mypage_profile_level">99+</string>
-    <string name="mypage_game_pick_title">게임 픽</string>
-    <string name="mypage_game_pick_name">게임 이름</string>
-    <string name="mypage_game_pick_hashtag">해시태그</string>
-    <string name="mypage_library_title">라이브러리</string>
-
-
     <!-- 디테일 액티비티(김현지) 내부 언어셋-->
     <string name="user_name">UserName</string>
     <string name="_user_name">testName</string>
@@ -41,61 +32,86 @@
     <string name="subtitle_screenshot">Game Screenshot</string>
 
 
-
     <!-- 마이 페이지 액티비티(공명선) 내부 언어셋-->
 
+    <string name="mypage_profile_name">Name</string>
+    <string name="mypage_profile_description">Introduce</string>
+    <string name="mypage_profile_level">99+</string>
+    <string name="mypage_game_pick_title">Game Pick</string>
+    <string name="mypage_game_pick_name">Game Name</string>
+    <string name="mypage_game_pick_hashtag">HashTag</string>
+    <string name="mypage_library_title">Library</string>
+    <string name="mypage_not_implement">This feature has not been implemented.</string>
+    <string name="mypage_not_input">No self-introduction has been entered.</string>
+    <string name="mypage_more">More</string>
+    <string name="mypage_close">Close</string>
+    <string name="mypage_please_input">#AddHere!</string>
+    <string name="mypage_genre_action">Action</string>
+    <string name="mypage_genre_shooting">Shooting</string>
+    <string name="mypage_genre_adventure">Adventure</string>
+    <string name="mypage_genre_simulation">Simulation</string>
+    <string name="mypage_genre_roleplaying">RPG</string>
+    <string name="mypage_genre_puzzle">Puzzle</string>
+    <string name="mypage_genre_music">Music</string>
 
+    <!-- 로그인 액티비티(황주빈) 내부 언어셋 영어 -->
+    <string name="text_signin_name">Name</string>
+    <string name="hint_name">Name</string>
+    <string name="text_signin_gender">Gender</string>
+    <string name="text_gender1">Man</string>
+    <string name="text_gender2">Woman</string>
+    <string name="text_signin_birth">birth date</string>
+    <string name="txte_signin_id">ID</string>
+    <string name="hint_signin_id">ID</string>
+    <string name="text_signin_check">Check Id</string>
+    <string name="text_signin_pw">Password</string>
+    <string name="hint_signin_pw">Password</string>
+    <string name="hint_signin_pwcheck">Check Password</string>
+    <string name="text_signin_genre">Favorite game Genre</string>
+    <string name="text_signin_complite">Join Membership</string>
 
-    <!-- 로그인 액티비티(황주빈) 내부 언어셋-->
-
-
-
-
-    <!-- 회원가입 액티비티(황주빈) 내부 언어셋-->
-
-
-
-
+    <!-- 회원가입 액티비티(황주빈) 내부 언어셋 영어 -->
+    <string name="hint_login_id">ID</string>
+    <string name="hint_login_pw">Password</string>
+    <string name="text_login_login">LogIn</string>
+    <string name="text_login_member">Join Membership</string>
 
 
     <!-- 이벤트 액티비티(박정호) 내부 언어셋-->
     <!-- 타이틀 영역 -->
-        <string name="update_now_title">Released Game</string>
-        <string name="rec_now_title">Recommanded Game</string>
+    <string name="update_now_title">Now Update</string>
+    <string name="rec_now_title">Now Suggest</string>
 
     <!-- 업데이트 영역 -->
-        <string name="update_title_minecraft">Minecraft 1.21</string>
-        <string name="update_tag_minecraft">#Sandbox</string>
+    <string name="update_title_minecraft">Minecraft-JAVA-</string>
+    <string name="update_info_minecraft">1.21 Release</string>
+    <string name="update_tag_minecraft">#Sandbox</string>
 
-        <string name="update_title_wows">WorldOfWarship 13.6</string>
-        <string name="update_tag_wows">#MMOShooting</string>
+    <string name="update_title_wows">WorldOfWarship</string>
+    <string name="update_info_wows">1.36 Release</string>
+    <string name="update_tag_wows">#MMOShooting</string>
 
-        <string name="update_title_lol">LeagueOfLegends 14.13</string>
-        <string name="update_tag_lol">#AOS</string>
+    <string name="update_title_lol">LeagueOfLegends</string>
+    <string name="update_info_lol">14.13 Release</string>
+    <string name="update_tag_lol">#AOS</string>
 
-        <string name="update_title_civ7">Civilization 7 (2025 Realse)</string>
-        <string name="update_tag_civ7">#Strategy</string>
+    <string name="update_title_civ7">Civilization 7</string>
+    <string name="update_info_civ7">2025 Launch</string>
+    <string name="update_tag_civ7">#Strategy</string>
 
     <!-- 추천 영역 -->
-        <string name="recommand_title_little">Little Nightmare</string>
-        <string name="recommand_tag_little">#Arcade</string>
-
-        <string name="recommand_title_helldivers2">Helldivers2</string>
-        <string name="recommand_tag_helldivers2">#TPS CoOp</string>
-
-        <string name="recommand_title_frostpunk">FrostPunk</string>
-        <string name="recommand_tag_frostpunk">#Survive</string>
-
-        <string name="recommand_title_fm24">Football Manager 2024</string>
-        <string name="recommand_tag_fm24">#Simulation</string>
-
-        <string name="recommand_title_elden_ring">Elden Ring</string>
-        <string name="recommand_tag_elden_ring">#Arcade</string>
-
-        <string name="recommand_title_civ6">Civilization 6</string>
-        <string name="recommand_tag_civ6">#Strategy</string>
-
-        <string name="recommand_title_cities">Cities:SkyLine</string>
-        <string name="recommand_tag_cities">#Management</string>
-
+    <string name="recommand_title_little">Little Nightmare</string>
+    <string name="recommand_tag_little">#Arcade</string>
+    <string name="recommand_title_helldivers2">Helldivers2</string>
+    <string name="recommand_tag_helldivers2">#TPS CoOp</string>
+    <string name="recommand_title_frostpunk">FrostPunk</string>
+    <string name="recommand_tag_frostpunk">#Survive</string>
+    <string name="recommand_title_fm24">Football Manager 24</string>
+    <string name="recommand_tag_fm24">#Simulation</string>
+    <string name="recommand_title_elden_ring">Elden Ring</string>
+    <string name="recommand_tag_elden_ring">#Arcade</string>
+    <string name="recommand_title_civ6">Civilization 6</string>
+    <string name="recommand_tag_civ6">#Strategy</string>
+    <string name="recommand_title_cities">Cities:SkyLine</string>
+    <string name="recommand_tag_cities">#Management</string>
 </resources>

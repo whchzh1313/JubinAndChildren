@@ -77,7 +77,6 @@ class MyPageGridAdapter(private val activity: MyPageActivity, private val linear
         imageView.setImageResource(gridItems[position])
 
         if(gridItems[position] == blackImage) {
-            println(position)
             imageView.setPadding(10 * dpi.toInt())
             imageView.setColorFilter(Color.parseColor("#ff222222"))
             imageView.setBackgroundColor(Color.parseColor("#000000"))
@@ -94,7 +93,7 @@ class MyPageGridAdapter(private val activity: MyPageActivity, private val linear
 
         if( next < itemArray.size && ( position == next && ((next - 2) % 15 == 0) || (position == 2 && next == 2) ) ) {
             imageView.setColorFilter(Color.parseColor("#7f222222"))
-            textView.text = "더보기"
+            textView.text = StringData.dataString[1]
             layout.setOnClickListener {
                 moreItem()
                 val multiple = gridItems.size / 3 + if(gridItems.size % 3 != 0) 1 else 0
@@ -108,7 +107,7 @@ class MyPageGridAdapter(private val activity: MyPageActivity, private val linear
 
         else if(gridItems.size - 1 == position && next >= itemArray.size && gridItems.size > 3) {
             imageView.setColorFilter(Color.parseColor("#7f222222"))
-            textView.text = "닫기"
+            textView.text = StringData.dataString[2]
             layout.setOnClickListener {
                 closeItem()
                 val multiple = gridItems.size / 3 + if(gridItems.size % 3 != 0) 1 else 0
