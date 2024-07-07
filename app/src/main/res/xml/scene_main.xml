@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        app:constraintSetStart="@+id/start"
+        app:constraintSetEnd="@+id/end"
+        motion:duration="250"
+        motion:motionInterpolator="linear">
+
+        <OnSwipe
+            app:dragDirection="dragUp"
+            app:touchAnchorId="@id/layout_d_background"
+            motion:touchAnchorSide="bottom"/>
+
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+
+        <Constraint
+            android:id="@id/layout_d_background"
+            android:layout_width="match_parent"
+            android:layout_height="600dp"
+            motion:motionProgress="1"
+            motion:layout_constraintTop_toTopOf="parent"/>
+
+
+        <Constraint
+            android:id="@id/sv_information"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="-50dp"
+            motion:layout_constraintTop_toBottomOf="@id/layout_d_background"/>
+
+
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+
+        <Constraint
+            android:id="@id/layout_d_background"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            motion:layout_constraintTop_toTopOf="parent"/>
+
+        <Constraint
+            android:id="@id/sv_information"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="-50dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/layout_d_background"/>
+
+
+
+    </ConstraintSet>
+
+</MotionScene>

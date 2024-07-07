@@ -5,15 +5,187 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ffffff"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <HorizontalScrollView
+        android:id="@+id/scrollView_main_genre"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/iv_main_logo">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <com.google.android.material.chip.ChipGroup
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_main_genre_1"
+                    style="@style/CustomChipStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="4dp"
+                    android:text="@string/main_genre_1"
+                    app:chipCornerRadius="100dp"
+                    app:chipStrokeColor="@color/black"
+                    app:chipStrokeWidth="1dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_main_genre_2"
+                    style="@style/CustomChipStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="4dp"
+                    android:text="@string/main_genre_2"
+                    app:chipCornerRadius="100dp"
+                    app:chipStrokeColor="@color/black"
+                    app:chipStrokeWidth="1dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_main_genre_3"
+                    style="@style/CustomChipStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="4dp"
+                    android:text="@string/main_genre_3"
+                    app:chipCornerRadius="100dp"
+                    app:chipStrokeColor="@color/black"
+                    app:chipStrokeWidth="1dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_main_genre_4"
+                    style="@style/CustomChipStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="4dp"
+                    android:text="@string/main_genre_4"
+                    app:chipCornerRadius="100dp"
+                    app:chipStrokeColor="@color/black"
+                    app:chipStrokeWidth="1dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_main_genre_5"
+                    style="@style/CustomChipStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="4dp"
+                    android:text="@string/main_genre_5"
+                    app:chipCornerRadius="100dp"
+                    app:chipStrokeColor="@color/black"
+                    app:chipStrokeWidth="1dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_main_genre_6"
+                    style="@style/CustomChipStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="4dp"
+                    android:text="@string/main_genre_6"
+                    app:chipCornerRadius="100dp"
+                    app:chipStrokeColor="@color/black"
+                    app:chipStrokeWidth="1dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_main_genre_7"
+                    style="@style/CustomChipStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="4dp"
+                    android:text="@string/main_genre_7"
+                    app:chipCornerRadius="100dp"
+                    app:chipStrokeColor="@color/black"
+                    app:chipStrokeWidth="1dp" />
+            </com.google.android.material.chip.ChipGroup>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/tv_main_title"
+        style="@style/headline_b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/main_play_list"
+        android:textColor="@color/primary"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_main_logo"
+        app:layout_constraintStart_toEndOf="@+id/iv_main_logo"
+        app:layout_constraintTop_toTopOf="@+id/iv_main_logo" />
+
+    <TextView
+        android:id="@+id/tv_main_review"
+        style="@style/subtitle_b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/main_view_review"
+        app:layout_constraintStart_toStartOf="@+id/iv_main_logo"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView_main_genre" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/viewPager_main_reivew_layout"
+        android:layout_width="409dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/primary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_main_review">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPager_main_reivew"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:paddingStart="12dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+            android:id="@+id/viewPager_main_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:dotsColor="@color/indicator_gray"
+            app:dotsCornerRadius="0dp"
+            app:dotsSize="8dp"
+            app:dotsSpacing="0dp"
+            app:dotsWidthFactor="1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewPager_main_reivew"
+            app:progressMode="true"
+            app:selectedDotColor="@color/indicator_secondary" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include
+        android:id="@+id/main_navigation_bar"
+        layout="@layout/bottom_navigation_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_main_logo"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icon_image"
+        app:tint="@color/primary" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

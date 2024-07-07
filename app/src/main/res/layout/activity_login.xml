@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFFFF"
+    tools:context=".LogInActivity">
+
+    <ImageView
+        android:id="@+id/image_login_view"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp"
+        android:tint="#FFA3C9E9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icon_image"
+        tools:ignore="UseAppTint"/>
+
+        <ImageView
+            android:id="@+id/iv_login_introduce"
+            android:layout_width="410dp"
+            android:layout_height="250dp"
+            android:layout_marginTop="32dp"
+            android:paddingBottom="8dp"
+            android:src="@drawable/iv_login_image_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image_login_view"/>
+
+    <EditText
+        android:id="@+id/text_login_putid"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/input_large"
+        android:backgroundTint="@color/gray"
+        android:ems="10"
+        android:hint="@string/hint_signin_id"
+        android:inputType="text"
+        android:paddingHorizontal="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_login_introduce" />
+
+    <Button
+        android:id="@+id/btn_login_login"
+        android:layout_width="170dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#FFA3C9E9"
+        android:text="@string/text_login_login"
+        app:layout_constraintEnd_toStartOf="@+id/btn_login_signin"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/text_login_putid"
+        app:layout_constraintTop_toBottomOf="@+id/text_login_putpw" />
+
+    <Button
+        android:id="@+id/btn_login_signin"
+        android:layout_width="170dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#FFD4E2ED"
+        android:text="@string/text_login_member"
+        app:layout_constraintEnd_toEndOf="@+id/text_login_putid"
+        app:layout_constraintTop_toBottomOf="@+id/text_login_putpw" />
+
+    <EditText
+        android:id="@+id/text_login_putpw"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/input_large"
+        android:backgroundTint="@color/gray"
+        android:ems="10"
+        android:hint="@string/hint_login_pw"
+        android:inputType="textPassword"
+        android:paddingHorizontal="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/text_login_putid"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/text_login_putid"
+        app:layout_constraintTop_toBottomOf="@+id/text_login_putid" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
