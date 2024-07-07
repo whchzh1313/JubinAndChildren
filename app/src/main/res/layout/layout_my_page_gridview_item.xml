@@ -22,9 +22,8 @@
         android:textAlignment="center"
         android:text=""
         android:textColor="@color/white"
-        android:textSize="22sp"
-        android:letterSpacing="0.3"
-        android:fontFamily="@font/pretendard_light"
+        android:textSize="20sp"
+        android:fontFamily="@font/pretendard_bold"
         />
 
 </FrameLayout>
