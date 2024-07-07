@@ -11,6 +11,7 @@ import android.widget.LinearLayout
 import android.widget.ScrollView
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.view.isVisible
 import androidx.core.view.setPadding
 import kotlin.math.ceil
 import java.util.Queue
@@ -84,7 +85,10 @@ class MyPageGridAdapter(private val activity: MyPageActivity, private val linear
 
         else {
             layout.setOnClickListener {
-                activity.findViewById<ConstraintLayout>(R.id.layout_mypage_select_library)
+                val layoutShow = activity.findViewById<ConstraintLayout>(R.id.layout_mypage_select_library)
+                val layoutShowImage = activity.findViewById<ImageView>(R.id.iv_mypage_select_library)
+                layoutShowImage.setImageResource(gridItems[position])
+                layoutShow.isVisible = true
             }
         }
 

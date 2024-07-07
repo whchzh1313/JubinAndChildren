@@ -46,6 +46,16 @@
     <string name="mypage_library_title">라이브러리</string>
     <string name="mypage_not_implement">미구현된 기능입니다.</string>
     <string name="mypage_not_input">자기소개가 입력되지 않았습니다.</string>
+    <string name="mypage_more">더보기</string>
+    <string name="mypage_close">닫기</string>
+    <string name="mypage_please_input">#추가해주세요!</string>
+    <string name="mypage_genre_action">액션</string>
+    <string name="mypage_genre_shooting">슈팅</string>
+    <string name="mypage_genre_adventure">어드벤처</string>
+    <string name="mypage_genre_simulation">시뮬레이션</string>
+    <string name="mypage_genre_roleplaying">롤플레잉</string>
+    <string name="mypage_genre_puzzle">퍼즐</string>
+    <string name="mypage_genre_music">음악</string>
 
     <!-- 로그인 액티비티(황주빈) 내부 언어셋-->
 
