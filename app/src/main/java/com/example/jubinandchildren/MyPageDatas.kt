@@ -119,11 +119,11 @@ object MyPageDataObject {
             myPageDataMap[id] =
                 MyPageData(
                     Profile(
-                        (UserDataList.userList[id]?.userName ?: R.string.mypage_profile_name).toString(),
-                        UserDataList.userList[id]?.isMan ?: true,
+                        (UserDataObject.getUserData(id).userName ?: R.string.mypage_profile_name).toString(),
+                        UserDataObject.getUserData(id).isMan ?: true,
                         StringData.dataString[0],
                         R.drawable.mypage_profile_base_image),
-                    UserDataList.userList[id]?.userGenre?.map{StringData.genreId[it ?: 7]}?.toTypedArray() ?: arrayOf(7, 7, 7),
+                    UserDataObject.getUserData(id).userGenre.map{StringData.genreId[it ?: 7]}.toTypedArray() ?: arrayOf(7, 7, 7),
                     arrayOf(
                         GamePick("?", StringData.dataString[3], R.drawable.mypage_missing),
                         GamePick("?", StringData.dataString[3], R.drawable.mypage_missing),

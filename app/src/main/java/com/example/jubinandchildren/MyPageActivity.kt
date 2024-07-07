@@ -56,7 +56,7 @@ class MyPageActivity : AppCompatActivity() {
 
         MyPageDataObject.initData()
 
-        val mpdStr = intent.getStringExtra("reviewerId") ?: UserDataList.id
+        val mpdStr = intent.getStringExtra("reviewerId") ?: UserDataObject.getId()
         val mpd = MyPageDataObject.getMyData(mpdStr)
         val bnv = findViewById<BottomNavigationView>(R.id.bnv_mypage)
         val btnLogout = findViewById<ImageView>(R.id.iv_mypage_logout)
