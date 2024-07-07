@@ -66,19 +66,8 @@ class DetailActivity : AppCompatActivity() {
 
         val selectScreenshot = findViewById<ConstraintLayout>(R.id.layout_d_select_screenshot)
 
-        selectScreenshot.visibility = View.INVISIBLE
+        val selectScreenshotImage = findViewById<ImageView>(R.id.iv_d_select_screenshot)
 
-        for(i in screenshotList.indices){
-            screenshotList[i].setOnClickListener {
-                selectScreenshot.visibility = View.VISIBLE
-            }
-        }
-
-        val closeBtn = findViewById<ImageView>(R.id.iv_d_closebtn)
-
-        closeBtn.setOnClickListener {
-            selectScreenshot.visibility = View.INVISIBLE
-        }
 
 
 
@@ -145,6 +134,23 @@ class DetailActivity : AppCompatActivity() {
             }
 
         }
+
+        selectScreenshot.visibility = View.INVISIBLE
+
+        for(i in screenshotList.indices){
+            screenshotList[i].setOnClickListener {
+                val screenshotSrc = screenshot[i]
+                selectScreenshot.visibility = View.VISIBLE
+                selectScreenshotImage.setImageResource(screenshotSrc?:0)
+            }
+        }
+
+        val closeBtn = findViewById<ImageView>(R.id.iv_d_closebtn)
+
+        closeBtn.setOnClickListener {
+            selectScreenshot.visibility = View.INVISIBLE
+        }
+
 
         //가격 Regex 추가
         gamePrice.text = priceRegex(ReviewList.reviewPrice.toString())
