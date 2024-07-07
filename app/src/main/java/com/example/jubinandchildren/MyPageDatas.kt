@@ -21,8 +21,8 @@ data class GamePick(
 )
 
 object MyPageDataObject {
-    private val myPageDataMap: MutableMap<String, MyPageData> = mutableMapOf()
-    private var isDataInitialized = false
+    val myPageDataMap: MutableMap<String, MyPageData> = mutableMapOf()
+    var isDataInitialized = false
 
     fun initData() {
         if (!isDataInitialized) {

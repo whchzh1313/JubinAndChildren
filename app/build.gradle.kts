@@ -38,7 +38,6 @@ android {
 }
 
 dependencies {
-
     implementation("androidx.transition:transition:1.5.0")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
