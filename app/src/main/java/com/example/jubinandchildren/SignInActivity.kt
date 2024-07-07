@@ -1,8 +1,6 @@
 package com.example.jubinandchildren
 
 import android.content.Intent
-import android.graphics.Color
-import android.graphics.Paint
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
@@ -74,14 +72,23 @@ class SignInActivity : AppCompatActivity() {
         toggle_gender1.setOnClickListener {
             b_toggle = true
         }
-        toggle_gender2.setOnClickListener {
+        toggle_gender2.setOnClickListener{
             b_toggle = false
         }
+
+        if (true){
+
+        } else if (false){
+
+        }else {
+
+        }
+
 
         var isChecked: Boolean? = null
 
         signin_id_check.setOnClickListener {
-            if (signin_id.text.toString() in UserDataList.userList ) {
+            if (signin_id.text.toString() in UserDataList.userList) {
                 Toast.makeText(this, "이미 존재하는 아이디입니다.", Toast.LENGTH_SHORT).show()
                 isChecked = false
             } else {
@@ -94,10 +101,7 @@ class SignInActivity : AppCompatActivity() {
         //칩 최대 3개까지 선택 가능하게
         checkedChipIds = mutableListOf()
         val firstChip = R.id.chip_signin_genre1
-        val secondChip = R.id.chip_signin_genre7
-        println("${R.id.chip_signin_genre1}, ${R.id.chip_signin_genre7}")
-        println(firstChip + 6 == secondChip)
-        signin_genre.setOnCheckedStateChangeListener { group, checkedIds ->
+        signin_genre.setOnCheckedStateChangeListener{ group, checkedIds ->
             val list: List<Int> = (0..6).filter { firstChip + it !in checkedIds }
             checkedChipIds = checkedIds
             if (checkedIds.size > 2) {
@@ -120,7 +124,7 @@ class SignInActivity : AppCompatActivity() {
         //회원가입 버튼 눌렀을 때
         // 조건 : 모든 정보가 기입 되어야 함, 비밀번호와 비밀번호 체크가 동일, 아이디 중복 확인이 통과된 상태에서 끝나야함
         // 생년월일 : . 이나 -를 없애서 인트? 값으로 하고 이걸 다시 스트링 8글자 (size)로 확인 한 다음에 통과
-        btn_signup.setOnClickListener {
+        btn_signup.setOnClickListener{
             if (signin_name.text.isEmpty()) {
                 Toast.makeText(this, "이름을 입력해주세요.", Toast.LENGTH_SHORT).show()
             } else if (signin_id.text.isEmpty()) {
@@ -129,7 +133,7 @@ class SignInActivity : AppCompatActivity() {
                 Toast.makeText(this, "비밀번호를 입력해주세요.", Toast.LENGTH_SHORT).show()
             } else if (b_toggle == null) {
                 Toast.makeText(this, "성별을 선택 해주세요.", Toast.LENGTH_SHORT).show()
-            } else if (signin_pw.text.trim() != signin_pw_check.text.trim()) {
+            } else if (signin_pw.text.toString().trim() != signin_pw_check.text.toString().trim()) {
                 Toast.makeText(this, "비밀번호와 비밀번호 확인이 서로 다릅니다.", Toast.LENGTH_SHORT).show()
             } else if (isChecked == false || isChecked == null) {
                 Toast.makeText(this, "아이디 중복 확인을 다시 해주세요.", Toast.LENGTH_SHORT).show()
@@ -155,5 +159,4 @@ class SignInActivity : AppCompatActivity() {
             }
         }
     }
-
 }
