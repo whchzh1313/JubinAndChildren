@@ -18,8 +18,6 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
-        // (박정호)아랫쪽에 이 애니메이션 혹시 필요하신가요? 메인 앱에서 애니메이션이 고정되어 있어서 애니메이션 효과가 안먹히는 상태입니다.
-        overridePendingTransition(R.drawable.slideright, R.drawable.sliderightout)
         viewPager_main_reivew = findViewById(R.id.viewPager_main_reivew)
         val viewPager_main_indicator = findViewById<DotsIndicator>(R.id.viewPager_main_indicator)
         /* 여백, 너비에 대한 정의 */
