@@ -17,6 +17,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.viewpager2.widget.ViewPager2
 import com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+import kotlin.math.log
 
 // 1. 로그인 가능하게
 // 2. 회원가입에서 로그인 페이지로 이동 가능하게 (0)
@@ -62,12 +63,19 @@ class LogInActivity : AppCompatActivity() {
             LauncherLogIn.launch(intent)
         }
 
+
         //로그인 기능
         btn_login.setOnClickListener {
+
+            val loginData = LoginDataObject.getList()
+
+            val loginMap = loginData.map{it.id to it.pwd}.toMap()
+
             if (login_text_id.text.toString().trim().isEmpty() || login_text_pw.text.trim().isEmpty()) {
                 Toast.makeText(this, "아이디 또는 비밀번호를 입력해주세요.", Toast.LENGTH_SHORT).show()
-            } else if (login_text_id.text.toString() in UserDataList.userList || login_text_id.text.toString().trim() in MyPageDataObject.myPageDataMap) {
-                if (UserDataList.userList[login_text_id.text.toString()]?.userPw == login_text_pw.text.toString()) {
+            } else if (login_text_id.text.toString() in UserDataList.userList || login_text_id.text.toString().trim() in loginMap) {
+                if (UserDataList.userList[login_text_id.text.toString()]?.userPw == login_text_pw.text.toString()
+                    || loginMap[login_text_id.text.toString()]==login_text_pw.text.toString()) {
                     val intent = Intent(this, MainActivity::class.java)
                     startActivity(intent)
                 } else {
