@@ -45,15 +45,27 @@
 
 
 
-    <!-- 로그인 액티비티(황주빈) 내부 언어셋-->
-
+    <!-- 로그인 액티비티(황주빈) 내부 언어셋 영어 -->
+    <string name="text_signin_name">Name</string>
     <string name="hint_name">Name</string>
+    <string name="text_signin_gender">Gender</string>
+    <string name="text_gender1">Man</string>
+    <string name="text_gender2">Woman</string>
+    <string name="text_signin_birth">birth date</string>
+    <string name="txte_signin_id">ID</string>
+    <string name="hint_signin_id">ID</string>
+    <string name="text_signin_check">Check Id</string>
+    <string name="text_signin_pw">Password</string>
+    <string name="hint_signin_pw">Password</string>
+    <string name="hint_signin_pwcheck">Check Password</string>
+    <string name="text_signin_genre">Favorite game Genre</string>
+    <string name="text_signin_complite">Join Membership</string>
 
-
-
-    <!-- 회원가입 액티비티(황주빈) 내부 언어셋-->
-
-
+    <!-- 회원가입 액티비티(황주빈) 내부 언어셋 영어 -->
+    <string name="hint_login_id">ID</string>
+    <string name="hint_login_pw">Password</string>
+    <string name="text_login_login">LogIn</string>
+    <string name="text_login_member">Join Membership</string>
 
 
 

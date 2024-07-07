@@ -65,7 +65,7 @@
                         android:id="@+id/tv_s_title_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="이름"
+                        android:text="@string/text_signin_name"
                         style="@style/body_b"
                         android:layout_marginStart="32dp"
                         android:layout_marginTop="32dp"
@@ -93,7 +93,7 @@
                         android:id="@+id/tv_s_title_id"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="아이디"
+                        android:text="@string/txte_signin_id"
                         style="@style/body_b"
                         android:layout_marginStart="32dp"
                         android:layout_marginTop="16dp"
@@ -110,7 +110,7 @@
                         android:background="@drawable/input_large"
                         android:backgroundTint="@color/gray"
                         android:ems="10"
-                        android:hint="ID"
+                        android:hint="@string/hint_signin_id"
                         android:inputType="text"
                         android:paddingHorizontal="16dp"
                         app:layout_constraintEnd_toStartOf="@+id/btn_signin_check_id"
@@ -124,7 +124,7 @@
                         android:layout_height="50dp"
                         android:layout_marginStart="8dp"
                         android:backgroundTint="#FFA3C9E9"
-                        android:text="중복확인"
+                        android:text="@string/text_signin_check"
                         app:layout_constraintBottom_toBottomOf="@+id/text_signin_putid"
                         app:layout_constraintEnd_toEndOf="@+id/text_signin_putname"
                         app:layout_constraintTop_toTopOf="@+id/text_signin_putid"
@@ -134,7 +134,7 @@
                         android:id="@+id/tv_s_title_gender"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="성별"
+                        android:text="@string/text_signin_gender"
                         style="@style/body_b"
                         android:layout_marginStart="32dp"
                         android:layout_marginTop="32dp"
@@ -156,8 +156,8 @@
                             android:id="@+id/toggle_btn_gender1"
                             android:layout_width="172dp"
                             android:layout_height="match_parent"
+                            android:text="@string/text_gender1"
                             android:backgroundTint="@drawable/selector_gender_toggle"
-                            android:text="남자"
                             tools:layout_editor_absoluteX="24dp"
                             tools:layout_editor_absoluteY="100dp" />
 
@@ -166,7 +166,7 @@
                             android:layout_width="172dp"
                             android:layout_height="match_parent"
                             android:backgroundTint="@drawable/selector_gender_toggle"
-                            android:text="여자"
+                            android:text="@string/text_gender2"
                             tools:layout_editor_absoluteX="98dp"
                             tools:layout_editor_absoluteY="100dp" />
                     </com.google.android.material.button.MaterialButtonToggleGroup>
@@ -177,7 +177,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
-                        android:text="생년월일"
+                        android:text="@string/text_signin_birth"
                         android:textColor="@color/black"
                         app:layout_constraintStart_toStartOf="@id/toggle_button_group"
                         app:layout_constraintTop_toBottomOf="@id/toggle_button_group" />
@@ -234,7 +234,7 @@
                         android:id="@+id/tv_s_title_pw"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="비밀번호"
+                        android:text="@string/text_signin_pw"
                         style="@style/body_b"
                         android:layout_marginStart="32dp"
                         android:layout_marginTop="16dp"
@@ -250,7 +250,7 @@
                         android:background="@drawable/input_large"
                         android:backgroundTint="@color/gray"
                         android:ems="10"
-                        android:hint="Password"
+                        android:hint="@string/hint_signin_pw"
                         android:inputType="text"
                         android:paddingHorizontal="16dp"
                         app:layout_constraintEnd_toEndOf="@+id/text_signin_putname"
@@ -267,7 +267,7 @@
                         android:background="@drawable/input_large"
                         android:backgroundTint="@color/gray"
                         android:ems="10"
-                        android:hint="Check Password"
+                        android:hint="@string/hint_signin_pwcheck"
                         android:inputType="text"
                         android:paddingHorizontal="16dp"
                         app:layout_constraintEnd_toEndOf="@+id/text_signin_putname"
@@ -285,8 +285,7 @@
                     android:layout_marginTop="4dp"
                     android:background="@color/white"
                     android:paddingHorizontal="32dp"
-                    app:layout_constraintTop_toBottomOf="@id/cl_i"
-                    tools:layout_editor_absoluteX="16dp">
+                    app:layout_constraintTop_toBottomOf="@id/cl_i">
 
                     <TextView
                         android:id="@+id/tv_s_title_select_genre"
@@ -294,7 +293,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
-                        android:text="좋아하는 게임 장르"
+                        android:text="@string/text_signin_genre"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -324,13 +323,13 @@
                         android:id="@+id/chip_si"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
+                        android:layout_marginTop="8dp"
                         android:layout_marginBottom="32dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/tv_des_genreselect"
+                        app:layout_constraintTop_toBottomOf="@id/tv_s_title_select_genre"
                         app:selectionRequired="false"
                         app:singleSelection="false">
 
@@ -415,7 +414,7 @@
                     android:layout_marginTop="32dp"
                     android:layout_marginBottom="32dp"
                     android:backgroundTint="#FFA3C9E9"
-                    android:text="회원가입 완료"
+                    android:text="@string/text_signin_complite"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/layout_si_chip" />
