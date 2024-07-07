@@ -108,6 +108,33 @@ object MyPageDataObject {
                         R.drawable.mypage_library_pubg5,
                     )
                 )
+            myPageDataMap["apape"] =
+                MyPageData(
+                    Profile("공명선", true,"아무것도 안 하고 사는 게 꿈", R.drawable.mypage_profile_apape),
+                    arrayOf(StringData.genreId[2], StringData.genreId[5], StringData.genreId[0]),
+                    arrayOf(
+                        GamePick("젤다의 전설", "#오픈월드, #짱재밌음", R.drawable.game_cover_zelda),
+                        GamePick("포켓몬스터", "#RPG #추억", R.drawable.mypage_library_pokemonsv),
+                        GamePick("휴먼 폴 플랫", "#퍼즐 #멀티", R.drawable.mypage_library_humanfallflat)
+                    ),
+                    intArrayOf(
+                        R.drawable.game_cover_zelda,
+                        R.drawable.game_cover_cyberpunk_2077,
+                        R.drawable.game_cover_gta_5,
+                        R.drawable.mypage_library_raft,
+                        R.drawable.mypage_library_ahatintime,
+                        R.drawable.mypage_library_oneshot,
+                        R.drawable.mypage_library_undertale,
+                        R.drawable.mypage_library_ori1,
+                        R.drawable.mypage_library_ori2,
+                        R.drawable.game_cover_human_fall_flat,
+                        R.drawable.mypage_library_dbd,
+                        R.drawable.mypage_library_pokemonsv,
+                        R.drawable.mypage_library_aaf123,
+                        R.drawable.mypage_gamepick_lol,
+                        R.drawable.img_minecraft_main
+                    )
+                )
             isDataInitialized = true
         }
     }
