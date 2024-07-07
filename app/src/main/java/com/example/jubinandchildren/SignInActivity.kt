@@ -88,8 +88,10 @@ class SignInActivity : AppCompatActivity() {
 
         var isChecked: Boolean? = null
 
+        MyPageDataObject.initData()
+
         signin_id_check.setOnClickListener {
-            if (signin_id.text.toString() in UserDataList.userList ) {
+            if (signin_id.text.toString() in UserDataList.userList || signin_id.text.toString().trim() in MyPageDataObject.myPageDataMap) {
                 Toast.makeText(this, "이미 존재하는 아이디입니다.", Toast.LENGTH_SHORT).show()
                 isChecked = false
             } else {
