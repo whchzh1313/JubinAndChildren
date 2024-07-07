@@ -79,41 +79,45 @@
 
     <!-- 이벤트 액티비티(박정호) 내부 언어셋-->
     <!-- 타이틀 영역 -->
-    <string name="update_now_title">Released Game</string>
-    <string name="rec_now_title">Recommanded Game</string>
+    <string name="update_now_title">Now Update</string>
+    <string name="rec_now_title">Now Suggest</string>
 
     <!-- 업데이트 영역 -->
-    <string name="update_title_minecraft">Minecraft 1.21</string>
+    <string name="update_title_minecraft">Minecraft-JAVA-</string>
+    <string name="update_info_minecraft">1.21 Release</string>
     <string name="update_tag_minecraft">#Sandbox</string>
 
-    <string name="update_title_wows">WorldOfWarship 13.6</string>
+    <string name="update_title_wows">WorldOfWarship</string>
+    <string name="update_info_wows">1.36 Release</string>
     <string name="update_tag_wows">#MMOShooting</string>
 
-    <string name="update_title_lol">LeagueOfLegends 14.13</string>
+    <string name="update_title_lol">LeagueOfLegends</string>
+    <string name="update_info_lol">14.13 Release</string>
     <string name="update_tag_lol">#AOS</string>
 
-    <string name="update_title_civ7">Civilization 7 (2025 Realse)</string>
+    <string name="update_title_civ7">Civilization 7</string>
+    <string name="update_info_civ7">2025 Launch</string>
     <string name="update_tag_civ7">#Strategy</string>
 
     <!-- 추천 영역 -->
     <string name="recommand_title_little">Little Nightmare</string>
     <string name="recommand_tag_little">#Arcade</string>
-
+    
     <string name="recommand_title_helldivers2">Helldivers2</string>
     <string name="recommand_tag_helldivers2">#TPS CoOp</string>
-
+    
     <string name="recommand_title_frostpunk">FrostPunk</string>
     <string name="recommand_tag_frostpunk">#Survive</string>
-
-    <string name="recommand_title_fm24">Football Manager 2024</string>
+    
+    <string name="recommand_title_fm24">Football Manager 24</string>
     <string name="recommand_tag_fm24">#Simulation</string>
-
+    
     <string name="recommand_title_elden_ring">Elden Ring</string>
     <string name="recommand_tag_elden_ring">#Arcade</string>
-
+    
     <string name="recommand_title_civ6">Civilization 6</string>
     <string name="recommand_tag_civ6">#Strategy</string>
-
+    
     <string name="recommand_title_cities">Cities:SkyLine</string>
     <string name="recommand_tag_cities">#Management</string>
 </resources>
