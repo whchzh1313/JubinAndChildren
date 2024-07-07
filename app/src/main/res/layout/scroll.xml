@@ -171,6 +171,7 @@
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_marginEnd="5dp"
+                        android:scaleType="centerCrop"
                         android:background="@color/gray" />
 
                     <ImageView
@@ -178,6 +179,7 @@
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_marginEnd="5dp"
+                        android:scaleType="centerCrop"
                         android:background="@color/gray" />
 
                     <ImageView
@@ -185,6 +187,7 @@
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_marginEnd="5dp"
+                        android:scaleType="centerCrop"
                         android:background="@color/gray" />
 
                     <ImageView
@@ -192,6 +195,7 @@
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_marginEnd="5dp"
+                        android:scaleType="centerCrop"
                         android:background="@color/gray" />
 
                     <ImageView
@@ -199,12 +203,14 @@
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_marginEnd="5dp"
+                        android:scaleType="centerCrop"
                         android:background="@color/gray" />
 
                     <ImageView
                         android:id="@+id/iv_d_screenshot_6"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
+                        android:scaleType="centerCrop"
                         android:background="@color/gray" />
 
 
