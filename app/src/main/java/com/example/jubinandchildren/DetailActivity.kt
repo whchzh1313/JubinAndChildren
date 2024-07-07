@@ -18,10 +18,12 @@ import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.motion.widget.MotionLayout
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.transition.Transition.TransitionListener
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import kotlinx.coroutines.selects.select
 import org.w3c.dom.Text
 
 class DetailActivity : AppCompatActivity() {
@@ -61,6 +63,22 @@ class DetailActivity : AppCompatActivity() {
             findViewById<ImageView>(R.id.iv_d_screenshot_5),
             findViewById<ImageView>(R.id.iv_d_screenshot_6)
         )
+
+        val selectScreenshot = findViewById<ConstraintLayout>(R.id.layout_d_select_screenshot)
+
+        selectScreenshot.visibility = View.INVISIBLE
+
+        for(i in screenshotList.indices){
+            screenshotList[i].setOnClickListener {
+                selectScreenshot.visibility = View.VISIBLE
+            }
+        }
+
+        val closeBtn = findViewById<ImageView>(R.id.iv_d_closebtn)
+
+        closeBtn.setOnClickListener {
+            selectScreenshot.visibility = View.INVISIBLE
+        }
 
 
 
