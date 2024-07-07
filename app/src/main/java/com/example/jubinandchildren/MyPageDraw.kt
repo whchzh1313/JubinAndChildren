@@ -30,6 +30,8 @@ private fun drawMyPageProfile(activity: MyPageActivity, mpd: MyPageData) {
     val profileTextGenre3 = activity.findViewById<TextView>(R.id.tv_mypage_profile_genre3)
     val genderText = if(mpd.profile.isMan) "♂" else "♀"
 
+    println("안넝 ${mpd.profile.description}")
+
     profileName.text = java.lang.String(mpd.profile.name + " $genderText")
     profilePhoto.setImageResource(mpd.profile.image)
     profileDesc.text =
@@ -39,12 +41,12 @@ private fun drawMyPageProfile(activity: MyPageActivity, mpd: MyPageData) {
     val notBlack = mpd.gamePicks.filterNot { it.title == "?" }.size
     if(notBlack != 0) profileBackground.setBackgroundResource(mpd.gamePicks[Random.nextInt(notBlack)].image)
     else profileBackground.setBackgroundColor(Color.parseColor("#3f000000"))
-    profileTextGenre1.text = mpd.genres[0]
-    profileTextGenre2.text = mpd.genres[1]
-    profileTextGenre3.text = mpd.genres[2]
-    profileImageGenre1.setImageResource(genrePhoto[mpd.genres[0]] ?: R.drawable.mypage_background_black)
-    profileImageGenre2.setImageResource(genrePhoto[mpd.genres[1]] ?: R.drawable.mypage_background_black)
-    profileImageGenre3.setImageResource(genrePhoto[mpd.genres[2]] ?: R.drawable.mypage_background_black)
+    profileTextGenre1.text = activity.getString(mpd.genres[0])
+    profileTextGenre2.text = activity.getString(mpd.genres[1])
+    profileTextGenre3.text = activity.getString(mpd.genres[2])
+    profileImageGenre1.setImageResource(StringData.genrePhoto[StringData.genreId.indexOf(mpd.genres[0])] ?: R.drawable.mypage_background_black)
+    profileImageGenre2.setImageResource(StringData.genrePhoto[StringData.genreId.indexOf(mpd.genres[1])] ?: R.drawable.mypage_background_black)
+    profileImageGenre3.setImageResource(StringData.genrePhoto[StringData.genreId.indexOf(mpd.genres[2])] ?: R.drawable.mypage_background_black)
 
 }
 
@@ -96,8 +98,6 @@ fun subString(str: String, num: Int): String {
             strBuilder.insert(i, '\n')
             n += num
         }
-        println(i)
     }
-    println(strBuilder.toString())
     return strBuilder.toString()
 }

@@ -51,6 +51,9 @@ class MyPageActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_my_page)
+
+        StringData.initStringData(this)
+
         MyPageDataObject.initData()
 
         val mpdStr = intent.getStringExtra("reviewerId") ?: UserDataList.id
@@ -63,14 +66,6 @@ class MyPageActivity : AppCompatActivity() {
         val layoutSelectLibrary = findViewById<ConstraintLayout>(R.id.layout_mypage_select_library)
 
         layoutSelectLibrary.isVisible=false
-
-        for (i in genreId.indices) {
-            genre[i] = getString(genreId[i])
-        }
-        for(i in dataStringId.indices){
-            dataString[i] = getString(dataStringId[i])
-        }
-
 
         drawMyPage(this, mpd)
 

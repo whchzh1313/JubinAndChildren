@@ -2,7 +2,7 @@ package com.example.jubinandchildren
 
 data class MyPageData(
     val profile: Profile,
-    var genres: Array<String>,
+    var genres: Array<Int>,
     val gamePicks: Array<GamePick>,
     val libraryPicturesIds: IntArray
 )
@@ -29,7 +29,7 @@ object MyPageDataObject {
             myPageDataMap["orinugoori9"] =
                 MyPageData(
                     Profile("김현지", false, "롤조아~ 롤토체스 조아~", R.drawable.mypage_profile_orinugoori9),
-                    arrayOf("롤플레잉", "어드벤처", "액션"),
+                    arrayOf(StringData.genreId[4], StringData.genreId[2], StringData.genreId[0]),
                     arrayOf(
                         GamePick("리그 오브 레전드", "#AOS #온라인게임 #팀플레이", R.drawable.mypage_gamepick_lol),
                         GamePick("구스 구스 덕", "#추리게임 #마피아 #멀티플레이어", R.drawable.mypage_gamepick_goose),
@@ -48,7 +48,7 @@ object MyPageDataObject {
             myPageDataMap["choco"] =
                 MyPageData(
                     Profile("이화민", true,"있는게임 다해요! 일단 맛부터 보는 편!", R.drawable.mypage_profile_choco),
-                    arrayOf("슈팅", "시뮬레이션", "어드벤처",),
+                    arrayOf(StringData.genreId[1], StringData.genreId[3], StringData.genreId[2]),
                     arrayOf(
                         GamePick("팩토리오", "#샌드박스 #건설_경영_시뮬레이션 #타워_디펜스 #할인_절대로_안함", R.drawable.mypage_gamepick_factorio),
                         GamePick("코어키퍼", "#샌드박스 #어드벤처 #할인때만_구매추천", R.drawable.mypage_gamepick_corekeeper),
@@ -66,7 +66,7 @@ object MyPageDataObject {
             myPageDataMap["mwamwa"] =
                 MyPageData(
                     Profile("황주빈", false,"말랑해요", R.drawable.mypage_profile_mwamwa),
-                    arrayOf("시뮬레이션", "롤플레잉", "어드벤처",),
+                    arrayOf(StringData.genreId[3], StringData.genreId[4], StringData.genreId[2]),
                     arrayOf(
                         GamePick("프로젝트 좀보이드", "# 오픈월드 #RPG #인디", R.drawable.mypage_gamepick_projectzomboid),
                         GamePick("스타듀밸리", "#농사 #힐링  #인디", R.drawable.mypage_gamepick_stardewvalley),
@@ -85,7 +85,7 @@ object MyPageDataObject {
             myPageDataMap["ruruha545"] =
                 MyPageData(
                     Profile("박정호", true,"월오쉽 2만판 55퍼 굿맨 KEINE클랜 머장", R.drawable.mypage_profile_ruruha545),
-                    arrayOf("슈팅", "액션", "어드벤처",),
+                    arrayOf(StringData.genreId[1], StringData.genreId[0], StringData.genreId[2]),
                     arrayOf(
                         GamePick("월드오브워쉽", "#슈팅, #MMO", R.drawable.mypage_gamepick_worldofworships),
                         GamePick("배틀그라운드", "#배틀로얄, #FPS", R.drawable.mypage_gamepick_pubg),
@@ -109,33 +109,32 @@ object MyPageDataObject {
                     )
                 )
             isDataInitialized = true
-        } else {
-            println("이미 초기화됨")
         }
     }
 
     // 데이터 추가
     fun addData(id: String) {
         if(!isDataContains(id)) {
+            println(StringData.dataString[3])
             myPageDataMap[id] =
                 MyPageData(
                     Profile(
                         (UserDataList.userList[id]?.userName ?: R.string.mypage_profile_name).toString(),
                         UserDataList.userList[id]?.isMan ?: true,
-                        /*TODO string.xml 에서 값 가져와야 함*/"",
+                        StringData.dataString[0],
                         R.drawable.mypage_profile_base_image),
-                    UserDataList.userList[id]?.userGenre?.map{genre[it ?: 7]}?.toTypedArray() ?: arrayOf("", "", ""),
+                    UserDataList.userList[id]?.userGenre?.map{StringData.genreId[it ?: 7]}?.toTypedArray() ?: arrayOf(7, 7, 7),
                     arrayOf(
-                        GamePick("?", "#추가해주세요!", R.drawable.mypage_missing),
-                        GamePick("?", "#추가해주세요!", R.drawable.mypage_missing),
-                        GamePick("?", "#추가해주세요!", R.drawable.mypage_missing)
+                        GamePick("?", StringData.dataString[3], R.drawable.mypage_missing),
+                        GamePick("?", StringData.dataString[3], R.drawable.mypage_missing),
+                        GamePick("?", StringData.dataString[3], R.drawable.mypage_missing)
                     ),
                     intArrayOf(
 
                     )
                 )
             while(myPageDataMap[id]!!.genres.size < 3) {
-                myPageDataMap[id]!!.genres += ""
+                myPageDataMap[id]!!.genres += 7
             }
         }
     }
@@ -150,35 +149,6 @@ object MyPageDataObject {
 
 }
 
-val genreId: Array<Int> = arrayOf(
-    R.string.mypage_genre_action,
-    R.string.mypage_genre_shooting,
-    R.string.mypage_genre_adventure,
-    R.string.mypage_genre_simulation,
-    R.string.mypage_genre_roleplaying,
-    R.string.mypage_genre_puzzle,
-    R.string.mypage_genre_music,)
 
-val genre: Array<String> = Array(genreId.size + 1) { "" }
 
-val genrePhoto: Map<String, Int> =
-    mapOf(
-        genre[0] to R.drawable.mypage_library_action,
-        genre[1] to R.drawable.mypage_library_shooting,
-        genre[2] to R.drawable.mypage_library_adventure,
-        genre[3] to R.drawable.mypage_library_simulation,
-        genre[4] to R.drawable.mypage_library_roleplaying,
-        genre[5] to R.drawable.mypage_library_puzzle,
-        genre[6] to R.drawable.mypage_library_music,
-        genre[7] to R.drawable.mypage_missing
-    )
-
-val dataStringId = arrayOf(
-    R.string.mypage_not_input,
-    R.string.mypage_more,
-    R.string.mypage_close,
-    R.string.mypage_please_input
-)
-
-val dataString: Array<String> = Array(dataStringId.size) { "" }
 
