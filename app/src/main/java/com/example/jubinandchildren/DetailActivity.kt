@@ -38,7 +38,6 @@ class DetailActivity : AppCompatActivity() {
         back.setOnClickListener {
             super.finish()
             overridePendingTransition(0,R.drawable.slideout)
-
         }
 
 

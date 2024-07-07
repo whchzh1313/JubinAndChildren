@@ -82,7 +82,7 @@
                         android:backgroundTint="@color/gray"
                         android:bottomLeftRadius="30dp"
                         android:ems="10"
-                        android:hint="Name"
+                        android:hint="@string/hint_name"
                         android:inputType="text"
                         android:paddingHorizontal="16dp"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -147,6 +147,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="8dp"
+                        app:singleSelection="true"
+                        app:checkedButton="@id/toggle_btn_gender1"
                         app:layout_constraintStart_toStartOf="@+id/text_signin_putname"
                         app:layout_constraintTop_toBottomOf="@+id/tv_s_title_gender">
 
@@ -154,17 +156,16 @@
                             android:id="@+id/toggle_btn_gender1"
                             android:layout_width="172dp"
                             android:layout_height="match_parent"
-                            android:backgroundTint="#FFA3C9E9"
+                            android:backgroundTint="@drawable/selector_gender_toggle"
                             android:text="남자"
                             tools:layout_editor_absoluteX="24dp"
                             tools:layout_editor_absoluteY="100dp" />
 
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/toggle_btn_gender2"
-                            style=""
                             android:layout_width="172dp"
                             android:layout_height="match_parent"
-                            android:backgroundTint="#FFD4E2ED"
+                            android:backgroundTint="@drawable/selector_gender_toggle"
                             android:text="여자"
                             tools:layout_editor_absoluteX="98dp"
                             tools:layout_editor_absoluteY="100dp" />
@@ -296,17 +297,40 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
+                    <TextView
+                        android:id="@+id/tv_des_genreselect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="좋아하는 게임 장르를 3개 선택해주세요"
+                        android:layout_marginTop="8dp"
+                        style="@style/caption"
+                        android:textColor="@color/gray"
+                        app:layout_constraintStart_toStartOf="@id/tv_s_title_select_genre"
+                        app:layout_constraintTop_toBottomOf="@id/tv_s_title_select_genre"/>
+
+                    <ImageView
+                        android:id="@+id/iv_icon_bluecheck"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/iv_icon_check"
+                        android:layout_marginStart="4dp"
+                        android:visibility="invisible"
+                        app:layout_constraintTop_toTopOf="@id/tv_s_title_select_genre"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_s_title_select_genre"
+                        app:layout_constraintStart_toEndOf="@id/tv_s_title_select_genre"
+                        />
+
                     <com.google.android.material.chip.ChipGroup
                         android:id="@+id/chip_si"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="16dp"
                         android:layout_marginBottom="32dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/tv_s_title_select_genre"
+                        app:layout_constraintTop_toBottomOf="@id/tv_des_genreselect"
                         app:selectionRequired="false"
                         app:singleSelection="false">
 
@@ -380,6 +404,8 @@
                             app:chipStrokeColor="@color/black"
                             app:chipStrokeWidth="1dp" />
                     </com.google.android.material.chip.ChipGroup>
+
+
 
 
                 </androidx.constraintlayout.widget.ConstraintLayout>

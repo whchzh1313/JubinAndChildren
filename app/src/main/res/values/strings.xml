@@ -47,6 +47,7 @@
 
     <!-- 로그인 액티비티(황주빈) 내부 언어셋-->
 
+    <string name="hint_name">Name</string>
 
 
 
