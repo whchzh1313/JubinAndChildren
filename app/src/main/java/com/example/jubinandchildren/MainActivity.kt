@@ -18,7 +18,6 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
-        overridePendingTransition(R.drawable.slideright, R.drawable.sliderightout)
         viewPager_main_reivew = findViewById(R.id.viewPager_main_reivew)
         val viewPager_main_indicator = findViewById<DotsIndicator>(R.id.viewPager_main_indicator)
         /* 여백, 너비에 대한 정의 */

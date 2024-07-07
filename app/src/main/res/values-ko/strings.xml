@@ -87,20 +87,24 @@
 
     <!-- 이벤트 액티비티(박정호) 내부 언어셋-->
     <!-- 타이틀 영역 -->
-    <string name="update_now_title">업데이트 된 게임</string>
-    <string name="rec_now_title">추천하는 게임</string>
+    <string name="update_now_title">업데이트 게임</string>
+    <string name="rec_now_title">제안하는 게임</string>
 
     <!-- 업데이트 영역 -->
-    <string name="update_title_minecraft">마인크래프트 1.21</string>
+    <string name="update_title_minecraft">마인크래프트</string>
+    <string name="update_info_minecraft">1.21 릴리즈</string>
     <string name="update_tag_minecraft">#샌드박스</string>
 
-    <string name="update_title_wows">월드오브워쉽 13.6</string>
+    <string name="update_title_wows">월드 오브 워쉽</string>
+    <string name="update_info_wows">1.36 릴리즈</string>
     <string name="update_tag_wows">#MMO슈팅</string>
 
-    <string name="update_title_lol">리그오브레전드 14.13</string>
+    <string name="update_title_lol">리그 오브 레전드</string>
+    <string name="update_info_lol">14.13 릴리즈</string>
     <string name="update_tag_lol">#AOS</string>
 
-    <string name="update_title_civ7">문명 7 (2025 공개)</string>
+    <string name="update_title_civ7">시드마이어 문명7</string>
+    <string name="update_info_civ7">2025년 공개예정</string>
     <string name="update_tag_civ7">#전략</string>
 
     <!-- 추천 영역 -->
@@ -119,7 +123,7 @@
     <string name="recommand_title_elden_ring">엘든링</string>
     <string name="recommand_tag_elden_ring">#아케이드</string>
 
-    <string name="recommand_title_civ6">문명 6</string>
+    <string name="recommand_title_civ6">시드마이어 문명6</string>
     <string name="recommand_tag_civ6">#전략</string>
 
     <string name="recommand_title_cities">시티즈 스카이라인</string>
