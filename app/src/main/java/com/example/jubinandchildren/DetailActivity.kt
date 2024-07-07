@@ -1,11 +1,14 @@
 package com.example.jubinandchildren
 
 import android.content.Intent
+import android.graphics.Typeface
 import android.net.Uri
 import android.os.Bundle
 import android.provider.ContactsContract.CommonDataKinds.Im
 import android.text.TextUtils
+import android.transition.Slide
 import android.util.Log
+import android.view.Gravity
 import android.view.View
 import android.view.ViewTreeObserver
 import android.widget.ImageView
@@ -26,11 +29,18 @@ class DetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_detail)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+
+        overridePendingTransition(R.drawable.slideup, R.drawable.no_animation)
+
+        //뒤로가기 버튼 구현
+        val back = findViewById<ImageView>(R.id.iv_icon_back)
+
+        back.setOnClickListener {
+            super.finish()
+            overridePendingTransition(0,R.drawable.slideout)
         }
+
+
         //변수할당
         val backgroundImage = findViewById<ImageView>(R.id.iv_d_background_game_image)
         val userRecommendGame = findViewById<TextView>(R.id.tv_d_user_recommend_game)
@@ -53,29 +63,34 @@ class DetailActivity : AppCompatActivity() {
         )
 
 
+
+
         val userIndex = intent.getIntExtra("index", 0)
 
         val ReviewList = getReviewList().get(userIndex)
 
         val navigation = findViewById<BottomNavigationView>(R.id.d_navigation)
 
-        navigation.setOnNavigationItemSelectedListener(){
-            when(it.itemId){
+        navigation.setOnNavigationItemSelectedListener() {
+            when (it.itemId) {
                 R.id.home -> {
-                    val homeIntent = Intent(this,MainActivity::class.java)
+                    val homeIntent = Intent(this, MainActivity::class.java)
                     startActivity(homeIntent)
                     true
                 }
+
                 R.id.search -> {
-                    val searchIntent = Intent(this,EventActivity::class.java)
+                    val searchIntent = Intent(this, EventActivity::class.java)
                     startActivity(searchIntent)
                     true
                 }
+
                 R.id.profile -> {
-                    val profileIntent = Intent(this,MyPageActivity::class.java)
+                    val profileIntent = Intent(this, MyPageActivity::class.java)
                     startActivity(profileIntent)
                     true
                 }
+
                 else -> {
                     false
                 }
@@ -143,16 +158,25 @@ class DetailActivity : AppCompatActivity() {
             }
         }
 
-        //뒤로가기 버튼 구현
-        val back = findViewById<ImageView>(R.id.iv_icon_back)
 
-        back.setOnClickListener {
-            finish()
+        userNameReview.setOnClickListener {
+            val reviewerId = ReviewList.id
+
+            val myPageIntent = Intent(this,MyPageActivity::class.java)
+            myPageIntent.putExtra("reviewerId",reviewerId)
+            startActivity(myPageIntent)
+        }
+
+        userNameRating.setOnClickListener {
+            val reviewerId = ReviewList.id
+
+            val myPageIntent = Intent(this,MyPageActivity::class.java)
+            myPageIntent.putExtra("reviewerId",reviewerId)
+            startActivity(myPageIntent)
         }
 
         //스팀페이지로 이동
         val addCart = findViewById<LinearLayout>(R.id.layout_d_icon_addcart)
-
         addCart.setOnClickListener {
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://store.steampowered.com/"))
             startActivity(intent)
@@ -181,6 +205,13 @@ class DetailActivity : AppCompatActivity() {
                 progress: Float
             ) {
                 userHashtag.maxLines = Int.MAX_VALUE
+
+                val minTextSize = 16f
+                val maxTextSize = 24f
+                val textSize = maxTextSize - (maxTextSize - minTextSize) * progress
+                userHashtag.textSize =  textSize
+
+
             }
 
 
@@ -188,13 +219,16 @@ class DetailActivity : AppCompatActivity() {
                 // 전환 완료 시
 
 
-                when (currentId){
-                    R.id.start-> {
+                when (currentId) {
+                    R.id.start -> {
                         userHashtag.maxLines = Int.MAX_VALUE
+                        userHashtag.setTextAppearance(R.style.startTextAppearance)
                     }
+
                     R.id.end -> {
                         userHashtag.maxLines = 1
                         userHashtag.ellipsize = TextUtils.TruncateAt.END
+                        userHashtag.setTextAppearance(R.style.endTextAppearance)
                     }
                 }
                 Log.d("currentId", ": $currentId")

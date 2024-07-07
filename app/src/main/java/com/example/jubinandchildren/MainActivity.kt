@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity() {
         val screenWidth = resources.displayMetrics.widthPixels // 스마트폰의 너비 길이를 가져옴
         val offsetPx = screenWidth - pageMarginPx - pagerWidth
 
+
         viewPager_main_reivew.setPageTransformer { page, position ->
             page.translationX = position * -offsetPx
         }
@@ -48,14 +49,14 @@ class MainActivity : AppCompatActivity() {
                     val intent = Intent(this, EventActivity::class.java)
                     startActivity(intent)
                     overridePendingTransition(R.drawable.slideright, R.drawable.sliderightout)
-                    finish()
+//                    finish()
                     true
                 }
                 R.id.profile -> {
                     val intent = Intent(this, MyPageActivity::class.java)
                     startActivity(intent)
                     overridePendingTransition(R.drawable.slideright, R.drawable.sliderightout)
-                    finish()
+//                    finish()
                     true
                 }
                 else -> {

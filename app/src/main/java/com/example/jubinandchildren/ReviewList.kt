@@ -3,6 +3,7 @@ package com.example.jubinandchildren
 import android.media.Rating
 
 data class ReviewList(
+    val id: String,
     val imageName: Int, // 이미지이름 drawable
     val reviewName: String, // 사람이름
     val reviewTitle: String, // 게임제목
