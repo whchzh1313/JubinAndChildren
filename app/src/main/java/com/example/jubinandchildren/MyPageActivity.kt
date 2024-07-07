@@ -35,10 +35,11 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 - 간단 -
 
 - 시간 남으면 해결 -
+6. 라이브러리 클릭 시 확대돼서 가운데에 띄우기(프레임 레이아웃으로 전체를 싸고, 일반 화면 위에 사진, 배경색은 살짝 투명한 검정색, x 버튼 추가한 레이아웃 만들기)
 8. 마이페이지 수정 가능하게 변경
-6. 라이브러리 클릭 시 확대돼서 가운데에 띄우기(지금 못 쓰는 기능이면 패스)
-5. 모션 및 애니메이션 고려
 7. 시간 남으면 게임픽이랑 장르에도 어댑터 추가
+
+5. 모션 및 애니메이션 고려 - 추가될 곳이 있나?
 
  */
 
@@ -82,8 +83,10 @@ class MyPageActivity : AppCompatActivity() {
             }
         }
 
+        resources.getString(R.string.mypage_not_input)
+
         btnEdit.setOnClickListener {
-            Toast.makeText(this, "미구현된 기능입니다.", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, R.string.mypage_not_implement, Toast.LENGTH_SHORT).show()
         }
 
         btnLogout.setOnClickListener {

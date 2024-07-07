@@ -120,9 +120,9 @@ object MyPageDataObject {
             myPageDataMap[id] =
                 MyPageData(
                     Profile(
-                        UserDataList.userList[id]?.userName ?: "이름",
+                        (UserDataList.userList[id]?.userName ?: R.string.mypage_profile_name).toString(),
                         UserDataList.userList[id]?.isMan ?: true,
-                        "자기소개가 입력되지 않았습니다.",
+                        "",
                         R.drawable.mypage_profile_base_image),
                     UserDataList.userList[id]?.userGenre!!.map{genre[it!!]}.toTypedArray()?: arrayOf("", "", ""),
                     arrayOf(

@@ -16,14 +16,6 @@
     <string name="dmy_3">#FPS #OpenWorld #StealthAction #Sniper #FPS #OpenWorld #StealthAction #Sniper #FPS #OpenWorld #StealthAction #Sniper</string>
     <string name="app_name">jubinAndChildren</string>
 
-    <string name="mypage_profile_name">이름</string>
-    <string name="mypage_profile_description">자기 소개</string>
-    <string name="mypage_profile_level">99+</string>
-    <string name="mypage_game_pick_title">게임 픽</string>
-    <string name="mypage_game_pick_name">게임 이름</string>
-    <string name="mypage_game_pick_hashtag">해시태그</string>
-    <string name="mypage_library_title">라이브러리</string>
-
     <!-- 디테일 액티비티(김현지) 내부 언어셋-->
     <string name="user_name">UserName</string>
     <string name="_user_name">testName</string>
@@ -43,6 +35,15 @@
 
     <!-- 마이 페이지 액티비티(공명선) 내부 언어셋-->
 
+    <string name="mypage_profile_name">Name</string>
+    <string name="mypage_profile_description">Introduce</string>
+    <string name="mypage_profile_level">99+</string>
+    <string name="mypage_game_pick_title">Game Pick</string>
+    <string name="mypage_game_pick_name">Game Name</string>
+    <string name="mypage_game_pick_hashtag">HashTag</string>
+    <string name="mypage_library_title">Library</string>
+    <string name="mypage_not_implement">This feature has not been implemented.</string>
+    <string name="mypage_not_input">No self-introduction has been entered.</string>
 
 
     <!-- 로그인 액티비티(황주빈) 내부 언어셋-->
