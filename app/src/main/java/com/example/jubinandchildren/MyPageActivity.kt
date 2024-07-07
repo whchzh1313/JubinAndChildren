@@ -3,6 +3,7 @@ package com.example.jubinandchildren
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.FrameLayout
 import android.widget.GridView
 import android.widget.ImageView
 import android.widget.LinearLayout
@@ -11,6 +12,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.isVisible
@@ -57,6 +59,10 @@ class MyPageActivity : AppCompatActivity() {
         val btnLogout = findViewById<ImageView>(R.id.iv_mypage_logout)
         val btnEdit = findViewById<ImageView>(R.id.iv_mypage_edit)
         val btnBack = findViewById<ImageView>(R.id.iv_mypage_back)
+        val btnClose = findViewById<ImageView>(R.id.iv_mypage_select_library_close)
+        val layoutSelectLibrary = findViewById<ConstraintLayout>(R.id.layout_mypage_select_library)
+
+        layoutSelectLibrary.isVisible=false
 
         drawMyPage(this, mpd)
 
@@ -100,5 +106,14 @@ class MyPageActivity : AppCompatActivity() {
         btnBack.setOnClickListener {
             finish()
         }
+
+        btnClose.setOnClickListener {
+            layoutSelectLibrary.isVisible=false
+        }
+
+        layoutSelectLibrary.setOnClickListener{
+            layoutSelectLibrary.isVisible=false
+        }
+
     }
 }

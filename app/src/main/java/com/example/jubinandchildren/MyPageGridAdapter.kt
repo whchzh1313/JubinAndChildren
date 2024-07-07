@@ -10,6 +10,7 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.ScrollView
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.setPadding
 import kotlin.math.ceil
 import java.util.Queue
@@ -74,6 +75,19 @@ class MyPageGridAdapter(private val activity: MyPageActivity, private val linear
 
         imageView.setImageResource(gridItems[position])
 
+        if(gridItems[position] == blackImage) {
+            println(position)
+            imageView.setPadding(10 * dpi.toInt())
+            imageView.setColorFilter(Color.parseColor("#ff222222"))
+            imageView.setBackgroundColor(Color.parseColor("#000000"))
+        }
+
+        else {
+            layout.setOnClickListener {
+                activity.findViewById<ConstraintLayout>(R.id.layout_mypage_select_library)
+            }
+        }
+
         if( next < itemArray.size && ( position == next && ((next - 2) % 15 == 0) || (position == 2 && next == 2) ) ) {
             imageView.setColorFilter(Color.parseColor("#7f222222"))
             textView.text = "더보기"
@@ -88,7 +102,7 @@ class MyPageGridAdapter(private val activity: MyPageActivity, private val linear
             }
         }
 
-        if(gridItems.size - 1 == position && next >= itemArray.size && gridItems.size > 3) {
+        else if(gridItems.size - 1 == position && next >= itemArray.size && gridItems.size > 3) {
             imageView.setColorFilter(Color.parseColor("#7f222222"))
             textView.text = "닫기"
             layout.setOnClickListener {
@@ -100,12 +114,6 @@ class MyPageGridAdapter(private val activity: MyPageActivity, private val linear
                     sv.fullScroll(ScrollView.FOCUS_UP)
                 } })
             }
-        }
-        if(gridItems[position] == blackImage) {
-            println(position)
-            imageView.setPadding(10 * dpi.toInt())
-            imageView.setColorFilter(Color.parseColor("#ff222222"))
-            imageView.setBackgroundColor(Color.parseColor("#000000"))
         }
 
         return layout

@@ -122,7 +122,7 @@ object MyPageDataObject {
                     Profile(
                         (UserDataList.userList[id]?.userName ?: R.string.mypage_profile_name).toString(),
                         UserDataList.userList[id]?.isMan ?: true,
-                        "",
+                        /*TODO string.xml 에서 값 가져와야 함*/"",
                         R.drawable.mypage_profile_base_image),
                     UserDataList.userList[id]?.userGenre!!.map{genre[it!!]}.toTypedArray()?: arrayOf("", "", ""),
                     arrayOf(
