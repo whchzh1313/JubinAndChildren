@@ -1,10 +1,14 @@
 package com.example.jubinandchildren
 
 import android.content.Intent
+import android.graphics.Color
+import android.graphics.Paint
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.NumberPicker
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -47,6 +51,11 @@ class SignInActivity : AppCompatActivity() {
 //        var signin_genre_chip7 = findViewById<Chip>(R.id.chip_signin_genre7)
 //        val checkedChipIds = signin_genre.checkedChipIds
 
+        val iconCheckGenre = findViewById<ImageView>(R.id.iv_icon_bluecheck)
+
+
+
+
         val btn_signup = findViewById<Button>(R.id.btn_signin_complete)
 
         val np_group = findViewById<ConstraintLayout>(R.id.np_group)
@@ -76,19 +85,13 @@ class SignInActivity : AppCompatActivity() {
             b_toggle = false
         }
 
-        if (true){
-
-        } else if (false){
-
-        }else {
-
-        }
-
 
         var isChecked: Boolean? = null
 
+        MyPageDataObject.initData()
+
         signin_id_check.setOnClickListener {
-            if (signin_id.text.toString() in UserDataList.userList) {
+            if (signin_id.text.toString() in UserDataList.userList || signin_id.text.toString().trim() in MyPageDataObject.myPageDataMap) {
                 Toast.makeText(this, "이미 존재하는 아이디입니다.", Toast.LENGTH_SHORT).show()
                 isChecked = false
             } else {
@@ -101,16 +104,18 @@ class SignInActivity : AppCompatActivity() {
         //칩 최대 3개까지 선택 가능하게
         checkedChipIds = mutableListOf()
         val firstChip = R.id.chip_signin_genre1
-        signin_genre.setOnCheckedStateChangeListener{ group, checkedIds ->
+//        val secondChip = R.id.chip_signin_genre7
+//        println("${R.id.chip_signin_genre1}, ${R.id.chip_signin_genre7}")
+//        println(firstChip + 6 == secondChip)
+
+        signin_genre.setOnCheckedStateChangeListener { group, checkedIds ->
             val list: List<Int> = (0..6).filter { firstChip + it !in checkedIds }
             checkedChipIds = checkedIds
             if (checkedIds.size > 2) {
                 list.forEach {
                     findViewById<Chip>(firstChip + it).isEnabled = false
                 }
-//                Toast.makeText(this, "최대 3개의 장르를 선택할 수 있습니다.", Toast.LENGTH_SHORT).show()
-//                Log.d("checked", "test${checkedChipIds.size}")
-//                Log.d("checked", "test$checkedChipIds")
+
             } else {
                 list.forEach {
                     findViewById<Chip>(firstChip + it).isEnabled = true
@@ -120,6 +125,13 @@ class SignInActivity : AppCompatActivity() {
 //                Log.d("checked", "testElse$checkedChipIds")
             }
         }
+
+//        if(checkedChipIds.size == 3){
+//            iconCheckGenre.visibility = View.VISIBLE
+//        }else{
+//            iconCheckGenre.visibility = View.INVISIBLE
+//        }
+
         //인트 > 스트링 > if > contains (함수) >  / 정규식 / numpicker
         //회원가입 버튼 눌렀을 때
         // 조건 : 모든 정보가 기입 되어야 함, 비밀번호와 비밀번호 체크가 동일, 아이디 중복 확인이 통과된 상태에서 끝나야함
