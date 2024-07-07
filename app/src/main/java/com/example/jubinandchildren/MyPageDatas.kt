@@ -120,15 +120,15 @@ object MyPageDataObject {
             myPageDataMap[id] =
                 MyPageData(
                     Profile(
-                        UserDataList.userList[id]?.userName ?: "이름",
+                        (UserDataList.userList[id]?.userName ?: R.string.mypage_profile_name).toString(),
                         UserDataList.userList[id]?.isMan ?: true,
-                        "자기소개가 입력되지 않았습니다.",
+                        /*TODO string.xml 에서 값 가져와야 함*/"",
                         R.drawable.mypage_profile_base_image),
-                    UserDataList.userList[id]?.userGenre!!.map{genre[it!!]}.toTypedArray()?: arrayOf("", "", ""),
+                    UserDataList.userList[id]?.userGenre?.map{genre[it ?: 7]}?.toTypedArray() ?: arrayOf("", "", ""),
                     arrayOf(
-                        GamePick("?", "#추가해주세요!", R.drawable.mypage_background_black),
-                        GamePick("?", "#추가해주세요!", R.drawable.mypage_background_black),
-                        GamePick("?", "#추가해주세요!", R.drawable.mypage_background_black)
+                        GamePick("?", "#추가해주세요!", R.drawable.mypage_missing),
+                        GamePick("?", "#추가해주세요!", R.drawable.mypage_missing),
+                        GamePick("?", "#추가해주세요!", R.drawable.mypage_missing)
                     ),
                     intArrayOf(
 
@@ -150,17 +150,35 @@ object MyPageDataObject {
 
 }
 
-val genre = arrayOf("액션","슈팅","어드벤처","시뮬레이션","롤플레잉","퍼즐","음악","")
+val genreId: Array<Int> = arrayOf(
+    R.string.mypage_genre_action,
+    R.string.mypage_genre_shooting,
+    R.string.mypage_genre_adventure,
+    R.string.mypage_genre_simulation,
+    R.string.mypage_genre_roleplaying,
+    R.string.mypage_genre_puzzle,
+    R.string.mypage_genre_music,)
+
+val genre: Array<String> = Array(genreId.size + 1) { "" }
+
 val genrePhoto: Map<String, Int> =
     mapOf(
-        "액션" to R.drawable.mypage_library_action,
-        "슈팅" to R.drawable.mypage_library_shooting,
-        "어드벤처" to R.drawable.mypage_library_adventure,
-        "시뮬레이션" to R.drawable.mypage_library_simulation,
-        "롤플레잉" to R.drawable.mypage_library_roleplaying,
-        "퍼즐" to R.drawable.mypage_library_puzzle,
-        "음악" to R.drawable.mypage_library_music,
-        "" to R.drawable.mypage_background_black
+        genre[0] to R.drawable.mypage_library_action,
+        genre[1] to R.drawable.mypage_library_shooting,
+        genre[2] to R.drawable.mypage_library_adventure,
+        genre[3] to R.drawable.mypage_library_simulation,
+        genre[4] to R.drawable.mypage_library_roleplaying,
+        genre[5] to R.drawable.mypage_library_puzzle,
+        genre[6] to R.drawable.mypage_library_music,
+        genre[7] to R.drawable.mypage_missing
     )
 
+val dataStringId = arrayOf(
+    R.string.mypage_not_input,
+    R.string.mypage_more,
+    R.string.mypage_close,
+    R.string.mypage_please_input
+)
+
+val dataString: Array<String> = Array(dataStringId.size) { "" }
 

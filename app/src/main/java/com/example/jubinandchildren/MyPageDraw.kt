@@ -1,5 +1,6 @@
 package com.example.jubinandchildren
 
+import android.graphics.Color
 import android.widget.GridView
 import android.widget.ImageView
 import android.widget.LinearLayout
@@ -37,6 +38,7 @@ private fun drawMyPageProfile(activity: MyPageActivity, mpd: MyPageData) {
     profileLevel.text = mpd.libraryPicturesIds.size.toString()
     val notBlack = mpd.gamePicks.filterNot { it.title == "?" }.size
     if(notBlack != 0) profileBackground.setBackgroundResource(mpd.gamePicks[Random.nextInt(notBlack)].image)
+    else profileBackground.setBackgroundColor(Color.parseColor("#3f000000"))
     profileTextGenre1.text = mpd.genres[0]
     profileTextGenre2.text = mpd.genres[1]
     profileTextGenre3.text = mpd.genres[2]
@@ -60,6 +62,12 @@ private fun drawMyPageGamePick(activity: MyPageActivity, mpd: MyPageData) {
     gamePickImage1.setImageResource(mpd.gamePicks[0].image)
     gamePickImage2.setImageResource(mpd.gamePicks[1].image)
     gamePickImage3.setImageResource(mpd.gamePicks[2].image)
+    if(mpd.gamePicks[0].image == R.drawable.mypage_missing)
+        gamePickImage1.setBackgroundResource(R.drawable.mypage_gamepick_missing_background)
+    if(mpd.gamePicks[1].image == R.drawable.mypage_missing)
+        gamePickImage2.setBackgroundResource(R.drawable.mypage_gamepick_missing_background)
+    if(mpd.gamePicks[2].image == R.drawable.mypage_missing)
+        gamePickImage3.setBackgroundResource(R.drawable.mypage_gamepick_missing_background)
     gamePickTitle1.text = mpd.gamePicks[0].title
     gamePickTitle2.text = mpd.gamePicks[1].title
     gamePickTitle3.text = mpd.gamePicks[2].title
